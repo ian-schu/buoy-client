@@ -1,0 +1,111 @@
+// Import external styles //
+@import url('https://fonts.googleapis.com/css?family=Kanit:500,900|Rubik:300,400,700');
+@import url('https://use.fontawesome.com/releases/v5.4.2/css/all.css');
+
+///////////////////////
+//  BULMA VARIABLES  //
+///////////////////////
+
+// Fonts
+$family-sans-serif: 'Rubik', sans-serif;
+
+// Color literals:
+$red: #ed043d;
+$brown: #8A582F;
+$green: #00a47f;
+$purple: #bd16e2;
+$gold: #d1af0f;
+$teal: #14addf;
+
+$body-background-color: #d4f2ff;
+$text-darkgray: #4a4a4a;
+
+// Navbar:
+$navbar-background-color: $body-background-color;
+$navbar-burger-color: $red;
+$navbar-item-color: $red;
+$navbar-height: 4rem;
+
+// Box:
+$box-radius: 1.5rem;
+$box-shadow: 0 2px 10px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+
+// Section:
+$section-padding: 1rem 0.5rem;
+
+@import './node_modules/bulma/bulma';
+
+/////////////////////
+//  DIRECT STYLES  //
+/////////////////////
+
+body {
+  background-color: $body-background-color;
+}
+
+.proper {
+  font-family: 'Kanit', sans-serif;
+}
+
+.hero-values {
+  margin: 1rem 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  &__value {
+    width: 40%;
+    margin: 0;
+    text-align: center;
+
+    &--wide {
+      width: 100%;
+    }
+
+    &--first-row {
+      margin-top: 0.5rem
+    }
+
+    i {
+      display: block;
+      font-size: 2rem;
+    }
+  }
+}
+
+.has-text-red {
+  color: $red;
+}
+.has-text-green {
+  color: $green;
+}
+.has-text-purple {
+  color: $purple;
+}
+.has-text-gold {
+  color: $gold;
+}
+.has-text-teal {
+  color: $teal;
+}
+.has-text-brown {
+  color: $brown;
+}
+
+#landing {
+  .hero-body {
+    padding-top: 1rem;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding-bottom: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+  }
+}
+
+

@@ -1,4 +1,4 @@
-# notmap-app-temp
+# buoy-client
 
 ## CLI Commands
 

@@ -11,9 +11,9 @@ export default class Header extends Component {
 
 	render({}, { expanded }) {
 		return (
-			<nav class="navbar is-link" role="navigation" aria-label="main navigation">
+			<nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
 				<div class="navbar-brand">
-					<a href="/" class="navbar-item">Dat NotMap</a>
+					<a href="/" class="navbar-item has-text-weight-bold is-size-2 proper">Buoy</a>
 					<a role="button" class={`navbar-burger ${expanded && 'is-active'}`}
 						data-target="navMenu" aria-label="menu" onClick={this.toggle} aria-expanded={expanded}
 					>
@@ -24,7 +24,11 @@ export default class Header extends Component {
 				</div>
 				<div class={`navbar-menu ${expanded && 'is-active'}`}>
 					<div class="navbar-end">
-						<a href="/filter" class="navbar-item">Filter</a>
+						<a href="/" class="navbar-item">Home</a>
+						<a href="/location" class="navbar-item">Change Location</a>
+						<a href="/about" class="navbar-item">About Buoy</a>
+						<a href="/sponsor" class="navbar-item">Sponsorships</a>
+						<a href="/contact" class="navbar-item">Contact</a>
 					</div>
 				</div>
 			</nav>

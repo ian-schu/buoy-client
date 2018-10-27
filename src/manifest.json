@@ -1,6 +1,6 @@
 {
-  "name": "notmap-app-temp",
-  "short_name": "notmap-app-temp",
+  "name": "Buoy App",
+  "short_name": "Buoy App",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
