@@ -38,25 +38,23 @@ $section-padding: 1rem 0.5rem;
 /////////////////////
 //  DIRECT STYLES  //
 /////////////////////
-
-body {
-  background-color: $body-background-color;
-}
-
 .proper {
   font-family: 'Kanit', sans-serif;
 }
 
-.no-wrap {
-  flex-wrap: nowrap;
-  &.buttons button {
-    max-width: 55%;
+#cta {
+  text-align: center;
+  .button, span {
+    display: inline-block;
+    text-align: center;
   }
 }
 
 #landing {
+  margin-top: 0.5rem;
+  padding: 0.15rem;
   .hero-body {
-    padding-top: 1rem;
+    padding: 0.75rem 1rem 0.5rem;
   }
 
   .title {
