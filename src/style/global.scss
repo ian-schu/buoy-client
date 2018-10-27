@@ -47,6 +47,10 @@ body {
   font-family: 'Kanit', sans-serif;
 }
 
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
 .hero-values {
   margin: 1rem 0 0;
   display: flex;
@@ -54,6 +58,7 @@ body {
   justify-content: space-between;
 
   &__value {
+    font-weight: bold;
     width: 40%;
     margin: 0;
     text-align: center;
@@ -69,6 +74,11 @@ body {
     i {
       display: block;
       font-size: 2rem;
+    }
+
+    span {
+      white-space: nowrap;
+      margin: 0 -1rem;
     }
   }
 }
