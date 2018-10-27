@@ -7,11 +7,11 @@ const Main = () => (
 					<h2 class="subtitle has-text-brown">Find &amp; support businesses that share your values.</h2>
 				</div>
 				<div class="hero-values">
-					<div class="hero-values__value hero-values__value--first-row has-text-teal ">
+					<div class="hero-values__value hero-values__value--first-row has-text-teal">
 						<i class="fas fa-store" />
 						<span>locally owned</span>
 					</div>
-					<div class="hero-values__value hero-values__value--first-row has-text-gold ">
+					<div class="hero-values__value hero-values__value--first-row has-text-gold">
 						<i class="fas fa-coins" />
 						<span>living wage</span>
 					</div>
