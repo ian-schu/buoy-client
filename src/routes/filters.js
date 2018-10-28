@@ -61,7 +61,7 @@ export default class ValueFilters extends Component {
 						<button class="button has-text-weight-bold is-size-4 is-danger is-outlined">Cancel</button> :
 						<a href="/" class="button has-text-weight-bold is-size-4 is-danger is-outlined">Back</a>
 					}
-					<button onClick={this.setValues} class="button has-text-weight-bold is-size-4 is-danger">Next</button>
+					<a href="/places" class="button has-text-weight-bold is-size-4 is-danger">Next</a>
 				</div>
 			</div>
 		</section>

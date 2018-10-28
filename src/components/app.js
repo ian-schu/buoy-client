@@ -4,11 +4,13 @@ import { Router, route } from 'preact-router';
 import Header from '../components/header';
 import Main from '../routes/main';
 import ValueFilters from '../routes/filters';
+import Places from '../routes/places';
 
 export default class App extends Component {
 	state = {
 		location: {},
-		filters: {}
+		filters: {},
+		placeType: ''
 	}
 
 	setLocation = positionObj => {
@@ -27,6 +29,10 @@ ${this.state.location.coords.latitude}, ${this.state.location.coords.longitude}`
 		});
 	}
 
+	setPlaceType = value => {
+		this.setState({ placeType: value });
+	}
+
 	/** Gets fired when the route changes.
 	 *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
 	 *	@param {string} event.url	The newly routed URL
@@ -36,7 +42,7 @@ ${this.state.location.coords.latitude}, ${this.state.location.coords.longitude}`
 		this.currentUrl = e.url;
 	};
 
-	render({},{ location, filters }) {
+	render({},{ location, filters, placeType }) {
 		return (
 			<div id="app">
 				<Header />
@@ -50,9 +56,11 @@ ${this.state.location.coords.latitude}, ${this.state.location.coords.longitude}`
 						filters={filters}
 						setGlobalFilter={this.setFilter}
 					/>
-					{/* <Filter path="/filter" />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" /> */}
+					<Places path="/places"
+						modal={false}
+						placeType={placeType}
+						setGlobalPlaceType={this.setPlaceType}
+					/>
 				</Router>
 			</div>
 		);
