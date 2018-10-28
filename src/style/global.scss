@@ -17,11 +17,11 @@ $purple: #bd16e2;
 $gold: #d1af0f;
 $teal: #14addf;
 
-$body-background-color: #d4f2ff;
+// $body-background-color: #d4f2ff;
 $text-darkgray: #4a4a4a;
 
 // Navbar:
-$navbar-background-color: $body-background-color;
+// $navbar-background-color: $body-background-color;
 $navbar-burger-color: $red;
 $navbar-item-color: $red;
 $navbar-height: 3.5rem;
@@ -97,23 +97,61 @@ $section-padding: 1rem 0.5rem;
   }
 }
 
-.has-text-red {
-  color: $red;
-}
-.has-text-green {
-  color: $green;
-}
-.has-text-purple {
-  color: $purple;
-}
-.has-text-gold {
-  color: $gold;
-}
-.has-text-teal {
-  color: $teal;
-}
-.has-text-brown {
-  color: $brown;
+.filters__button {
+  display: block;
+  margin: 0.5rem 0;
+  height: 3.5rem;
+  border: none;
+  @extend .button ;
+  @extend .has-text-weight-bold ;
+  @extend .is-size-5 ;
+  @extend .is-rounded ;
+
+  i {
+    font-size: 1.6rem;
+    margin-right: 0.3rem;
+    position: relative;
+    top: 0.1rem;
+  }
 }
 
+$color-map: (
+  red: $red,
+  green: $green,
+  purple: $purple,
+  gold: $gold,
+  teal: $teal,
+  brown: $brown,
+);
 
+@each $colorName, $color in $color-map {
+  .has-text-#{$colorName} {
+    color: #{$color};
+
+    &:hover, &:active, &:visited, &:focus {
+      color: #{$color};
+    }
+
+    &.is-selected {
+      color: $white;
+    }
+  }
+}
+
+@each $colorName, $color in $color-map {
+  .has-background-#{$colorName} {
+    background-color: rgba($color,0.1);
+
+    &:hover {
+      background-color: rgba($color, 0.25)
+    }
+
+    &:active {
+      background-color: rgba($color, 0.35)
+    }
+
+    &.is-selected {
+      background-color: rgba($color, 0.75)
+    }
+  }
+}
