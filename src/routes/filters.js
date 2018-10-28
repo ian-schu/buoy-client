@@ -59,7 +59,7 @@ export default class ValueFilters extends Component {
 				<div id="cta">
 					{modal ?
 						<button class="button has-text-weight-bold is-size-4 is-danger is-outlined">Cancel</button> :
-						<button class="button has-text-weight-bold is-size-4 is-danger is-outlined">Back</button>
+						<a href="/" class="button has-text-weight-bold is-size-4 is-danger is-outlined">Back</a>
 					}
 					<button onClick={this.setValues} class="button has-text-weight-bold is-size-4 is-danger">Next</button>
 				</div>
