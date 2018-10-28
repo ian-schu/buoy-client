@@ -14,6 +14,8 @@ export default class App extends Component {
 	setLocation = positionObj => {
 		this.setState({ location: positionObj });
 		if (this.state.location) {
+			console.log(`Location set as: 
+${this.state.location.coords.latitude}, ${this.state.location.coords.longitude}`);
 			route('/values', true);
 		}
 	};
