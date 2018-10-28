@@ -1,6 +1,6 @@
 import { Component } from 'preact';
 
-export default class Filters extends Component {
+export default class ValueFilters extends Component {
 	state = {
 		localOwned: this.props.filters.localOwned,
 		livingWage: this.props.filters.livingWage,
@@ -18,13 +18,15 @@ export default class Filters extends Component {
 		}
 	}
 
-	render = ({ props }, { localOwned, livingWage, recruitsVeterans, sustainable, womenOwned }) => (
+	render = ({ modal }, { localOwned, livingWage, recruitsVeterans, sustainable, womenOwned }) => (
 		<section class="section">
 			<div id="landing" class="hero is-medium is-marginless">
 				<div class="hero-body">
 					<div class="container">
 						<h1 class="title has-text-brown">Values</h1>
-						<h2 class="subtitle has-text-brown">Select as many as you like.</h2>
+						{!modal &&
+							<h2 class="subtitle has-text-brown">Select as many as you like.</h2>
+						}
 					</div>
 					<div class="filters">
 						<button data-name="localOwned" onClick={this.setStateValue}
@@ -55,7 +57,10 @@ export default class Filters extends Component {
 					</div>
 				</div>
 				<div id="cta">
-					<button class="button has-text-weight-bold is-size-4 is-danger is-outlined">Back</button>
+					{modal ?
+						<button class="button has-text-weight-bold is-size-4 is-danger is-outlined">Cancel</button> :
+						<button class="button has-text-weight-bold is-size-4 is-danger is-outlined">Back</button>
+					}
 					<button onClick={this.setValues} class="button has-text-weight-bold is-size-4 is-danger">Next</button>
 				</div>
 			</div>

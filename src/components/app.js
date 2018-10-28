@@ -3,7 +3,7 @@ import { Router, route } from 'preact-router';
 
 import Header from '../components/header';
 import Main from '../routes/main';
-import Filters from '../routes/filters';
+import ValueFilters from '../routes/filters';
 
 export default class App extends Component {
 	state = {
@@ -14,7 +14,7 @@ export default class App extends Component {
 	setLocation = positionObj => {
 		this.setState({ location: positionObj });
 		if (this.state.location) {
-			route('/filters', true);
+			route('/values', true);
 		}
 	};
 
@@ -43,7 +43,8 @@ export default class App extends Component {
 						location={location}
 						setLocation={this.setLocation}
 					/>
-					<Filters path="/filters"
+					<ValueFilters path="/values"
+						modal={false}
 						filters={filters}
 						setGlobalFilter={this.setFilter}
 					/>
