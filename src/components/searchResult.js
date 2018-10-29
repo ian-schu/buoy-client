@@ -1,4 +1,6 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
+
+import ValueIcon from './valueIcon';
 
 export default class SearchResult extends Component {
 	state = {
@@ -6,13 +8,16 @@ export default class SearchResult extends Component {
 		yelpLoading: false
 	};
 
-
-	render({ name, type, values }, { }) {
+	render({ name, type, values }, {}) {
 		return (
-			<div class="box">
+			<div class="search-result box">
 				<div>Name: {name}</div>
 				<div>Type: {type}</div>
-				<div>Values: {values.join(', ')}</div>
+				<div class="search-result__values">
+					{values.map(name => (
+						<ValueIcon name={name} />
+					))}
+				</div>
 			</div>
 		);
 	}

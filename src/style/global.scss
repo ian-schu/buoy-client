@@ -1,17 +1,17 @@
 // Import external styles //
-@import url('https://fonts.googleapis.com/css?family=Kanit:500,900|Rubik:300,400,700');
-@import url('https://pro.fontawesome.com/releases/v5.4.2/css/all.css');
+@import url("https://fonts.googleapis.com/css?family=Kanit:500,900|Rubik:300,400,700");
+@import url("https://pro.fontawesome.com/releases/v5.4.2/css/all.css");
 
 ///////////////////////
 //  BULMA VARIABLES  //
 ///////////////////////
 
 // Fonts
-$family-sans-serif: 'Rubik', sans-serif;
+$family-sans-serif: "Rubik", sans-serif;
 
 // Color literals:
 $red: #ed043d;
-$brown: #8A582F;
+$brown: #8a582f;
 $green: #00a47f;
 $purple: #bd16e2;
 $gold: #d1af0f;
@@ -28,132 +28,150 @@ $navbar-height: 3.5rem;
 
 // Box:
 $box-radius: 1.5rem;
-$box-shadow: 0 2px 10px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+$box-shadow: 0 2px 10px 5px rgba(10, 10, 10, 0.1),
+	0 0 0 1px rgba(10, 10, 10, 0.1);
 
 // Section:
 $section-padding: 1rem 0.5rem;
 
-@import './node_modules/bulma/bulma';
+@import "./node_modules/bulma/bulma";
 
 /////////////////////
 //  DIRECT STYLES  //
 /////////////////////
 .proper {
-  font-family: 'Kanit', sans-serif;
+	font-family: "Kanit", sans-serif;
 }
 
 #cta {
-  text-align: center;
-  .button, span {
-    display: inline-block;
-    text-align: center;
-    margin: 0 1rem;
-  }
+	text-align: center;
+	.button,
+	span {
+		display: inline-block;
+		text-align: center;
+		margin: 0 1rem;
+	}
 }
 
 #landing {
-  padding: 0;
-  .hero-body {
-    padding: 0.5rem 1rem;
-  }
+	padding: 0;
+	.hero-body {
+		padding: 0.5rem 1rem;
+	}
 
-  .title {
-    font-size: 2.2rem;
-  }
+	.title {
+		font-size: 2.2rem;
+	}
 
-  .subtitle {
-    font-size: 1.5rem;
-  }
+	.subtitle {
+		font-size: 1.5rem;
+	}
 }
 
 .hero-values {
-  margin: 0 0 0.5rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+	margin: 0 0 0.5rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
 
-  &__value {
-    font-weight: bold;
-    width: 40%;
-    margin: -0.15rem 0;
-    text-align: center;
+	&__value {
+		font-weight: bold;
+		width: 40%;
+		margin: -0.15rem 0;
+		text-align: center;
 
-    &--wide {
-      width: 100%;
-    }
+		&--wide {
+			width: 100%;
+		}
 
-    &--first-row {
-      margin-top: 1rem;
-    }
+		&--first-row {
+			margin-top: 1rem;
+		}
 
-    i {
-      display: block;
-      font-size: 2rem;
-    }
+		i {
+			display: block;
+			font-size: 2rem;
+		}
 
-    span {
-      white-space: nowrap;
-      margin: 0 -1rem;
-    }
-  }
+		span {
+			white-space: nowrap;
+			margin: 0 -1rem;
+		}
+	}
 }
 
-.filters__button, .places__button {
-  display: block;
-  margin: 0.5rem 0;
-  height: 3.5rem;
-  border: none;
-  @extend .button ;
-  @extend .has-text-weight-bold ;
-  @extend .is-size-5 ;
-  @extend .is-rounded ;
+.filters__button,
+.places__button {
+	display: block;
+	margin: 0.5rem 0;
+	height: 3.5rem;
+	border: none;
+	@extend .button;
+	@extend .has-text-weight-bold;
+	@extend .is-size-5;
+	@extend .is-rounded;
 
-  i {
-    font-size: 1.6rem;
-    margin-right: 0.3rem;
-    position: relative;
-    top: 0.1rem;
-  }
+	i {
+		font-size: 1.6rem;
+		margin-right: 0.3rem;
+		position: relative;
+		top: 0.1rem;
+	}
 }
 
 $color-map: (
-  red: $red,
-  green: $green,
-  purple: $purple,
-  gold: $gold,
-  teal: $teal,
-  brown: $brown,
+	red: $red,
+	green: $green,
+	purple: $purple,
+	gold: $gold,
+	teal: $teal,
+	brown: $brown
 );
 
 @each $colorName, $color in $color-map {
-  .has-text-#{$colorName} {
-    color: #{$color};
+	.has-text-#{$colorName} {
+		color: #{$color};
 
-    &:hover, &:active, &:visited, &:focus {
+		&:hover,
+		&:active,
+		&:visited,
+		&:focus {
 			outline: 0;
-      color: #{$color};
-    }
+			color: #{$color};
+		}
 
-    &.is-selected {
-      color: $white;
-    }
-  }
+		&.is-selected {
+			color: $white;
+		}
+	}
 }
 
 @each $colorName, $color in $color-map {
-  .has-background-#{$colorName} {
-    background-color: rgba($color,0.1);
+	.has-background-#{$colorName} {
+		background-color: rgba($color, 0.1);
 
-    &:hover {
-      background-color: rgba($color, 0.25)
-    }
+		&:hover {
+			background-color: rgba($color, 0.25);
+		}
 
-    &:active {
-      background-color: rgba($color, 0.35)
-    }
+		&:active {
+			background-color: rgba($color, 0.35);
+		}
 
-    &.is-selected {
-      background-color: rgba($color, 0.75)
-    }
-  }
+		&.is-selected {
+			background-color: rgba($color, 0.75);
+		}
+	}
+}
+
+.search-result {
+	padding: 1rem 1rem 0.5rem;
+	&__values {
+		@extend .is-size-4;
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	&__value {
+		margin: 0 0.2rem;
+	}
 }
