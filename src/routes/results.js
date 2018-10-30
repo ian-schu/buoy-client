@@ -1,5 +1,6 @@
 import { Component } from 'preact';
 import SearchResult from '../components/searchResult';
+import ValueIcon from '../components/valueIcon';
 
 export default class Results extends Component {
 	state = {
@@ -30,6 +31,24 @@ export default class Results extends Component {
 		{ showModal, modalType }
 	) => (
 		<section class="section">
+			<div class="filters-bar">
+				{placeType && (
+					<div class="placeType-pill box">
+						<ValueIcon name={placeType} className="placeType-pill__icon" />
+					</div>
+				)}
+				{filters && (
+					<div class="filters-pill box">
+						{Object.entries(filters).map(filter => (
+							<ValueIcon
+								name={filter[0]}
+								inactive={!filter[1]}
+								className="filters-pill__icon"
+							/>
+						))}
+					</div>
+				)}
+			</div>
 			<div id="landing" class="hero is-medium is-marginless">
 				<div class="hero-body">
 					{resultsLoading && <div>Results loading</div>}

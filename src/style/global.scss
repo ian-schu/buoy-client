@@ -194,3 +194,43 @@ $color-map: (
 		cursor: pointer;
 	}
 }
+
+.filters-bar {
+	margin-top: 1rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 0 1rem;
+
+	.box {
+		border-radius: 100px;
+	}
+
+	.placeType-pill,
+	.filters-pill {
+		@extend .is-size-3;
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			cursor: pointer;
+			background-color: rgba($teal, 0.2);
+		}
+	}
+
+	.placeType-pill {
+		width: 60px;
+	}
+
+	.filters-pill {
+		&__icon {
+			margin: 0 0.2rem;
+		}
+	}
+}
+
+.inactive {
+	opacity: 0.3;
+}

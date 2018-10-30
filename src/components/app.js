@@ -11,8 +11,14 @@ import Results from '../routes/results';
 export default class App extends Component {
 	state = {
 		location: {},
-		filters: {},
-		placeType: '',
+		filters: {
+			localOwned: true,
+			livingWage: true,
+			recruitsVeterans: true,
+			sustainable: true,
+			womenOwned: true
+		},
+		placeType: 'food',
 		results: [],
 		resultsLoading: false
 	};
