@@ -165,7 +165,14 @@ $color-map: (
 }
 
 .search-result {
-	padding: 1rem 1rem 0.5rem;
+	padding: 1rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+
+	&__title {
+		@extend .is-size-4, .has-text-weight-bold, .has-text-black;
+	}
 	&__values {
 		@extend .is-size-4;
 		display: flex;
@@ -173,5 +180,17 @@ $color-map: (
 	}
 	&__value {
 		margin: 0 0.2rem;
+	}
+	&__right {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+	}
+	&__arrow {
+		@extend .is-size-3;
+	}
+	&__arrow:hover {
+		color: $purple;
+		cursor: pointer;
 	}
 }
