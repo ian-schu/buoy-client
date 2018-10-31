@@ -2,9 +2,7 @@
 A search engine for consumers to find businesses they want to believe in.
 
 ----
-This app started life as boilerplate from `preact-cli`, so the following terminal commands are baked 
-## CLI Commands
-
+This app started life as boilerplate from `preact-cli`, so the following **terminal commands are baked in:**
 ``` bash
 # install dependencies
 npm install
@@ -17,6 +15,11 @@ npm run test
 ```
 
 For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
+
+----
+**Current to-do's**
+ - [ ] 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4ODM0NTAxMl19
+eyJoaXN0b3J5IjpbMTc2NjU5Nzk3Nl19
 -->
