@@ -2,10 +2,13 @@ import { Component } from 'preact';
 
 export default class Main extends Component {
 	getLocation = () => {
-		window.navigator.geolocation.getCurrentPosition(this.props.setLocation);
+		this.props.locationHandlers.setLocationLoading();
+		window.navigator.geolocation.getCurrentPosition(
+			this.props.locationHandlers.setLocation
+		);
 	};
 
-	render = ({ location, setLocation }, {}) => (
+	render = ({ location }, {}) => (
 		<section class="section">
 			<div id="landing" class="hero is-medium is-marginless">
 				<div class="hero-body">
@@ -43,7 +46,8 @@ export default class Main extends Component {
 				<div id="cta">
 					<button
 						onClick={this.getLocation}
-						class="button has-text-weight-bold is-size-4 is-danger"
+						class={`button has-text-weight-bold is-size-4 is-danger
+						${location.loading ? ' is-loading' : ''}`}
 					>
 						Use my location
 					</button>
