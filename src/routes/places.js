@@ -1,6 +1,6 @@
 import { Component } from 'preact';
 
-export default class ValueFilters extends Component {
+export default class Places extends Component {
 	setPlaceType = ev => {
 		const value = ev.target.dataset.name;
 		if (value) {
