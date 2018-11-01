@@ -234,3 +234,12 @@ $color-map: (
 .inactive {
 	opacity: 0.3;
 }
+
+.load-container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	font-size: 5rem;
+	min-height: 200px;
+}

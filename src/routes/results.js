@@ -27,7 +27,7 @@ export default class Results extends Component {
 	}
 
 	render = (
-		{ location, filters, placeType, results, resultsLoading },
+		{ location, filters, placeType, results },
 		{ showModal, modalType }
 	) => (
 		<section class="section">
@@ -51,12 +51,16 @@ export default class Results extends Component {
 			</div>
 			<div id="landing" class="hero is-medium is-marginless">
 				<div class="hero-body">
-					{resultsLoading && <div>Results loading</div>}
+					{results.loading && (
+						<div class="load-container has-text-purple">
+							<i class="fas fa-spinner fa-pulse" />
+						</div>
+					)}
 					{!showModal &&
-						!resultsLoading && (
+						!results.loading && (
 						<div class="results">
-							{results && results.length
-								? results.map(record => (
+							{results.data && results.data.length
+								? results.data.map(record => (
 									<SearchResult
 										name={record.fields['Location-name']}
 										type={record.fields['Location-type']}

@@ -23,11 +23,19 @@ export default class App extends Component {
 			womenOwned: true
 		},
 		placeType: 'food',
-		results: [],
-		resultsLoading: false
+		results: {
+			data: [],
+			loading: false
+		}
 	};
 
 	getFullSearchResults = () => {
+		this.setState({
+			results: {
+				data: [],
+				loading: true
+			}
+		});
 		axios
 			.get('https://api.airtable.com/v0/appcqM5kpu31ZWD0f/Locations', {
 				params: {
@@ -35,7 +43,12 @@ export default class App extends Component {
 				}
 			})
 			.then(res => {
-				this.setState({ results: res.data.records, resultsLoading: false });
+				this.setState({
+					results: {
+						data: res.data.records,
+						loading: false
+					}
+				});
 			})
 			.catch(err => {
 				console.log(err);
@@ -94,7 +107,7 @@ export default class App extends Component {
 		this.currentUrl = e.url;
 	};
 
-	render({}, { location, filters, placeType, results, resultsLoading }) {
+	render({}, { location, filters, placeType, results }) {
 		return (
 			<div id="app">
 				<Header />
@@ -122,7 +135,6 @@ export default class App extends Component {
 						filters={filters}
 						placeType={placeType}
 						results={results}
-						resultsLoading={resultsLoading}
 						setLocation={this.setLocation}
 						setFilter={this.setFilter}
 						setPlaceType={this.setPlaceType}
