@@ -38,17 +38,10 @@ export default class App extends Component {
 		});
 		axios
 			.get('https://api.airtable.com/v0/appcqM5kpu31ZWD0f/Locations', {
-				params: {
-					api_key: 'key3sTuBkfw2XeXRt'
-				}
+				params: { api_key: 'key3sTuBkfw2XeXRt' }
 			})
 			.then(res => {
-				this.setState({
-					results: {
-						data: res.data.records,
-						loading: false
-					}
-				});
+				this.setState({ results: { data: res.data.records, loading: false } });
 			})
 			.catch(err => {
 				console.log(err);
@@ -60,9 +53,7 @@ export default class App extends Component {
 			this.setState({ location: positionObj });
 			if (this.state.location) {
 				console.log(`Location set as: 
-					${this.state.location.coords.latitude}, ${
-					this.state.location.coords.longitude
-				}`);
+					${this.state.location.coords.latitude}, ${this.state.location.coords.longitude}`);
 				this.locationHandlers.clearLocationLoading();
 				route('/values', true);
 			}
@@ -112,17 +103,8 @@ export default class App extends Component {
 			<div id="app">
 				<Header />
 				<Router onChange={this.handleRoute}>
-					<Main
-						path="/"
-						location={location}
-						locationHandlers={this.locationHandlers}
-					/>
-					<ValueFilters
-						path="/values"
-						modal={false}
-						filters={filters}
-						setFilter={this.setFilter}
-					/>
+					<Main path="/" location={location} locationHandlers={this.locationHandlers} />
+					<ValueFilters path="/values" modal={false} filters={filters} setFilter={this.setFilter} />
 					<Places
 						path="/places"
 						modal={false}

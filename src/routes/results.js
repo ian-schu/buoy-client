@@ -26,10 +26,7 @@ export default class Results extends Component {
 		this.props.getResults();
 	}
 
-	render = (
-		{ location, filters, placeType, results },
-		{ showModal, modalType }
-	) => (
+	render = ({ location, filters, placeType, results }, { showModal, modalType }) => (
 		<section class="section">
 			<div class="filters-bar">
 				{placeType && (
@@ -40,11 +37,7 @@ export default class Results extends Component {
 				{filters && (
 					<div class="filters-pill box">
 						{Object.entries(filters).map(filter => (
-							<ValueIcon
-								name={filter[0]}
-								inactive={!filter[1]}
-								className="filters-pill__icon"
-							/>
+							<ValueIcon name={filter[0]} inactive={!filter[1]} className="filters-pill__icon" />
 						))}
 					</div>
 				)}

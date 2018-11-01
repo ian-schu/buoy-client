@@ -13,11 +13,7 @@ export default class ValueFilters extends Component {
 				<div class="hero-body">
 					<div class="container">
 						<h1 class="title has-text-brown">Values</h1>
-						{!modal && (
-							<h2 class="subtitle has-text-brown">
-								Select as many as you like.
-							</h2>
-						)}
+						{!modal && <h2 class="subtitle has-text-brown">Select as many as you like.</h2>}
 					</div>
 					<div class="filters">
 						<button
@@ -68,17 +64,11 @@ export default class ValueFilters extends Component {
 							Cancel
 						</button>
 					) : (
-						<a
-							href="/"
-							class="button has-text-weight-bold is-size-4 is-danger is-outlined"
-						>
+						<a href="/" class="button has-text-weight-bold is-size-4 is-danger is-outlined">
 							Back
 						</a>
 					)}
-					<a
-						href="/places"
-						class="button has-text-weight-bold is-size-4 is-danger"
-					>
+					<a href="/places" class="button has-text-weight-bold is-size-4 is-danger">
 						Next
 					</a>
 				</div>

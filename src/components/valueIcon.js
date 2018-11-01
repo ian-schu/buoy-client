@@ -66,11 +66,9 @@ export default class ValueIcon extends Component {
 	};
 
 	render = ({ name, className, inactive }, {}) => {
-		const iconClassName = classnames(
-			className,
-			`has-text-${this.dictionary[name].color}`,
-			{ inactive }
-		);
+		const iconClassName = classnames(className, `has-text-${this.dictionary[name].color}`, {
+			inactive
+		});
 
 		return (
 			<div class={iconClassName}>
