@@ -216,7 +216,7 @@ $color-map: (
 
 		&:hover {
 			cursor: pointer;
-			background-color: rgba($teal, 0.2);
+			box-shadow: 0 0 1rem 3px rgba($teal, 0.4);
 		}
 	}
 
