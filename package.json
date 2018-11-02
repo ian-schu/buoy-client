@@ -34,6 +34,10 @@
   "dependencies": {
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
+    "convert-units": "^2.3.4",
+    "dotenv": "^6.1.0",
+    "fs-extra": "^7.0.0",
+    "haversine-position": "^1.0.3",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
     "preact-router": "^2.5.7"

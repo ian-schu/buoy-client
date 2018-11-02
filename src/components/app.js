@@ -8,6 +8,7 @@ import Main from '../routes/main';
 import ValueFilters from '../routes/filters';
 import Places from '../routes/places';
 import Results from '../routes/results';
+import allData from '../../data/enriched/loadableDB';
 
 export default class App extends Component {
 	state = {
@@ -24,6 +25,8 @@ export default class App extends Component {
 		},
 		placeType: 'food',
 		results: {
+			all: allData,
+			filtered: [],
 			data: [],
 			loading: false
 		}

@@ -1,0 +1,165 @@
+[
+  {
+    "id": "recJ26Di46tDyX4pr",
+    "fields": {
+      "Values": [
+        "locally-owned",
+        "women-owned"
+      ],
+      "Location-name": "Vintage IT Services ",
+      "Location-type": "service"
+    },
+    "createdTime": "2018-10-21T19:26:56.000Z"
+  },
+  {
+    "id": "recMTwmNDEg88ccRo",
+    "fields": {
+      "Values": [
+        "recruits-veterans"
+      ],
+      "Location-name": "Allstate Insurance",
+      "Location-type": "service"
+    },
+    "createdTime": "2018-10-21T19:23:32.000Z"
+  },
+  {
+    "id": "recSWDfDBnXekF8kB",
+    "fields": {
+      "Values": [
+        "locally-owned",
+        "living-wage"
+      ],
+      "Location-name": "Black Star Coop",
+      "Location-type": "food",
+      "Google-ID": "ChIJw6LxOTbKRIYR6tMZVkiyTGI"
+    },
+    "createdTime": "2018-10-21T19:12:58.000Z"
+  },
+  {
+    "id": "recSaDEIVhOTAISkP",
+    "fields": {
+      "Values": [
+        "locally-owned"
+      ],
+      "Location-name": "Woom Bikes USA",
+      "Location-type": "retail",
+      "Google-ID": "ChIJuYaR843LRIYRxL9VD2j4TV4"
+    },
+    "createdTime": "2018-10-21T19:16:52.000Z"
+  },
+  {
+    "id": "recTkbdsKorF5nd35",
+    "fields": {
+      "Notes": "“Fashion is the second-largest polluter behind oil...” https://apple.news/A33qatXLsSK-P1oqIUn1Z-Q\n\n\n",
+      "Values": [
+        "sustainable"
+      ],
+      "Location-name": "Secondhand Stores!",
+      "Location-type": "retail"
+    },
+    "createdTime": "2018-10-23T13:56:01.000Z"
+  },
+  {
+    "id": "recYyPH6z4XQkn37s",
+    "fields": {
+      "Values": [
+        "locally-owned",
+        "women-owned"
+      ],
+      "Location-name": "Kendra Scott",
+      "Location-type": "retail",
+      "Google-ID": "ChIJM_9YFYfKRIYRXIiwEbNqVbo"
+    },
+    "createdTime": "2018-10-21T19:24:49.000Z"
+  },
+  {
+    "id": "recaQqDHhAPUNw8Ry",
+    "fields": {
+      "Values": [
+        "locally-owned",
+        "sustainable"
+      ],
+      "Location-name": "Texas Farmers’ Market at Mueller",
+      "Location-type": "retail",
+      "Google-ID": "ChIJUfiJvfm1RIYR18aDhOnca8s"
+    },
+    "createdTime": "2018-10-21T19:19:55.000Z"
+  },
+  {
+    "id": "reccAjwXEsKaBH4xX",
+    "fields": {
+      "Values": [
+        "recruits-veterans"
+      ],
+      "Location-name": "Service King",
+      "Location-type": "service",
+      "Google-ID": "ChIJm7_O5sm0RIYRAlgg23ipkC8"
+    },
+    "createdTime": "2018-10-21T19:13:36.000Z"
+  },
+  {
+    "id": "rech7LT6pg6qGjuYX",
+    "fields": {
+      "Values": [
+        "living-wage",
+        "sustainable"
+      ],
+      "Location-name": "Thai Fresh",
+      "Location-type": "food",
+      "Google-ID": "ChIJX4dS6eC0RIYRa-_W4B6G1OY"
+    },
+    "createdTime": "2018-10-21T19:13:16.000Z"
+  },
+  {
+    "id": "recmjFVgp5wEbmpQx",
+    "fields": {
+      "Notes": "recycles, fair trade, women owned",
+      "Values": [
+        "women-owned",
+        "sustainable",
+        "locally-owned"
+      ],
+      "Verification": "See attached photo of tax records",
+      "Location-name": "Bananarchy",
+      "Location-type": "food",
+      "Google-ID": "ChIJS8vlbRm1RIYRzipYa4SJ7ko"
+    },
+    "createdTime": "2018-09-23T21:04:44.000Z"
+  },
+  {
+    "id": "recovajeihRrc9oG8",
+    "fields": {
+      "Values": [
+        "locally-owned"
+      ],
+      "Location-name": "Sam’s Bar-B-Que",
+      "Location-type": "food"
+    },
+    "createdTime": "2018-10-21T19:15:32.000Z"
+  },
+  {
+    "id": "recsfRSXihjsuUben",
+    "fields": {
+      "Values": [
+        "recruits-veterans",
+        "sustainable",
+        "locally-owned"
+      ],
+      "Location-name": "Austin Public Library",
+      "Location-type": "service"
+    },
+    "createdTime": "2018-10-21T19:23:40.000Z"
+  },
+  {
+    "id": "recvbrAyw8kgZcORV",
+    "fields": {
+      "Values": [
+        "locally-owned"
+      ],
+      "Location-name": "VMC Pharmacy",
+      "Location-type": "retail",
+      "Google-ID": "ChIJ44y9rzZLW4YRdovMBe-_a3M"
+    },
+    "createdTime": "2018-10-21T19:20:08.000Z"
+  }
+]
