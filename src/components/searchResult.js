@@ -18,6 +18,7 @@ export default class SearchResult extends Component {
 				<div class="search-result__left">
 					<div class="search-result__title">{data.name}</div>
 					<div>{fullAddress}</div>
+					<div>{data.distanceTo} mi</div>
 					<div>({data.type})</div>
 					<div class="search-result__values">
 						{data.values.map(valueName => (

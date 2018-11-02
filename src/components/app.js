@@ -2,6 +2,8 @@
 import { h, Component } from 'preact';
 import { Router, route } from 'preact-router';
 import 'preact/debug';
+import { Haversine } from 'haversine-position';
+import convert from 'convert-units';
 
 import Header from '../components/header';
 import Main from '../routes/main';
@@ -14,7 +16,10 @@ export default class App extends Component {
 	state = {
 		allRecords,
 		location: {
-			data: {},
+			data: {
+				lat: null,
+				lng: null
+			},
 			loading: false
 		},
 		filters: {
@@ -56,9 +61,23 @@ export default class App extends Component {
 			return record.values.some(val => filtersArray.includes(val));
 		});
 
+		const origin = new Haversine(this.state.location.data);
+		const distanceAdded = valueFiltered.map(record => {
+			let distanceTo = origin.getDistance(record.location);
+			record.distanceTo = convert(distanceTo)
+				.from('m')
+				.to('mi')
+				.toFixed(1);
+			return record;
+		});
+
+		const orderedByDistance = distanceAdded.sort((a, b) => {
+			return a.distanceTo - b.distanceTo;
+		});
+
 		this.setState({
 			results: {
-				data: valueFiltered,
+				data: orderedByDistance,
 				loading: false
 			}
 		});
@@ -66,27 +85,22 @@ export default class App extends Component {
 
 	locationHandlers = {
 		setLocation: positionObj => {
-			this.setState({ location: positionObj });
-			if (this.state.location) {
-				console.log(`Location set as: 
-					${this.state.location.coords.latitude}, ${this.state.location.coords.longitude}`);
-				this.locationHandlers.clearLocationLoading();
-				route('/values', true);
-			}
+			this.setState({
+				location: {
+					data: {
+						lat: positionObj.coords.latitude,
+						lng: positionObj.coords.longitude
+					},
+					loading: false
+				}
+			});
+			route('/values', true);
 		},
 		setLocationLoading: () => {
 			this.setState({
 				location: {
-					data: {},
-					loading: true
-				}
-			});
-		},
-		clearLocationLoading: () => {
-			this.setState({
-				location: {
 					data: this.state.location.data,
-					loading: false
+					loading: true
 				}
 			});
 		}
