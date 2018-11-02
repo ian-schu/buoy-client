@@ -2,7 +2,7 @@ export default [
 	{
 		name: 'Black Star Co-op',
 		type: 'food',
-		values: ['locally-owned', 'living-wage'],
+		values: ['localOwned', 'livingWage'],
 		location: {
 			lat: 30.3382593,
 			lng: -97.7188884
@@ -25,7 +25,7 @@ export default [
 	{
 		name: 'woom bikes USA',
 		type: 'retail',
-		values: ['locally-owned'],
+		values: ['localOwned'],
 		location: {
 			lat: 30.37817059999999,
 			lng: -97.72126039999999
@@ -49,7 +49,7 @@ export default [
 	{
 		name: 'Kendra Scott',
 		type: 'retail',
-		values: ['locally-owned', 'women-owned'],
+		values: ['localOwned', 'womenOwned'],
 		location: {
 			lat: 30.3060028,
 			lng: -97.743175
@@ -79,7 +79,7 @@ export default [
 	{
 		name: "Texas Farmers' Market at Mueller",
 		type: 'retail',
-		values: ['locally-owned', 'sustainable'],
+		values: ['localOwned', 'sustainable'],
 		location: {
 			lat: 30.296611,
 			lng: -97.7072821
@@ -102,7 +102,7 @@ export default [
 	{
 		name: 'Service King Collision Repair of Austin',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruitsVeterans'],
 		location: {
 			lat: 30.2284888,
 			lng: -97.77985249999999
@@ -125,7 +125,7 @@ export default [
 	{
 		name: 'Thai Fresh',
 		type: 'food',
-		values: ['living-wage', 'sustainable'],
+		values: ['livingWage', 'sustainable'],
 		location: {
 			lat: 30.247849,
 			lng: -97.761729
@@ -158,7 +158,7 @@ export default [
 	{
 		name: 'Bananarchy',
 		type: 'food',
-		values: ['women-owned', 'sustainable', 'locally-owned'],
+		values: ['womenOwned', 'sustainable', 'localOwned'],
 		location: {
 			lat: 30.2444054,
 			lng: -97.758124
@@ -181,7 +181,7 @@ export default [
 	{
 		name: 'VMC Pharmacy Health & Wellness Products',
 		type: 'retail',
-		values: ['locally-owned'],
+		values: ['localOwned'],
 		location: {
 			lat: 30.2322543,
 			lng: -97.7911433

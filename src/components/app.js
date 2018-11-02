@@ -1,6 +1,6 @@
+/* eslint-disable arrow-body-style */
 import { h, Component } from 'preact';
 import { Router, route } from 'preact-router';
-import axios from 'axios';
 import 'preact/debug';
 
 import Header from '../components/header';
@@ -8,10 +8,11 @@ import Main from '../routes/main';
 import ValueFilters from '../routes/filters';
 import Places from '../routes/places';
 import Results from '../routes/results';
-import allData from '../../data/enriched/loadableDB';
+import allRecords from '../../data/enriched/loadableDB';
 
 export default class App extends Component {
 	state = {
+		allRecords,
 		location: {
 			data: {},
 			loading: false
@@ -25,31 +26,43 @@ export default class App extends Component {
 		},
 		placeType: 'food',
 		results: {
-			all: allData,
-			filtered: [],
 			data: [],
 			loading: false
 		}
 	};
 
-	getFullSearchResults = () => {
+	reduceFilters = filtersHash =>
+		Object.entries(filtersHash).reduce((acc, curr) => {
+			if (curr[1]) acc.push(curr[0]);
+			return acc;
+		}, []);
+
+	getFullSearchResults() {
 		this.setState({
 			results: {
 				data: [],
 				loading: true
 			}
 		});
-		axios
-			.get('https://api.airtable.com/v0/appcqM5kpu31ZWD0f/Locations', {
-				params: { api_key: 'key3sTuBkfw2XeXRt' }
-			})
-			.then(res => {
-				this.setState({ results: { data: res.data.records, loading: false } });
-			})
-			.catch(err => {
-				console.log(err);
-			});
-	};
+
+		const filtersArray = this.reduceFilters(this.state.filters);
+		const placeType = this.state.placeType;
+
+		const typeFiltered = this.state.allRecords.filter(record => {
+			return record.type == placeType;
+		});
+
+		const valueFiltered = typeFiltered.filter(record => {
+			return record.values.some(val => filtersArray.includes(val));
+		});
+
+		this.setState({
+			results: {
+				data: valueFiltered,
+				loading: false
+			}
+		});
+	}
 
 	locationHandlers = {
 		setLocation: positionObj => {
@@ -100,6 +113,11 @@ export default class App extends Component {
 	handleRoute = e => {
 		this.currentUrl = e.url;
 	};
+
+	constructor() {
+		super();
+		this.getFullSearchResults = this.getFullSearchResults.bind(this);
+	}
 
 	render({}, { location, filters, placeType, results }) {
 		return (

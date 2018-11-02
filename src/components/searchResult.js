@@ -8,14 +8,14 @@ export default class SearchResult extends Component {
 		yelpLoading: false
 	};
 
-	render = ({ name, type, values }, {}) => (
+	render = ({ data }, {}) => (
 		<div class="search-result box">
 			<div class="search-result__left">
-				<div class="search-result__title">{name}</div>
-				<div>{type}</div>
+				<div class="search-result__title">{data.name}</div>
+				<div>{data.type}</div>
 				<div class="search-result__values">
-					{values.map(name => (
-						<ValueIcon className="search-result__value" name={name} />
+					{data.values.map(valueName => (
+						<ValueIcon className="search-result__value" name={valueName} />
 					))}
 				</div>
 			</div>

@@ -53,13 +53,7 @@ export default class Results extends Component {
 						!results.loading && (
 						<div class="results">
 							{results.data && results.data.length
-								? results.data.map(record => (
-									<SearchResult
-										name={record.fields['Location-name']}
-										type={record.fields['Location-type']}
-										values={record.fields.Values}
-									/>
-									  ))
+								? results.data.map(record => <SearchResult data={record} />)
 								: 'No results here.'}
 						</div>
 					)}
