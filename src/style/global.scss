@@ -146,27 +146,12 @@ $color-map: (
 
 @each $colorName, $color in $color-map {
 	.has-background-#{$colorName} {
-		// &:hover {
-		// 	background-color: rgba($color, 0.25);
-		// }
-
 		&:active {
 			background-color: rgba($color, 0.35);
 		}
 
 		&.is-selected {
 			background-color: rgba($color, 0.75);
-		}
-	}
-}
-
-// TODO: get this working conditionally
-@media (max-width: 900px) {
-	.hero-body > .filters > button.filters__button {
-		&:hover,
-		&:active,
-		&:visited {
-			background-color: none !important;
 		}
 	}
 }
@@ -249,4 +234,15 @@ $color-map: (
 	align-items: center;
 	font-size: 5rem;
 	min-height: 200px;
+}
+
+// Begin Desktop styles
+@media (min-width: 650px) {
+	@each $colorName, $color in $color-map {
+		.has-background-#{$colorName} {
+			&:hover {
+				background-color: rgba($color, 0.25);
+			}
+		}
+	}
 }
