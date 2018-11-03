@@ -1,13 +1,13 @@
 // Import external styles //
-@import url("https://fonts.googleapis.com/css?family=Kanit:500,900|Rubik:300,400,700");
-@import url("https://pro.fontawesome.com/releases/v5.4.2/css/all.css");
+@import url('https://fonts.googleapis.com/css?family=Kanit:500,900|Rubik:300,400,700');
+@import url('https://pro.fontawesome.com/releases/v5.4.2/css/all.css');
 
 ///////////////////////
 //  BULMA VARIABLES  //
 ///////////////////////
 
 // Fonts
-$family-sans-serif: "Rubik", sans-serif;
+$family-sans-serif: 'Rubik', sans-serif;
 
 // Color literals:
 $red: #ed043d;
@@ -28,19 +28,18 @@ $navbar-height: 3.5rem;
 
 // Box:
 $box-radius: 1.5rem;
-$box-shadow: 0 2px 10px 5px rgba(10, 10, 10, 0.1),
-	0 0 0 1px rgba(10, 10, 10, 0.1);
+$box-shadow: 0 2px 10px 5px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 
 // Section:
 $section-padding: 1rem 0.5rem;
 
-@import "./node_modules/bulma/bulma";
+@import './node_modules/bulma/bulma';
 
 /////////////////////
 //  DIRECT STYLES  //
 /////////////////////
 .proper {
-	font-family: "Kanit", sans-serif;
+	font-family: 'Kanit', sans-serif;
 }
 
 #cta {
@@ -125,7 +124,7 @@ $color-map: (
 	purple: $purple,
 	gold: $gold,
 	teal: $teal,
-	brown: $brown
+	brown: $brown,
 );
 
 @each $colorName, $color in $color-map {
@@ -133,7 +132,6 @@ $color-map: (
 		color: #{$color};
 
 		&:hover,
-		&:active,
 		&:visited,
 		&:focus {
 			outline: 0;
@@ -148,11 +146,9 @@ $color-map: (
 
 @each $colorName, $color in $color-map {
 	.has-background-#{$colorName} {
-		background-color: rgba($color, 0.1);
-
-		&:hover {
-			background-color: rgba($color, 0.25);
-		}
+		// &:hover {
+		// 	background-color: rgba($color, 0.25);
+		// }
 
 		&:active {
 			background-color: rgba($color, 0.35);
@@ -160,6 +156,17 @@ $color-map: (
 
 		&.is-selected {
 			background-color: rgba($color, 0.75);
+		}
+	}
+}
+
+// TODO: get this working conditionally
+@media (max-width: 900px) {
+	.hero-body > .filters > button.filters__button {
+		&:hover,
+		&:active,
+		&:visited {
+			background-color: none !important;
 		}
 	}
 }
