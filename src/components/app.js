@@ -23,11 +23,11 @@ export default class App extends Component {
 			loading: false
 		},
 		filters: {
-			localOwned: true,
-			livingWage: true,
-			recruitsVeterans: true,
-			sustainable: true,
-			womenOwned: true
+			localOwned: false,
+			livingWage: false,
+			recruitsVeterans: false,
+			sustainable: false,
+			womenOwned: false
 		},
 		placeType: 'food',
 		results: {
@@ -128,6 +128,8 @@ export default class App extends Component {
 		this.currentUrl = e.url;
 	};
 
+	hasResults = () => this.state.results.data.length > 0;
+
 	constructor() {
 		super();
 		this.getFullSearchResults = this.getFullSearchResults.bind(this);
@@ -139,10 +141,15 @@ export default class App extends Component {
 				<Header />
 				<Router onChange={this.handleRoute}>
 					<Main path="/" location={location} locationHandlers={this.locationHandlers} />
-					<ValueFilters path="/values" modal={false} filters={filters} setFilter={this.setFilter} />
+					<ValueFilters
+						path="/values"
+						modal={this.hasResults()}
+						filters={filters}
+						setFilter={this.setFilter}
+					/>
 					<Places
 						path="/places"
-						modal={false}
+						modal={this.hasResults()}
 						placeType={placeType}
 						setPlaceType={this.setPlaceType}
 					/>

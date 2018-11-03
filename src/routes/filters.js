@@ -58,20 +58,22 @@ export default class ValueFilters extends Component {
 						</button>
 					</div>
 				</div>
-				<div id="cta">
-					{modal ? (
-						<button class="button has-text-weight-bold is-size-4 is-danger is-outlined">
-							Cancel
-						</button>
-					) : (
+				{modal ? (
+					<div id="cta">
+						<a href="/results" class="button has-text-weight-bold is-size-4 is-danger">
+							Apply
+						</a>
+					</div>
+				) : (
+					<div id="cta">
 						<a href="/" class="button has-text-weight-bold is-size-4 is-danger is-outlined">
 							Back
 						</a>
-					)}
-					<a href="/places" class="button has-text-weight-bold is-size-4 is-danger">
-						Next
-					</a>
-				</div>
+						<a href="/places" class="button has-text-weight-bold is-size-4 is-danger">
+							Next
+						</a>
+					</div>
+				)}
 			</div>
 		</section>
 	);

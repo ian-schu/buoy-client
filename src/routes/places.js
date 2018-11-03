@@ -14,11 +14,7 @@ export default class Places extends Component {
 				<div class="hero-body">
 					<div class="container">
 						<h1 class="title has-text-brown">Places</h1>
-						{!modal && (
-							<h2 class="subtitle has-text-brown">
-								Change your choice any time.
-							</h2>
-						)}
+						{!modal && <h2 class="subtitle has-text-brown">Change your choice any time.</h2>}
 					</div>
 					<div class="places">
 						<button
@@ -47,26 +43,22 @@ export default class Places extends Component {
 						</button>
 					</div>
 				</div>
-				<div id="cta">
-					{modal ? (
-						<button class="button has-text-weight-bold is-size-4 is-danger is-outlined">
-							Cancel
-						</button>
-					) : (
-						<a
-							href="/values"
-							class="button has-text-weight-bold is-size-4 is-danger is-outlined"
-						>
+				{modal ? (
+					<div id="cta">
+						<a href="/results" class="button has-text-weight-bold is-size-4 is-danger">
+							Apply
+						</a>
+					</div>
+				) : (
+					<div id="cta">
+						<a href="/values" class="button has-text-weight-bold is-size-4 is-danger is-outlined">
 							Back
 						</a>
-					)}
-					<a
-						href="/results"
-						class="button has-text-weight-bold is-size-4 is-danger"
-					>
-						Search
-					</a>
-				</div>
+						<a href="/results" class="button has-text-weight-bold is-size-4 is-danger">
+							Next
+						</a>
+					</div>
+				)}
 			</div>
 		</section>
 	);
