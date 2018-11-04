@@ -68,7 +68,7 @@ export default class App extends Component {
 
 		let coords = {
 			lat: this.state.location.data.lat,
-			lng: this.state.location.data.lng,
+			lng: this.state.location.data.lng
 		};
 		const origin = new Haversine(coords);
 
