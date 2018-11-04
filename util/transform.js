@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 require('dotenv').config();
 const apiKey = process.env.GOOGLE_PLACES_API_KEY;
 const axios = require('axios');
