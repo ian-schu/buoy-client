@@ -9,6 +9,7 @@ import Header from '../components/header';
 import Main from '../routes/main';
 import ValueFilters from '../routes/filters';
 import Places from '../routes/places';
+import Location from '../routes/location';
 import Results from '../routes/results';
 import allRecords from '../../data/enriched/loadableDB';
 
@@ -18,7 +19,11 @@ export default class App extends Component {
 		location: {
 			data: {
 				lat: null,
-				lng: null
+				lng: null,
+				county: null,
+				city: null,
+				state: null,
+				country: null
 			},
 			loading: false
 		},
@@ -61,7 +66,12 @@ export default class App extends Component {
 			return record.values.some(val => filtersArray.includes(val));
 		});
 
-		const origin = new Haversine(this.state.location.data);
+		let coords = {
+			lat: this.state.location.data.lat,
+			lng: this.state.location.data.lng,
+		};
+		const origin = new Haversine(coords);
+
 		const distanceAdded = valueFiltered.map(record => {
 			let distanceTo = origin.getDistance(record.location);
 			record.distanceTo = convert(distanceTo)
@@ -84,12 +94,34 @@ export default class App extends Component {
 	}
 
 	locationHandlers = {
-		setLocation: positionObj => {
+		changeLocation: locationManifest => {
 			this.setState({
 				location: {
 					data: {
-						lat: positionObj.coords.latitude,
-						lng: positionObj.coords.longitude
+						lat: locationManifest.lat,
+						lng: locationManifest.lng,
+						county: locationManifest.county || null,
+						city: locationManifest.city || null,
+						state: locationManifest.state || null,
+						country: locationManifest.country || null
+					},
+					loading: false
+				}
+			});
+		},
+		setLocationFromNavigator: positionObj => {
+			let manifest = {
+				lat: positionObj.coords.latitude,
+				lng: positionObj.coords.longitude
+			};
+			this.locationHandlers.changeLocation(manifest);
+		},
+		setLocationFromGeocode: positionObj => {
+			this.setState({
+				location: {
+					data: {
+						lat: positionObj.lat,
+						lng: positionObj.lng
 					},
 					loading: false
 				}
@@ -119,11 +151,6 @@ export default class App extends Component {
 		this.setState({ placeType: value });
 	};
 
-	/** Gets fired when the route changes.
-	 *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
-	 *	@param {string} event.url	The newly routed URL
-	 */
-
 	handleRoute = e => {
 		this.currentUrl = e.url;
 	};
@@ -133,6 +160,9 @@ export default class App extends Component {
 	constructor() {
 		super();
 		this.getFullSearchResults = this.getFullSearchResults.bind(this);
+		this.locationHandlers.changeLocation = this.locationHandlers.changeLocation.bind(
+			this,
+		);
 	}
 
 	render({}, { location, filters, placeType, results }) {
@@ -140,7 +170,11 @@ export default class App extends Component {
 			<div id="app">
 				<Header />
 				<Router onChange={this.handleRoute}>
-					<Main path="/" location={location} locationHandlers={this.locationHandlers} />
+					<Main
+						path="/"
+						location={location}
+						locationHandlers={this.locationHandlers}
+					/>
 					<ValueFilters
 						path="/values"
 						modal={this.hasResults()}
@@ -153,13 +187,18 @@ export default class App extends Component {
 						placeType={placeType}
 						setPlaceType={this.setPlaceType}
 					/>
+					<Location
+						path="/location"
+						modal={this.hasResults()}
+						location={location}
+						locationHandlers={this.locationHandlers}
+					/>
 					<Results
 						path="/results"
 						location={location}
 						filters={filters}
 						placeType={placeType}
 						results={results}
-						setLocation={this.setLocation}
 						setFilter={this.setFilter}
 						setPlaceType={this.setPlaceType}
 						getResults={this.getFullSearchResults}

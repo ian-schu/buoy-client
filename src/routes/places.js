@@ -54,7 +54,7 @@ export default class Places extends Component {
 						<a href="/values" class="button has-text-weight-bold is-size-4 is-danger is-outlined">
 							Back
 						</a>
-						<a href="/results" class="button has-text-weight-bold is-size-4 is-danger">
+						<a href="/location" class="button has-text-weight-bold is-size-4 is-danger">
 							Next
 						</a>
 					</div>

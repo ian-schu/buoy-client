@@ -44,12 +44,21 @@ $section-padding: 1rem 0.5rem;
 }
 
 #cta {
-	text-align: center;
-	.button,
-	span {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+
+	.button {
 		display: inline-block;
 		text-align: center;
 		margin: 0 1rem;
+
+		span.icon {
+			position: relative;
+			top: 1px;
+			margin: 0 0 0 -10px;
+		}
 	}
 }
 
@@ -69,7 +78,8 @@ $section-padding: 1rem 0.5rem;
 	}
 
 	.filters,
-	.places {
+	.places,
+	.location {
 		min-height: 50vh;
 		display: flex;
 		flex-flow: column nowrap;

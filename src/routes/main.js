@@ -1,21 +1,12 @@
 import { Component } from 'preact';
 
 export default class Main extends Component {
-	getLocation = () => {
-		this.props.locationHandlers.setLocationLoading();
-		window.navigator.geolocation.getCurrentPosition(
-			this.props.locationHandlers.setLocation
-		);
-	};
-
 	render = ({ location }, {}) => (
 		<section class="section">
 			<div id="landing" class="hero is-medium is-marginless">
 				<div class="hero-body">
 					<div class="container">
-						<h1 class="title has-text-brown">
-							Put your money where your heart is.
-						</h1>
+						<h1 class="title has-text-brown">Put your money where your heart is.</h1>
 						<h2 class="subtitle has-text-brown">
 							Find &amp; support businesses that share your values.
 						</h2>
@@ -44,17 +35,9 @@ export default class Main extends Component {
 					</div>
 				</div>
 				<div id="cta">
-					<button
-						onClick={this.getLocation}
-						class={`button has-text-weight-bold is-size-4 is-danger
-						${location.loading ? ' is-loading' : ''}`}
-					>
-						Use my location
-					</button>
-					<div>or</div>
-					<button class="button has-text-weight-bold is-size-4 is-danger is-outlined">
-						Enter ZIP
-					</button>
+					<a href="/values" class={'button has-text-weight-bold is-size-4 is-danger'}>
+						Let's go!
+					</a>
 				</div>
 			</div>
 		</section>
