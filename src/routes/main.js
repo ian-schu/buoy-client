@@ -37,7 +37,7 @@ export default class Main extends Component {
 				</div>
 				<div id="cta">
 					<a href="/values" class={'button has-text-weight-bold is-size-4 is-danger'}>
-						Let's go!
+						Find Places
 					</a>
 				</div>
 			</div>

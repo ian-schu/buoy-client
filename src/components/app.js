@@ -6,6 +6,7 @@ import { Haversine } from 'haversine-position';
 import convert from 'convert-units';
 
 import Header from '../components/header';
+import BackgroundLayer from '../components/backgroundLayer';
 import Main from '../routes/main';
 import ValueFilters from '../routes/filters';
 import Places from '../routes/places';
@@ -183,6 +184,7 @@ export default class App extends Component {
 		return (
 			<div id="app">
 				<Header />
+				<BackgroundLayer />
 				<Router onChange={this.handleRoute}>
 					<Main
 						path="/"

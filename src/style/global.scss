@@ -21,7 +21,7 @@ $teal: #14addf;
 $text-darkgray: #4a4a4a;
 
 // Navbar:
-// $navbar-background-color: $body-background-color;
+$navbar-background-color: transparent;
 $navbar-burger-color: $red;
 $navbar-item-color: $red;
 $navbar-item-hover-color: $red;
@@ -44,6 +44,10 @@ $section-padding: 1rem 0.5rem;
 	font-family: 'Kanit', sans-serif;
 }
 
+#app {
+	overflow: visible;
+}
+
 #cta {
 	display: flex;
 	flex-flow: row nowrap;
@@ -60,6 +64,30 @@ $section-padding: 1rem 0.5rem;
 			top: 1px;
 			margin: 0 0 0 -10px;
 		}
+	}
+}
+
+.background-layer {
+	position: absolute;
+	height: 130vh;
+	width: 130vw;
+	top: 0px;
+	z-index: -1;
+}
+
+.background-svg {
+	position: absolute;
+	&.beach {
+		z-index: -1;
+		transform: scale(2.9, 1.6) rotate(3deg);
+		top: -18px;
+		left: -386px;
+	}
+	&.ocean {
+		z-index: -5;
+		top: 240px;
+		transform: scale(3.5, 2.7) rotate(10deg);
+		left: -60px;
 	}
 }
 
