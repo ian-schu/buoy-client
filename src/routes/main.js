@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function */
 import { Component } from 'preact';
 
 export default class Main extends Component {
