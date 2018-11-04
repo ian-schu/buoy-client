@@ -2,6 +2,7 @@ import { Component } from 'preact';
 
 export default class ValueFilters extends Component {
 	setFilter = ev => {
+		ev.target.blur();
 		let valueName = ev.target.dataset.name;
 		let newValue = !this.props.filters[valueName];
 		this.props.setFilter(valueName, newValue);
