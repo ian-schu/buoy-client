@@ -13,6 +13,7 @@ import Places from '../routes/places';
 import Location from '../routes/location';
 import Results from '../routes/results';
 import allRecords from '../../data/enriched/loadableDB';
+import { geocode } from '../apis/geocode';
 
 export default class App extends Component {
 	state = {
@@ -114,11 +115,19 @@ export default class App extends Component {
 			});
 		},
 		setLocationFromNavigator: positionObj => {
+			// Receive basic coordinates
 			let manifest = {
 				lat: positionObj.coords.latitude,
 				lng: positionObj.coords.longitude
 			};
-			this.locationHandlers.changeLocation(manifest);
+
+			// Lookup location details from coords
+			geocode('latlng', `${manifest.lat},${manifest.lng}`).then(
+				locationManifest => {
+					console.log(locationManifest);
+					this.locationHandlers.changeLocation(locationManifest);
+				},
+			);
 		},
 		setLocationLoading: () => {
 			this.setState({
@@ -158,7 +167,7 @@ export default class App extends Component {
 			Object.values(this.state.filters).includes(true),
 			this.state.placeType
 		].every(el => !!el);
-	}
+	};
 
 	constructor() {
 		super();
@@ -211,7 +220,8 @@ export default class App extends Component {
 				</Router>
 				<div class="footer">
 					<div class="footer__text">
-					&copy; Buoy Navigation 2018. Built by Ian and Robert in Austin, Texas.
+						&copy; Buoy Navigation 2018. Built by Ian and Robert in Austin,
+						Texas.
 					</div>
 				</div>
 			</div>

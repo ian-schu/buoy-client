@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-export const geocode = inputAddress => {
-	console.log(`Requesting payload for '${inputAddress}'`);
+export const geocode = (type, inputString) => {
+	console.log(`Requesting payload for '${inputString}'`);
 	const promise = axios.get(
 		'https://maps.googleapis.com/maps/api/geocode/json',
 		{
 			params: {
 				key: 'AIzaSyDeFmj7tW3bSDYKe9ojsvQTN1j1mQM3L74',
-				address: inputAddress
+				[type]: inputString
 			}
 		},
 	);

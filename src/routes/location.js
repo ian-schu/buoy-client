@@ -44,7 +44,7 @@ export default class Location extends Component {
 		this.setState({
 			isLoading: true
 		});
-		geocode(this.state.enteredZip)
+		geocode('address', this.state.enteredZip)
 			.then(locationManifest => {
 				console.log(locationManifest);
 				this.props.locationHandlers.changeLocation(locationManifest);
