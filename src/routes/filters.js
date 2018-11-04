@@ -62,7 +62,7 @@ export default class ValueFilters extends Component {
 				{modal ? (
 					<div id="cta">
 						<a href="/results" class="button has-text-weight-bold is-size-4 is-danger">
-							Apply
+							Save
 						</a>
 					</div>
 				) : (
