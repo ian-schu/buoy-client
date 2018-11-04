@@ -162,24 +162,6 @@ export default class App extends Component {
 		);
 	}
 
-	// componentDidUpdate() {
-	// 	// Check if no results yet - wait for all selections
-	// 	if (!this.state.results.data.length) {
-	// 		let conditions = [
-	// 			this.state.location.data.lat,
-	// 			Object.values(this.state.filters).includes(true),
-	// 			this.state.placeType
-	// 		];
-
-	// 		if (conditions.every(el => !!el == true)) {
-	// 			this.getFullSearchResults();
-	// 		}
-	// 	}
-	// 	else if (this.state.searchPrefsChanged) {
-	// 		this.getFullSearchResults();
-	// 	}
-	// }
-
 	render({}, { location, filters, placeType, results }) {
 		return (
 			<div id="app">
@@ -221,6 +203,11 @@ export default class App extends Component {
 						searchPrefsChanged={this.state.searchPrefsChanged}
 					/>
 				</Router>
+				<div class="footer">
+					<div class="footer__text">
+					&copy; Buoy Navigation 2018. Built by Ian and Robert in Austin, Texas.
+					</div>
+				</div>
 			</div>
 		);
 	}

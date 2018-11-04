@@ -45,7 +45,11 @@ $section-padding: 1rem 0.5rem;
 }
 
 #app {
-	overflow: visible;
+  overflow: visible;
+  min-height: 100vh;
+  position: absolute;
+  padding-bottom: 4rem;
+  width: 100vw;
 }
 
 #cta {
@@ -114,6 +118,34 @@ $section-padding: 1rem 0.5rem;
 		flex-flow: column nowrap;
 		justify-content: center;
 		align-items: flex-start;
+	}
+}
+
+.about {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: flex-start;
+
+	&__logo {
+		width: 23%;
+		margin-top: 2.5rem;
+		max-width: 200px;
+		transform: rotate(15deg);
+	}
+
+	&__group {
+		margin: 3rem 0 0 0;
+		padding: 0 2rem;
+		@extend .has-text-brown ;
+
+		&__title {
+			@extend .title , .has-text-brown ;
+		}
+
+		&__p {
+			@extend .is-size-6 ;
+		}
 	}
 }
 
@@ -285,6 +317,18 @@ $color-map: (
 	align-items: center;
 	font-size: 5rem;
 	min-height: 200px;
+}
+
+.footer {
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+	&__text {
+		@extend .is-size-7, .has-text-red ;
+	}
 }
 
 // Begin Desktop styles

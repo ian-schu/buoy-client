@@ -12,7 +12,7 @@ export default class Header extends Component {
 	render({}, { expanded }) {
 		return (
 			<nav
-				class="navbar is-fixed-top is-transparent"
+				class="navbar is-transparent"
 				role="navigation"
 				aria-label="main navigation"
 			>
