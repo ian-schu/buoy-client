@@ -1,6 +1,6 @@
 /* eslint-disable arrow-body-style */
 import { h, Component } from 'preact';
-import { Router, route } from 'preact-router';
+import { Router } from 'preact-router';
 import 'preact/debug';
 import { Haversine } from 'haversine-position';
 import convert from 'convert-units';
@@ -38,7 +38,8 @@ export default class App extends Component {
 		results: {
 			data: [],
 			loading: false
-		}
+		},
+		searchPrefsChanged: false
 	};
 
 	reduceFilters = filtersHash =>
@@ -89,7 +90,8 @@ export default class App extends Component {
 			results: {
 				data: orderedByDistance,
 				loading: false
-			}
+			},
+			searchPrefsChanged: false
 		});
 	}
 
@@ -106,7 +108,8 @@ export default class App extends Component {
 						country: locationManifest.country || null
 					},
 					loading: false
-				}
+				},
+				searchPrefsChanged: true
 			});
 		},
 		setLocationFromNavigator: positionObj => {
@@ -116,24 +119,13 @@ export default class App extends Component {
 			};
 			this.locationHandlers.changeLocation(manifest);
 		},
-		setLocationFromGeocode: positionObj => {
-			this.setState({
-				location: {
-					data: {
-						lat: positionObj.lat,
-						lng: positionObj.lng
-					},
-					loading: false
-				}
-			});
-			route('/values', true);
-		},
 		setLocationLoading: () => {
 			this.setState({
 				location: {
 					data: this.state.location.data,
 					loading: true
-				}
+				},
+				searchPrefsChanged: true
 			});
 		}
 	};
@@ -143,12 +135,16 @@ export default class App extends Component {
 			filters: {
 				...this.state.filters,
 				[filterName]: value
-			}
+			},
+			searchPrefsChanged: true
 		});
 	};
 
 	setPlaceType = value => {
-		this.setState({ placeType: value });
+		this.setState({
+			placeType: value,
+			searchPrefsChanged: true
+		});
 	};
 
 	handleRoute = e => {
@@ -164,6 +160,24 @@ export default class App extends Component {
 			this,
 		);
 	}
+
+	// componentDidUpdate() {
+	// 	// Check if no results yet - wait for all selections
+	// 	if (!this.state.results.data.length) {
+	// 		let conditions = [
+	// 			this.state.location.data.lat,
+	// 			Object.values(this.state.filters).includes(true),
+	// 			this.state.placeType
+	// 		];
+
+	// 		if (conditions.every(el => !!el == true)) {
+	// 			this.getFullSearchResults();
+	// 		}
+	// 	}
+	// 	else if (this.state.searchPrefsChanged) {
+	// 		this.getFullSearchResults();
+	// 	}
+	// }
 
 	render({}, { location, filters, placeType, results }) {
 		return (
@@ -202,6 +216,7 @@ export default class App extends Component {
 						setFilter={this.setFilter}
 						setPlaceType={this.setPlaceType}
 						getResults={this.getFullSearchResults}
+						searchPrefsChanged={this.state.searchPrefsChanged}
 					/>
 				</Router>
 			</div>

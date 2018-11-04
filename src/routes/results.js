@@ -23,10 +23,27 @@ export default class Results extends Component {
 	};
 
 	componentDidMount() {
-		this.props.getResults();
+		// Check if no results yet - wait for all selections
+		if (!this.props.results.data.length) {
+			const conditions = [
+				!!this.props.location.data.lat,
+				Object.values(this.props.filters).includes(true),
+				!!this.props.placeType
+			];
+
+			if (conditions.every(el => el == true)) {
+				this.props.getResults();
+			}
+		}
+		else if (this.props.searchPrefsChanged) {
+			this.props.getResults();
+		}
 	}
 
-	render = ({ location, filters, placeType, results }, { showModal, modalType }) => (
+	render = (
+		{ location, filters, placeType, results },
+		{ showModal, modalType },
+	) => (
 		<section class="section">
 			<div class="filters-bar">
 				{placeType && (
@@ -37,7 +54,11 @@ export default class Results extends Component {
 				{filters && (
 					<a href="/values" class="filters-pill box">
 						{Object.entries(filters).map(filter => (
-							<ValueIcon name={filter[0]} inactive={!filter[1]} className="filters-pill__icon" />
+							<ValueIcon
+								name={filter[0]}
+								inactive={!filter[1]}
+								className="filters-pill__icon"
+							/>
 						))}
 					</a>
 				)}
