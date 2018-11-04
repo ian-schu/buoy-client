@@ -152,7 +152,13 @@ export default class App extends Component {
 		this.currentUrl = e.url;
 	};
 
-	hasResults = () => this.state.results.data.length > 0;
+	selectionsComplete = () => {
+		return [
+			this.state.location.data.lat,
+			Object.values(this.state.filters).includes(true),
+			this.state.placeType
+		].every(el => !!el);
+	}
 
 	constructor() {
 		super();
@@ -175,19 +181,19 @@ export default class App extends Component {
 					/>
 					<ValueFilters
 						path="/values"
-						modal={this.hasResults()}
+						modal={this.selectionsComplete()}
 						filters={filters}
 						setFilter={this.setFilter}
 					/>
 					<Places
 						path="/places"
-						modal={this.hasResults()}
+						modal={this.selectionsComplete()}
 						placeType={placeType}
 						setPlaceType={this.setPlaceType}
 					/>
 					<Location
 						path="/location"
-						modal={this.hasResults()}
+						modal={this.selectionsComplete()}
 						location={location}
 						locationHandlers={this.locationHandlers}
 					/>

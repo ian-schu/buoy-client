@@ -14,7 +14,7 @@ export default class ValueFilters extends Component {
 				<div class="hero-body">
 					<div class="container">
 						<h1 class="title has-text-brown">Values</h1>
-						{!modal && <h2 class="subtitle has-text-brown">Select as many as you like.</h2>}
+						<h2 class="subtitle has-text-brown">Select as many as you like.</h2>
 					</div>
 					<div class="filters">
 						<button
