@@ -201,10 +201,11 @@ $color-map: (
 		justify-content: center;
 	}
 	&__arrow {
-		@extend .is-size-3;
+		color: $red;
+		@extend .is-size-1;
 	}
 	&__arrow:hover {
-		color: $purple;
+		color: $teal;
 		cursor: pointer;
 	}
 }
