@@ -254,6 +254,10 @@ $color-map: (
 			&:hover {
 				background-color: rgba($color, 0.25);
 			}
+
+			&.is-selected:hover {
+				background-color: darken($color, 15);
+			}
 		}
 	}
 }
