@@ -16,8 +16,6 @@ import Error from '../routes/error';
 import allRecords from '../../data/enriched/loadableDB';
 import { geocode } from '../apis/geocode';
 
-import Helmet from 'preact-helmet';
-
 export default class App extends Component {
 	state = {
 		allRecords,
@@ -183,12 +181,6 @@ export default class App extends Component {
 	render({}, { location, filters, placeType, results }) {
 		return (
 			<div id="app">
-				<Helmet
-					script={[
-						{ src: 'http://localhost:8097', type: 'text/javascript' }
-					]}
-				/>
-
 				<Header />
 				<BackgroundLayer />
 				<Router onChange={this.handleRoute}>
