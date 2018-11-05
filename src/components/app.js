@@ -4,7 +4,7 @@ import { Router, route } from 'preact-router';
 import 'preact/debug';
 import { Haversine } from 'haversine-position';
 import convert from 'convert-units';
-import { get, set } from 'idb-keyval';
+import { get, set } from 'idb-keyval/dist/idb-keyval-cjs';
 
 import Header from '../components/header';
 import BackgroundLayer from '../components/backgroundLayer';
