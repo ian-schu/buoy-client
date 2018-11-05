@@ -12,8 +12,11 @@ import ValueFilters from '../routes/filters';
 import Places from '../routes/places';
 import Location from '../routes/location';
 import Results from '../routes/results';
+import Error from '../routes/error';
 import allRecords from '../../data/enriched/loadableDB';
 import { geocode } from '../apis/geocode';
+
+import Helmet from 'preact-helmet';
 
 export default class App extends Component {
 	state = {
@@ -180,6 +183,12 @@ export default class App extends Component {
 	render({}, { location, filters, placeType, results }) {
 		return (
 			<div id="app">
+				<Helmet
+					script={[
+						{ src: 'http://localhost:8097', type: 'text/javascript' }
+					]}
+				/>
+
 				<Header />
 				<BackgroundLayer />
 				<Router onChange={this.handleRoute}>
@@ -217,6 +226,7 @@ export default class App extends Component {
 						getResults={this.getFullSearchResults}
 						searchPrefsChanged={this.state.searchPrefsChanged}
 					/>
+					<Error type="404" default />
 				</Router>
 				<div class="footer">
 					<div class="footer__text">

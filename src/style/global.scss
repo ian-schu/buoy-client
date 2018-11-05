@@ -121,6 +121,16 @@ $section-padding: 1rem 0.5rem;
 	}
 }
 
+.error {
+	text-align: center;
+
+	.logo {
+		height: 13vh;
+		transform: rotate(15deg);
+		margin: 1rem 0 1.5rem;
+	}
+}
+
 .about {
 	display: flex;
 	flex-flow: column nowrap;
