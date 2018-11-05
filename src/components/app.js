@@ -4,6 +4,7 @@ import { Router, route } from 'preact-router';
 import 'preact/debug';
 import { Haversine } from 'haversine-position';
 import convert from 'convert-units';
+import { get, set } from 'idb-keyval';
 
 import Header from '../components/header';
 import BackgroundLayer from '../components/backgroundLayer';
@@ -90,6 +91,12 @@ export default class App extends Component {
 			return a.distanceTo - b.distanceTo;
 		});
 
+		console.log(
+			`Finished working up results and we have ${
+				orderedByDistance.length
+			} of them`,
+		);
+
 		this.setState({
 			results: {
 				data: orderedByDistance,
@@ -97,6 +104,8 @@ export default class App extends Component {
 			},
 			searchPrefsChanged: false
 		});
+
+		console.log(`We just set State with new results!`);
 	}
 
 	locationHandlers = {
@@ -116,6 +125,10 @@ export default class App extends Component {
 				searchPrefsChanged: true,
 				configComplete: true
 			});
+			set('buoy_location_data', this.state.location.data)
+				.then(() => console.log('Location data saved locally'))
+				.catch(err => console.log('Setting location data failed', err));
+
 			route('/results', true);
 		},
 		setLocationFromNavigator: positionObj => {
@@ -152,6 +165,10 @@ export default class App extends Component {
 			},
 			searchPrefsChanged: true
 		});
+
+		set('buoy_filters', this.state.filters)
+			.then(() => console.log('Filter data saved locally'))
+			.catch(err => console.log('Setting filter data failed', err));
 	};
 
 	setPlaceType = value => {
@@ -159,6 +176,10 @@ export default class App extends Component {
 			placeType: value,
 			searchPrefsChanged: true
 		});
+
+		set('buoy_placeType', this.state.placeType)
+			.then(() => console.log('Place type saved locally'))
+			.catch(err => console.log('Setting place type failed', err));
 	};
 
 	handleRoute = e => {
@@ -171,6 +192,55 @@ export default class App extends Component {
 		this.locationHandlers.changeLocation = this.locationHandlers.changeLocation.bind(
 			this,
 		);
+	}
+
+	componentDidMount() {
+		let loadLocation = get('buoy_location_data')
+			.then(locationData => {
+				if (Object.values(locationData)) {
+					this.setState({
+						location: {
+							data: locationData,
+							loading: false
+						}
+					});
+				}
+			})
+			.catch(err => console.log('Error loading location data', err));
+
+		let loadFilters = get('buoy_filters')
+			.then(filters => {
+				if (Object.values(filters).length) {
+					this.setState({
+						filters
+					});
+				}
+			})
+			.catch(err => console.log('Error loading filter data', err));
+
+		let loadPlaceType = get('buoy_placeType')
+			.then(placeType => {
+				if (placeType) {
+					this.setState({
+						placeType
+					});
+				}
+			})
+			.catch(err => console.log('Error loading placeType data', err));
+
+		Promise.all([loadLocation, loadFilters, loadPlaceType]).then(() => {
+			let conditions = [
+				!!this.state.placeType,
+				Object.values(this.state.filters).includes(true),
+				!!this.state.location.data.lat,
+				!!this.state.location.data.lng
+			];
+			if (conditions.every(el => el == true)) {
+				this.setState({ configComplete: true });
+				this.getFullSearchResults;
+				route('/results', true);
+			}
+		});
 	}
 
 	render({}, { location, filters, placeType, results }) {

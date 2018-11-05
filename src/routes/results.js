@@ -28,6 +28,12 @@ export default class Results extends Component {
 		}
 	}
 
+	componentDidUpdate() {
+		if (this.props.configComplete && this.props.results.data.length == 0) {
+			this.props.getResults();
+		}
+	}
+
 	render = (
 		{ location, filters, placeType, results },
 		{ showModal, modalType },
