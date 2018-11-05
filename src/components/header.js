@@ -35,19 +35,19 @@ export default class Header extends Component {
 				</div>
 				<div class={`navbar-menu ${expanded && 'is-active'}`}>
 					<div class="navbar-end">
-						<a href="/" class="navbar-item">
+						<a onClick={this.toggle} href="/" class="navbar-item">
 							Home
 						</a>
-						<a href="/location" class="navbar-item">
+						<a onClick={this.toggle} href="/location" class="navbar-item">
 							Change Location
 						</a>
-						<a href="/about" class="navbar-item">
+						<a onClick={this.toggle} href="/about" class="navbar-item">
 							About Buoy
 						</a>
-						<a href="/sponsor" class="navbar-item">
+						<a onClick={this.toggle} href="/sponsor" class="navbar-item">
 							Sponsorships
 						</a>
-						<a href="/contact" class="navbar-item">
+						<a onClick={this.toggle} href="/contact" class="navbar-item">
 							Contact
 						</a>
 					</div>
