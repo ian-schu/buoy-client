@@ -193,6 +193,7 @@ $section-padding: 1rem 0.5rem;
 	@extend .is-rounded;
 
 	i {
+		pointer-events: none;
 		font-size: 1.6rem;
 		margin-right: 0.3rem;
 		position: relative;
