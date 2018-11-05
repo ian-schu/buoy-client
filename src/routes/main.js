@@ -47,7 +47,7 @@ export default class Main extends Component {
 				</div>
 			</div>
 			<div class="about">
-				<img src="../assets/artwork/logo-red.png" class="about__logo" />
+				<img src="../assets/artwork/logo-red.svg" alt="Buoy logo" class="about__logo" />
 				<div class="about__group">
 					<h1 class="about__group__title">What is Buoy?</h1>
 					<p class="about__group__p">

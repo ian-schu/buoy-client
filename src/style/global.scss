@@ -334,6 +334,7 @@ $color-map: (
 }
 
 .footer {
+	background-color: $land;
   padding: 1rem;
   position: absolute;
   bottom: 0;
@@ -341,7 +342,10 @@ $color-map: (
   right: 0;
 
 	&__text {
-		@extend .is-size-7, .has-text-red ;
+		text-align: center;
+		@extend .is-size-7;
+		font-weight: bold;
+		color: $brown;
 	}
 }
 

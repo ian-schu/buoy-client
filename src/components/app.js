@@ -290,7 +290,7 @@ export default class App extends Component {
 				</Router>
 				<div class="footer">
 					<div class="footer__text">
-						&copy; Buoy Navigation 2018. Built by Ian and Robert in Austin,
+						&copy; Buoy Navigation 2018.<br />Built by Ian and Robert in Austin,
 						Texas.
 					</div>
 				</div>
