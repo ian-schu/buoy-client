@@ -1,6 +1,15 @@
 import { Component } from 'preact';
 
 export default class ValueFilters extends Component {
+	state = {
+		loading: false
+	};
+
+	beginSearch = () => {
+		this.setState({ loading: true });
+		this.props.getResults();
+	};
+
 	setFilter = ev => {
 		ev.target.blur();
 		let valueName = ev.target.dataset.name;
@@ -61,16 +70,27 @@ export default class ValueFilters extends Component {
 				</div>
 				{modal ? (
 					<div id="cta">
-						<a href="/results" class="button has-text-weight-bold is-size-4 is-danger">
+						<a
+							href="/results"
+							class={`button has-text-weight-bold is-size-4 is-danger${
+								this.state.loading ? 'is-loading' : ''
+							}`}
+						>
 							Save
 						</a>
 					</div>
 				) : (
 					<div id="cta">
-						<a href="/" class="button has-text-weight-bold is-size-4 is-danger is-outlined">
+						<a
+							href="/"
+							class="button has-text-weight-bold is-size-4 is-danger is-outlined"
+						>
 							Back
 						</a>
-						<a href="/places" class="button has-text-weight-bold is-size-4 is-danger">
+						<a
+							href="/places"
+							class="button has-text-weight-bold is-size-4 is-danger"
+						>
 							Next
 						</a>
 					</div>

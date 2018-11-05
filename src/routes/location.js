@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import { Component } from 'preact';
-import { route } from 'preact-router';
 import { geocode } from '../apis/geocode';
 import classnames from 'classnames';
 
@@ -48,8 +47,6 @@ export default class Location extends Component {
 			.then(locationManifest => {
 				console.log(locationManifest);
 				this.props.locationHandlers.changeLocation(locationManifest);
-
-				route('/results', true);
 			})
 			.catch(err => {
 				console.log("Oh, that didn't work ...");
@@ -67,7 +64,6 @@ export default class Location extends Component {
 			.then(result => {
 				console.log(JSON.stringify(result.coords));
 				this.props.locationHandlers.setLocationFromNavigator(result);
-				route('/results', true);
 			})
 			.catch(err => {
 				console.log(err);

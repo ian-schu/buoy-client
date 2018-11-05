@@ -1,6 +1,6 @@
 /* eslint-disable arrow-body-style */
 import { h, Component } from 'preact';
-import { Router } from 'preact-router';
+import { Router, route } from 'preact-router';
 import 'preact/debug';
 import { Haversine } from 'haversine-position';
 import convert from 'convert-units';
@@ -42,7 +42,8 @@ export default class App extends Component {
 			data: [],
 			loading: false
 		},
-		searchPrefsChanged: false
+		searchPrefsChanged: false,
+		configComplete: false
 	};
 
 	reduceFilters = filtersHash =>
@@ -112,8 +113,10 @@ export default class App extends Component {
 					},
 					loading: false
 				},
-				searchPrefsChanged: true
+				searchPrefsChanged: true,
+				configComplete: true
 			});
+			route('/results', true);
 		},
 		setLocationFromNavigator: positionObj => {
 			// Receive basic coordinates
@@ -162,14 +165,6 @@ export default class App extends Component {
 		this.currentUrl = e.url;
 	};
 
-	selectionsComplete = () => {
-		return [
-			this.state.location.data.lat,
-			Object.values(this.state.filters).includes(true),
-			this.state.placeType
-		].every(el => !!el);
-	};
-
 	constructor() {
 		super();
 		this.getFullSearchResults = this.getFullSearchResults.bind(this);
@@ -191,23 +186,26 @@ export default class App extends Component {
 					/>
 					<ValueFilters
 						path="/values"
-						modal={this.selectionsComplete()}
+						modal={this.state.configComplete}
 						filters={filters}
 						setFilter={this.setFilter}
+						getResults={this.getFullSearchResults}
 					/>
 					<Places
 						path="/places"
-						modal={this.selectionsComplete()}
+						modal={this.state.configComplete}
 						placeType={placeType}
 						setPlaceType={this.setPlaceType}
+						getResults={this.getFullSearchResults}
 					/>
 					<Location
 						path="/location"
-						modal={this.selectionsComplete()}
+						modal={this.state.configComplete}
 						location={location}
 						locationHandlers={this.locationHandlers}
 					/>
 					<Results
+						configComplete={this.state.configComplete}
 						path="/results"
 						location={location}
 						filters={filters}

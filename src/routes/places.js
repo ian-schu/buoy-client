@@ -1,6 +1,15 @@
 import { Component } from 'preact';
 
 export default class Places extends Component {
+	state = {
+		loading: false
+	};
+
+	beginSearch = () => {
+		this.setState({ loading: true });
+		this.props.getResults();
+	};
+
 	setPlaceType = ev => {
 		const value = ev.target.dataset.name;
 		if (value) {
@@ -14,7 +23,11 @@ export default class Places extends Component {
 				<div class="hero-body">
 					<div class="container">
 						<h1 class="title has-text-brown">Places</h1>
-						{!modal && <h2 class="subtitle has-text-brown">Change your choice any time.</h2>}
+						{!modal && (
+							<h2 class="subtitle has-text-brown">
+								Change your choice any time.
+							</h2>
+						)}
 					</div>
 					<div class="places">
 						<button
@@ -45,16 +58,27 @@ export default class Places extends Component {
 				</div>
 				{modal ? (
 					<div id="cta">
-						<a href="/results" class="button has-text-weight-bold is-size-4 is-danger">
+						<a
+							href="/results"
+							class={`button has-text-weight-bold is-size-4 is-danger${
+								this.state.loading ? 'is-loading' : ''
+							}`}
+						>
 							Save
 						</a>
 					</div>
 				) : (
 					<div id="cta">
-						<a href="/values" class="button has-text-weight-bold is-size-4 is-danger is-outlined">
+						<a
+							href="/values"
+							class="button has-text-weight-bold is-size-4 is-danger is-outlined"
+						>
 							Back
 						</a>
-						<a href="/location" class="button has-text-weight-bold is-size-4 is-danger">
+						<a
+							href="/location"
+							class="button has-text-weight-bold is-size-4 is-danger"
+						>
 							Next
 						</a>
 					</div>

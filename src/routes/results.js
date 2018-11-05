@@ -22,20 +22,8 @@ export default class Results extends Component {
 		}
 	};
 
-	componentDidMount() {
-		// Check if no results yet - wait for all selections
-		if (!this.props.results.data.length) {
-			const conditions = [
-				!!this.props.location.data.lat,
-				Object.values(this.props.filters).includes(true),
-				!!this.props.placeType
-			];
-
-			if (conditions.every(el => el == true)) {
-				this.props.getResults();
-			}
-		}
-		else if (this.props.searchPrefsChanged) {
+	componentWillMount() {
+		if (this.props.configComplete) {
 			this.props.getResults();
 		}
 	}
