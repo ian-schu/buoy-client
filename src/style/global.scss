@@ -279,7 +279,7 @@ $color-map: (
 		@extend .is-size-1;
 	}
 	&__arrow:hover {
-		color: $teal;
+		color: darken($red, 15);
 		cursor: pointer;
 	}
 }
