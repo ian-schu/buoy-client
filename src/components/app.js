@@ -116,7 +116,12 @@ export default class App extends Component {
 	};
 
 	handleRoute = e => {
-		this.currentUrl = e.url;
+		if (e.router.base === undefined) {
+			route('/', true);
+		}
+		else {
+			this.currentUrl = e.url;
+		}
 	};
 
 	constructor() {
@@ -174,7 +179,7 @@ export default class App extends Component {
 			<div id="app">
 				<Header />
 				<BackgroundLayer />
-				<Router onChange={this.handleRoute}>
+				<Router onChange={this.handleRoute.bind(this)}>
 					<Main
 						path="/"
 						location={location}
