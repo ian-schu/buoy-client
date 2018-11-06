@@ -5,11 +5,6 @@ export default class Places extends Component {
 		loading: false
 	};
 
-	beginSearch = () => {
-		this.setState({ loading: true });
-		this.props.getResults();
-	};
-
 	setPlaceType = ev => {
 		const value = ev.target.dataset.name;
 		if (value) {

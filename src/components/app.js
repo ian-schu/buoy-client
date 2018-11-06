@@ -2,8 +2,6 @@
 import { h, Component } from 'preact';
 import { Router, route } from 'preact-router';
 import 'preact/debug';
-import { Haversine } from 'haversine-position';
-import convert from 'convert-units';
 import { get, set } from 'idb-keyval/dist/idb-keyval-cjs';
 
 import Header from '../components/header';
@@ -39,74 +37,9 @@ export default class App extends Component {
 			womenOwned: false
 		},
 		placeType: 'food',
-		results: {
-			data: [],
-			loading: false
-		},
 		searchPrefsChanged: false,
 		configComplete: false
 	};
-
-	reduceFilters = filtersHash =>
-		Object.entries(filtersHash).reduce((acc, curr) => {
-			if (curr[1]) acc.push(curr[0]);
-			return acc;
-		}, []);
-
-	getFullSearchResults() {
-		this.setState({
-			results: {
-				data: [],
-				loading: true
-			}
-		});
-
-		const filtersArray = this.reduceFilters(this.state.filters);
-		const placeType = this.state.placeType;
-
-		const typeFiltered = this.state.allRecords.filter(record => {
-			return record.type == placeType;
-		});
-
-		const valueFiltered = typeFiltered.filter(record => {
-			return record.values.some(val => filtersArray.includes(val));
-		});
-
-		let coords = {
-			lat: this.state.location.data.lat,
-			lng: this.state.location.data.lng
-		};
-		const origin = new Haversine(coords);
-
-		const distanceAdded = valueFiltered.map(record => {
-			let distanceTo = origin.getDistance(record.location);
-			record.distanceTo = convert(distanceTo)
-				.from('m')
-				.to('mi')
-				.toFixed(1);
-			return record;
-		});
-
-		const orderedByDistance = distanceAdded.sort((a, b) => {
-			return a.distanceTo - b.distanceTo;
-		});
-
-		console.log(
-			`Finished working up results and we have ${
-				orderedByDistance.length
-			} of them`,
-		);
-
-		this.setState({
-			results: {
-				data: orderedByDistance,
-				loading: false
-			},
-			searchPrefsChanged: false
-		});
-
-		console.log(`We just set State with new results!`);
-	}
 
 	locationHandlers = {
 		changeLocation: locationManifest => {
@@ -188,7 +121,6 @@ export default class App extends Component {
 
 	constructor() {
 		super();
-		this.getFullSearchResults = this.getFullSearchResults.bind(this);
 		this.locationHandlers.changeLocation = this.locationHandlers.changeLocation.bind(
 			this,
 		);
@@ -236,8 +168,7 @@ export default class App extends Component {
 				!!this.state.location.data.lng
 			];
 			if (conditions.every(el => el == true)) {
-				this.setState({ configComplete: true });
-				this.getFullSearchResults;
+				this.setState({ configComplete: true, searchPrefsChanged: true });
 				route('/results', true);
 			}
 		});
@@ -259,14 +190,12 @@ export default class App extends Component {
 						modal={this.state.configComplete}
 						filters={filters}
 						setFilter={this.setFilter}
-						getResults={this.getFullSearchResults}
 					/>
 					<Places
 						path="/places"
 						modal={this.state.configComplete}
 						placeType={placeType}
 						setPlaceType={this.setPlaceType}
-						getResults={this.getFullSearchResults}
 					/>
 					<Location
 						path="/location"
@@ -275,15 +204,12 @@ export default class App extends Component {
 						locationHandlers={this.locationHandlers}
 					/>
 					<Results
-						configComplete={this.state.configComplete}
 						path="/results"
+						allRecords={this.state.allRecords}
+						configComplete={this.state.configComplete}
 						location={location}
 						filters={filters}
 						placeType={placeType}
-						results={results}
-						setFilter={this.setFilter}
-						setPlaceType={this.setPlaceType}
-						getResults={this.getFullSearchResults}
 						searchPrefsChanged={this.state.searchPrefsChanged}
 					/>
 					<Error type="404" default />

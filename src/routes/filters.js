@@ -5,11 +5,6 @@ export default class ValueFilters extends Component {
 		loading: false
 	};
 
-	beginSearch = () => {
-		this.setState({ loading: true });
-		this.props.getResults();
-	};
-
 	setFilter = ev => {
 		ev.target.blur();
 		let valueName = ev.target.dataset.name;
