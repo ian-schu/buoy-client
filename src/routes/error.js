@@ -6,7 +6,7 @@ const Error = () => (
 					<h1 class="title has-text-brown">
 						Ugh, sorry <i class="fal fa-flushed" /> something went wrong here.
 					</h1>
-					<img src="../assets/artwork/logo-red.svg" class="logo" />
+					<img src="../../assets/artwork/logo-red.svg" class="logo" />
 					<h2 class="subtitle has-text-brown">
 						This app is still new and we're ironing things out. Technology,
 						right?

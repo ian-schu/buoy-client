@@ -1,19 +1,21 @@
+/* eslint-disable no-console */
 /* eslint-disable arrow-body-style */
 import { h, Component } from 'preact';
 import { Router, route } from 'preact-router';
 import 'preact/debug';
 import { get, set } from 'idb-keyval/dist/idb-keyval-cjs';
+import './style/global';
 
-import Header from '../components/header';
-import BackgroundLayer from '../components/backgroundLayer';
-import Main from '../routes/main';
-import ValueFilters from '../routes/filters';
-import Places from '../routes/places';
-import Location from '../routes/location';
-import Results from '../routes/results';
-import Error from '../routes/error';
-import allRecords from '../../data/enriched/loadableDB';
-import { geocode } from '../apis/geocode';
+import Header from './components/header';
+import BackgroundLayer from './components/backgroundLayer';
+import Main from './routes/main';
+import ValueFilters from './routes/filters';
+import Places from './routes/places';
+import Location from './routes/location';
+import Results from './routes/results';
+import Error from './routes/error';
+import allRecords from '../data/enriched/loadableDB';
+import { geocode } from './apis/geocode';
 
 export default class App extends Component {
 	state = {
