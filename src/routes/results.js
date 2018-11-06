@@ -15,22 +15,19 @@ export default class Results extends Component {
 	};
 
 	reduceFilters(filtersHash) {
-		Object.entries(filtersHash).reduce((acc, curr) => {
-			if (curr[1]) acc.push(curr[0]);
-			return acc;
+		return Object.keys(filtersHash).reduce((filtersArray, currentKey) => {
+			if (filtersHash[currentKey]) {
+				filtersArray.push(currentKey);
+			}
+			return filtersArray;
 		}, []);
 	}
 
 	loadNewResults() {
-		this.setState({
-			loading: true
-		});
-		this.setState({
-			currentResults: this.calculateResults()
-		});
-		this.setState({
-			loading: false
-		});
+		this.setState(prevState => ({ loading: true }));
+		this.setState(prevState => ({ filters: this.props.filters }));
+		this.setState(prevState => ({ currentResults: this.calculateResults() }));
+		this.setState(prevState => ({ loading: false }));
 	}
 
 	configIsComplete(searchPrefsObject) {
@@ -81,6 +78,12 @@ export default class Results extends Component {
 		return orderedByDistance;
 	}
 
+	componentDidMount() {
+		if (this.configIsComplete(this.state)) {
+			this.loadNewResults();
+		}
+	}
+
 	componentWillReceiveProps(nextProps, nextState) {
 		if (this.configIsComplete(nextState)) {
 			console.log('Component updated and search config is complete');
@@ -101,12 +104,6 @@ export default class Results extends Component {
 		}
 	}
 
-	// componentDidMount() {
-	// 	if (this.configIsComplete(this.state)) {
-	// 		this.loadNewResults();
-	// 	}
-	// }
-
 	render = ({}, { loading, currentResults, filters, placeType, location }) => (
 		<section class="section">
 			<div class="filters-bar">
@@ -114,10 +111,10 @@ export default class Results extends Component {
 					<ValueIcon name={placeType} className="placeType-pill__icon" />
 				</a>
 				<a href="/values" class="filters-pill box">
-					{Object.entries(filters).map(filter => (
+					{Object.keys(filters).map(filterKey => (
 						<ValueIcon
-							name={filter[0]}
-							inactive={!filter[1]}
+							name={filterKey}
+							inactive={!filters[filterKey]}
 							className="filters-pill__icon"
 						/>
 					))}

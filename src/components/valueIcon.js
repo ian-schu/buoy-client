@@ -4,7 +4,7 @@ import classnames from 'classnames';
 export default class ValueIcon extends Component {
 	dictionary = {
 		'locally-owned': {
-			propName: 'localOwned',
+			propName: 'locally-owned',
 			color: 'teal',
 			iconClass: 'fas fa-store'
 		},
@@ -14,7 +14,7 @@ export default class ValueIcon extends Component {
 			iconClass: 'fas fa-coins'
 		},
 		'recruits-veterans': {
-			propName: 'recruitsVeterans',
+			propName: 'recruits-veterans',
 			color: 'red',
 			iconClass: 'fas fa-medal'
 		},
@@ -24,27 +24,7 @@ export default class ValueIcon extends Component {
 			iconClass: 'fas fa-globe-americas'
 		},
 		'women-owned': {
-			propName: 'womenOwned',
-			color: 'purple',
-			iconClass: 'fas fa-venus'
-		},
-		localOwned: {
-			propName: 'localOwned',
-			color: 'teal',
-			iconClass: 'fas fa-store'
-		},
-		livingWage: {
-			propName: 'livingWage',
-			color: 'gold',
-			iconClass: 'fas fa-coins'
-		},
-		recruitsVeterans: {
-			propName: 'recruitsVeterans',
-			color: 'red',
-			iconClass: 'fas fa-medal'
-		},
-		womenOwned: {
-			propName: 'womenOwned',
+			propName: 'women-owned',
 			color: 'purple',
 			iconClass: 'fas fa-venus'
 		},
