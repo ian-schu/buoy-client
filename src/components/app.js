@@ -2,8 +2,6 @@
 import { h, Component } from 'preact';
 import { Router, route } from 'preact-router';
 import 'preact/debug';
-import { Haversine } from 'haversine-position';
-import convert from 'convert-units';
 import { get, set } from 'idb-keyval/dist/idb-keyval-cjs';
 
 import Header from '../components/header';
@@ -32,85 +30,20 @@ export default class App extends Component {
 			loading: false
 		},
 		filters: {
-			localOwned: false,
-			livingWage: false,
-			recruitsVeterans: false,
+			'locally-owned': false,
+			'living-wage': false,
+			'recruits-veterans': false,
 			sustainable: false,
-			womenOwned: false
+			'women-owned': false
 		},
 		placeType: 'food',
-		results: {
-			data: [],
-			loading: false
-		},
 		searchPrefsChanged: false,
 		configComplete: false
 	};
 
-	reduceFilters = filtersHash =>
-		Object.entries(filtersHash).reduce((acc, curr) => {
-			if (curr[1]) acc.push(curr[0]);
-			return acc;
-		}, []);
-
-	getFullSearchResults() {
-		this.setState({
-			results: {
-				data: [],
-				loading: true
-			}
-		});
-
-		const filtersArray = this.reduceFilters(this.state.filters);
-		const placeType = this.state.placeType;
-
-		const typeFiltered = this.state.allRecords.filter(record => {
-			return record.type == placeType;
-		});
-
-		const valueFiltered = typeFiltered.filter(record => {
-			return record.values.some(val => filtersArray.includes(val));
-		});
-
-		let coords = {
-			lat: this.state.location.data.lat,
-			lng: this.state.location.data.lng
-		};
-		const origin = new Haversine(coords);
-
-		const distanceAdded = valueFiltered.map(record => {
-			let distanceTo = origin.getDistance(record.location);
-			record.distanceTo = convert(distanceTo)
-				.from('m')
-				.to('mi')
-				.toFixed(1);
-			return record;
-		});
-
-		const orderedByDistance = distanceAdded.sort((a, b) => {
-			return a.distanceTo - b.distanceTo;
-		});
-
-		console.log(
-			`Finished working up results and we have ${
-				orderedByDistance.length
-			} of them`,
-		);
-
-		this.setState({
-			results: {
-				data: orderedByDistance,
-				loading: false
-			},
-			searchPrefsChanged: false
-		});
-
-		console.log(`We just set State with new results!`);
-	}
-
 	locationHandlers = {
 		changeLocation: locationManifest => {
-			this.setState({
+			this.setState(prevState => ({
 				location: {
 					data: {
 						lat: locationManifest.lat,
@@ -124,7 +57,7 @@ export default class App extends Component {
 				},
 				searchPrefsChanged: true,
 				configComplete: true
-			});
+			}));
 			set('buoy_location_data', this.state.location.data)
 				.then(() => console.log('Location data saved locally'))
 				.catch(err => console.log('Setting location data failed', err));
@@ -147,24 +80,24 @@ export default class App extends Component {
 			);
 		},
 		setLocationLoading: () => {
-			this.setState({
+			this.setState(prevState => ({
 				location: {
-					data: this.state.location.data,
+					data: prevState.location.data,
 					loading: true
 				},
 				searchPrefsChanged: true
-			});
+			}));
 		}
 	};
 
 	setFilter = (filterName, value) => {
-		this.setState({
+		this.setState(prevState => ({
 			filters: {
-				...this.state.filters,
+				...prevState.filters,
 				[filterName]: value
 			},
 			searchPrefsChanged: true
-		});
+		}));
 
 		set('buoy_filters', this.state.filters)
 			.then(() => console.log('Filter data saved locally'))
@@ -188,7 +121,6 @@ export default class App extends Component {
 
 	constructor() {
 		super();
-		this.getFullSearchResults = this.getFullSearchResults.bind(this);
 		this.locationHandlers.changeLocation = this.locationHandlers.changeLocation.bind(
 			this,
 		);
@@ -198,12 +130,9 @@ export default class App extends Component {
 		let loadLocation = get('buoy_location_data')
 			.then(locationData => {
 				if (Object.values(locationData)) {
-					this.setState({
-						location: {
-							data: locationData,
-							loading: false
-						}
-					});
+					this.setState(prevState => ({
+						location: { data: locationData, loading: false }
+					}));
 				}
 			})
 			.catch(err => console.log('Error loading location data', err));
@@ -211,9 +140,7 @@ export default class App extends Component {
 		let loadFilters = get('buoy_filters')
 			.then(filters => {
 				if (Object.values(filters).length) {
-					this.setState({
-						filters
-					});
+					this.setState(prevState => ({ filters }));
 				}
 			})
 			.catch(err => console.log('Error loading filter data', err));
@@ -221,9 +148,7 @@ export default class App extends Component {
 		let loadPlaceType = get('buoy_placeType')
 			.then(placeType => {
 				if (placeType) {
-					this.setState({
-						placeType
-					});
+					this.setState(prevState => ({ placeType }));
 				}
 			})
 			.catch(err => console.log('Error loading placeType data', err));
@@ -236,9 +161,10 @@ export default class App extends Component {
 				!!this.state.location.data.lng
 			];
 			if (conditions.every(el => el == true)) {
-				this.setState({ configComplete: true });
-				this.getFullSearchResults;
-				route('/results', true);
+				this.setState(prevState => ({
+					configComplete: true,
+					searchPrefsChanged: true
+				}));
 			}
 		});
 	}
@@ -259,14 +185,12 @@ export default class App extends Component {
 						modal={this.state.configComplete}
 						filters={filters}
 						setFilter={this.setFilter}
-						getResults={this.getFullSearchResults}
 					/>
 					<Places
 						path="/places"
 						modal={this.state.configComplete}
 						placeType={placeType}
 						setPlaceType={this.setPlaceType}
-						getResults={this.getFullSearchResults}
 					/>
 					<Location
 						path="/location"
@@ -275,23 +199,21 @@ export default class App extends Component {
 						locationHandlers={this.locationHandlers}
 					/>
 					<Results
-						configComplete={this.state.configComplete}
 						path="/results"
+						allRecords={this.state.allRecords}
+						configComplete={this.state.configComplete}
 						location={location}
 						filters={filters}
 						placeType={placeType}
-						results={results}
-						setFilter={this.setFilter}
-						setPlaceType={this.setPlaceType}
-						getResults={this.getFullSearchResults}
 						searchPrefsChanged={this.state.searchPrefsChanged}
 					/>
 					<Error type="404" default />
 				</Router>
 				<div class="footer">
 					<div class="footer__text">
-						&copy; Buoy Navigation 2018.<br />Built by Ian and Robert in Austin,
-						Texas.
+						&copy; Buoy Navigation 2018.
+						<br />
+						Built by Ian and Robert in Austin, Texas.
 					</div>
 				</div>
 			</div>
