@@ -8,7 +8,7 @@ const BackgroundLayer = () => (
 	<div>
 		<Match path="/">{
 			({ matches }) => matches &&
-				<div class="background-layer">
+				<div class="background-layer home">
 					<SvgBeach className="background-svg beach" />
 					<SvgOcean className="background-svg ocean" />
 				</div>

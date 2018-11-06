@@ -76,8 +76,9 @@ $section-padding: 1rem 0.5rem;
 
 .background-layer {
 	position: absolute;
-	height: 130vh;
-	width: 130vw;
+	overflow: hidden;
+	min-height: 100vh;
+	width: 100vw;
 	top: 0px;
 	z-index: -1;
 }
@@ -86,15 +87,15 @@ $section-padding: 1rem 0.5rem;
 	position: absolute;
 	&.beach {
 		z-index: -1;
-		transform: scale(2.9, 1.6) rotate(3deg);
-		top: -18px;
-		left: -386px;
+		transform: scale(1.9, 1.3) rotate(-17deg);
+		top: -40px;
+		left: 39px;
 	}
 	&.ocean {
 		z-index: -5;
 		top: 240px;
-		transform: scale(3.5, 2.7) rotate(10deg);
-		left: -60px;
+		transform: scale(4, 3.4) rotate(4deg);
+		left: 350px;
 	}
 }
 
@@ -360,6 +361,22 @@ $color-map: (
 			&.is-selected:hover {
 				background-color: darken($color, 15);
 			}
+		}
+	}
+
+	.background-svg {
+		position: absolute;
+		&.beach {
+			z-index: -1;
+			transform: scale(6.9, 3.3) rotate(-18deg);
+			top: -4%;
+			left: 52%;
+		}
+		&.ocean {
+			z-index: -5;
+			transform: scale(18, 15.4) rotate(1deg);
+			top: 9%;
+			left: 50%;
 		}
 	}
 }
