@@ -1,5 +1,5 @@
 // Import external styles //
-@import url('https://fonts.googleapis.com/css?family=Kanit:500,900|Rubik:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Kanit:900|Rubik:400,700');
 @import url('https://pro.fontawesome.com/releases/v5.4.2/css/all.css');
 
 ///////////////////////
@@ -48,11 +48,11 @@ $section-padding: 1rem 0.5rem;
 }
 
 #app {
-  overflow: visible;
-  min-height: 100vh;
-  position: absolute;
-  padding-bottom: 4rem;
-  width: 100vw;
+	overflow: visible;
+	min-height: 100vh;
+	position: absolute;
+	padding-bottom: 4rem;
+	width: 100vw;
 }
 
 #cta {
@@ -74,27 +74,56 @@ $section-padding: 1rem 0.5rem;
 	}
 }
 
+.cta--vertical {
+	display: flex;
+	flex-flow: column nowrap !important;
+	.button {
+		margin: 0.4rem 0 !important;
+	}
+}
+
 .background-layer {
 	position: absolute;
-	height: 130vh;
-	width: 130vw;
+	overflow: hidden;
+	min-height: 100vh;
+	height: 100%;
+	width: 100vw;
 	top: 0px;
 	z-index: -1;
+	&.home {
+		background: linear-gradient(
+			to bottom,
+			#d5f2ff 30%,
+			#d1e3f9 69%,
+			#d4fafc 100%
+		);
+	}
+	&.results {
+		background: linear-gradient(
+			to bottom,
+			#d5f2ff 30%,
+			#95c1f9 69%,
+			#4093ff 100%
+		);
+	}
+	&.values,&.places,&.location {
+		background: linear-gradient(to bottom, #ffffff 59%,#f5e7db 90%);
+	}
 }
 
 .background-svg {
 	position: absolute;
 	&.beach {
 		z-index: -1;
-		transform: scale(2.9, 1.6) rotate(3deg);
-		top: -18px;
-		left: -386px;
+		transform: scale(1.9, 1.6) rotate(-17deg);
+		top: -1vh;
+		left: 39px;
 	}
 	&.ocean {
 		z-index: -5;
 		top: 240px;
-		transform: scale(3.5, 2.7) rotate(10deg);
-		left: -60px;
+		transform: scale(4, 3.4) rotate(4deg);
+		left: 350px;
 	}
 }
 
@@ -134,13 +163,21 @@ $section-padding: 1rem 0.5rem;
 	}
 }
 
+.logo {
+	display: block;
+	width: 32%;
+	margin: 1rem auto;
+	max-width: 250px;
+	transform: rotate(15deg);
+}
+
 .about {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
 	justify-content: flex-start;
 
-	&__logo {
+	.logo {
 		width: 23%;
 		margin-top: 2.5rem;
 		max-width: 200px;
@@ -150,14 +187,14 @@ $section-padding: 1rem 0.5rem;
 	&__group {
 		margin: 3rem 0 0 0;
 		padding: 0 2rem;
-		@extend .has-text-brown ;
+		@extend .has-text-brown;
 
 		&__title {
-			@extend .title , .has-text-brown ;
+			@extend .title, .has-text-brown;
 		}
 
 		&__p {
-			@extend .is-size-6 ;
+			@extend .is-size-6;
 		}
 	}
 }
@@ -200,6 +237,7 @@ $section-padding: 1rem 0.5rem;
 	margin: 0.5rem 0;
 	height: 3.5rem;
 	border: none;
+	background: transparent;
 	@extend .button;
 	@extend .has-text-weight-bold;
 	@extend .is-size-5;
@@ -279,7 +317,7 @@ $color-map: (
 		@extend .is-size-1;
 	}
 	&__arrow:hover {
-		color: $teal;
+		color: darken($red, 15);
 		cursor: pointer;
 	}
 }
@@ -324,22 +362,39 @@ $color-map: (
 	opacity: 0.3;
 }
 
-.load-container {
+.load-indicator {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: column wrap;
 	justify-content: center;
 	align-items: center;
 	font-size: 5rem;
-	min-height: 200px;
+	min-height: 30vh;
+
+	&__text {
+		font-style: italic;
+		font-weight: 400;
+		text-align: center;
+		font-size: 1.5rem;
+	}
+
+	&__island {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		transform: scale(1.8,1.9) rotate(-2deg);
+		top: 6vh;
+		left: 16vw;
+		z-index: -1;
+	}
 }
 
 .footer {
 	background-color: $land;
-  padding: 1rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+	padding: 1rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 
 	&__text {
 		text-align: center;
@@ -360,6 +415,22 @@ $color-map: (
 			&.is-selected:hover {
 				background-color: darken($color, 15);
 			}
+		}
+	}
+
+	.background-svg {
+		position: absolute;
+		&.beach {
+			z-index: -1;
+			transform: scale(6.9, 3.3) rotate(-18deg);
+			top: -4%;
+			left: 52%;
+		}
+		&.ocean {
+			z-index: -5;
+			transform: scale(18, 15.4) rotate(1deg);
+			top: 9%;
+			left: 50%;
 		}
 	}
 }

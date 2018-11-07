@@ -45,7 +45,7 @@ export default [
 	},
 	{
 		name: '24 Hour Fitness',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.39735459999999,
@@ -328,7 +328,7 @@ export default [
 	},
 	{
 		name: 'Service King Collision Repair South 1st - Austin',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.237492,
@@ -351,7 +351,7 @@ export default [
 	},
 	{
 		name: 'AT&T Store',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.2704988,
@@ -378,7 +378,7 @@ export default [
 	},
 	{
 		name: 'Accenture',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.2609153,
@@ -425,7 +425,7 @@ export default [
 	},
 	{
 		name: 'Bank of America Financial Center',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.267628,
@@ -560,7 +560,7 @@ export default [
 	},
 	{
 		name: '24 Hour Fitness',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.30135210000001,
@@ -638,7 +638,7 @@ export default [
 	},
 	{
 		name: 'Mopac Media',
-		type: 'services',
+		type: 'service',
 		values: ['locally-owned', 'women-owned'],
 		location: {
 			lat: 30.310003,
@@ -795,7 +795,7 @@ export default [
 	},
 	{
 		name: 'Allstate Insurance: Roger Morse',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.207646,
@@ -824,7 +824,7 @@ export default [
 	},
 	{
 		name: '24 Hour Fitness',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.22239899999999,
@@ -1174,7 +1174,7 @@ export default [
 	},
 	{
 		name: 'Austin Carson: Allstate Insurance',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.2432286,
@@ -1386,7 +1386,7 @@ export default [
 	},
 	{
 		name: 'Workplace Resource',
-		type: 'services',
+		type: 'service',
 		values: ['locally-owned', 'women-owned'],
 		location: {
 			lat: 30.2758029,
@@ -1517,7 +1517,7 @@ export default [
 	},
 	{
 		name: 'Service King Collision Repair of Austin',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.2284888,
@@ -1594,7 +1594,7 @@ export default [
 	},
 	{
 		name: 'Service King Collision Repair North Lamar',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.333616,
@@ -1700,7 +1700,7 @@ export default [
 	},
 	{
 		name: 'Service King Collision Repair of South Austin',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.1804582,
@@ -1756,7 +1756,7 @@ export default [
 	},
 	{
 		name: 'Accenture Interactive',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.26570709999999,
@@ -1779,7 +1779,7 @@ export default [
 	},
 	{
 		name: 'Austin City Hall',
-		type: 'services',
+		type: 'service',
 		values: ['locally-owned', 'recruits-veterans', 'living-wage'],
 		location: {
 			lat: 30.264792,
@@ -1807,7 +1807,7 @@ export default [
 	},
 	{
 		name: 'Baer Engineering & Environmental Consulting, Inc.',
-		type: 'services',
+		type: 'service',
 		values: ['women-owned', 'locally-owned'],
 		location: {
 			lat: 30.356728,
@@ -1832,7 +1832,7 @@ export default [
 	},
 	{
 		name: 'Kidd Roofing',
-		type: 'services',
+		type: 'service',
 		values: ['locally-owned', 'women-owned'],
 		location: {
 			lat: 30.335071,
@@ -1917,7 +1917,7 @@ export default [
 	},
 	{
 		name: 'Sherry Matthews Inc',
-		type: 'services',
+		type: 'service',
 		values: ['locally-owned', 'women-owned'],
 		location: {
 			lat: 30.2597436,
@@ -1987,7 +1987,7 @@ export default [
 	},
 	{
 		name: 'Michael Walker: Allstate Insurance',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.3064245,
@@ -2215,7 +2215,7 @@ export default [
 	},
 	{
 		name: 'Ride Austin',
-		type: 'services',
+		type: 'service',
 		values: ['locally-owned'],
 		location: {
 			lat: 30.2714956,
@@ -2235,7 +2235,7 @@ export default [
 	},
 	{
 		name: 'Austin Central Library, Austin Public Library',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans', 'sustainable', 'locally-owned'],
 		location: {
 			lat: 30.2660439,
@@ -2281,7 +2281,7 @@ export default [
 	},
 	{
 		name: 'Homero Escobar: Allstate Insurance',
-		type: 'services',
+		type: 'service',
 		values: ['recruits-veterans'],
 		location: {
 			lat: 30.209944,
@@ -2329,7 +2329,7 @@ export default [
 	},
 	{
 		name: 'T3',
-		type: 'services',
+		type: 'service',
 		values: ['locally-owned', 'women-owned'],
 		location: {
 			lat: 30.28334409999999,

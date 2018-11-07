@@ -1,19 +1,21 @@
+/* eslint-disable no-console */
 /* eslint-disable arrow-body-style */
 import { h, Component } from 'preact';
 import { Router, route } from 'preact-router';
 import 'preact/debug';
 import { get, set } from 'idb-keyval/dist/idb-keyval-cjs';
+import './style/global';
 
-import Header from '../components/header';
-import BackgroundLayer from '../components/backgroundLayer';
-import Main from '../routes/main';
-import ValueFilters from '../routes/filters';
-import Places from '../routes/places';
-import Location from '../routes/location';
-import Results from '../routes/results';
-import Error from '../routes/error';
-import allRecords from '../../data/enriched/loadableDB';
-import { geocode } from '../apis/geocode';
+import Header from './components/header';
+import BackgroundLayer from './components/backgroundLayer';
+import Main from './routes/main';
+import ValueFilters from './routes/filters';
+import Places from './routes/places';
+import Location from './routes/location';
+import Results from './routes/results';
+import Error from './routes/error';
+import allRecords from '../data/enriched/loadableDB';
+import { geocode } from './apis/geocode';
 
 export default class App extends Component {
 	state = {
@@ -90,6 +92,32 @@ export default class App extends Component {
 		}
 	};
 
+	resetPrefs() {
+		this.setState(prevState => ({
+			location: {
+				data: {
+					lat: null,
+					lng: null,
+					county: null,
+					city: null,
+					state: null,
+					country: null
+				},
+				loading: false
+			},
+			filters: {
+				'locally-owned': false,
+				'living-wage': false,
+				'recruits-veterans': false,
+				sustainable: false,
+				'women-owned': false
+			},
+			placeType: 'food',
+			searchPrefsChanged: false,
+			configComplete: false
+		}));
+	}
+
 	setFilter = (filterName, value) => {
 		this.setState(prevState => ({
 			filters: {
@@ -116,7 +144,12 @@ export default class App extends Component {
 	};
 
 	handleRoute = e => {
-		this.currentUrl = e.url;
+		if (e.router.base === undefined) {
+			route('/', true);
+		}
+		else {
+			this.currentUrl = e.url;
+		}
 	};
 
 	constructor() {
@@ -169,16 +202,17 @@ export default class App extends Component {
 		});
 	}
 
-	render({}, { location, filters, placeType, results }) {
+	render({}, { location, filters, placeType, results, configComplete }) {
 		return (
 			<div id="app">
 				<Header />
 				<BackgroundLayer />
-				<Router onChange={this.handleRoute}>
+				<Router onChange={this.handleRoute.bind(this)}>
 					<Main
 						path="/"
 						location={location}
-						locationHandlers={this.locationHandlers}
+						configComplete={configComplete}
+						resetPrefs={this.resetPrefs.bind(this)}
 					/>
 					<ValueFilters
 						path="/values"

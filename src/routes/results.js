@@ -1,6 +1,7 @@
 import { Component } from 'preact';
 import SearchResult from '../components/searchResult';
 import ValueIcon from '../components/valueIcon';
+import SvgIsland from '../components/svg/island';
 
 import { Haversine } from 'haversine-position';
 import convert from 'convert-units';
@@ -23,11 +24,25 @@ export default class Results extends Component {
 		}, []);
 	}
 
-	loadNewResults() {
+	setLoading() {
 		this.setState(prevState => ({ loading: true }));
+	}
+
+	clearLoading() {
+		this.setState(prevState => ({ loading: false }));
+	}
+
+	simulatedLoadingMs() {
+		let value = (400 + Math.random() * 2000).toFixed(0);
+		console.log(`Loading for ${value / 1000} seconds`);
+		return value;
+	}
+
+	loadNewResults() {
+		this.setLoading();
 		this.setState(prevState => ({ filters: this.props.filters }));
 		this.setState(prevState => ({ currentResults: this.calculateResults() }));
-		this.setState(prevState => ({ loading: false }));
+		setTimeout(this.clearLoading.bind(this), this.simulatedLoadingMs());
 	}
 
 	configIsComplete(searchPrefsObject) {
@@ -69,38 +84,36 @@ export default class Results extends Component {
 			(a, b) => a.distanceTo - b.distanceTo,
 		);
 
-		console.log(
-			`Finished working up results and we have ${
-				orderedByDistance.length
-			} of them`,
-		);
-
 		return orderedByDistance;
 	}
+
+	loadingIndicator = () => {
+		const randomPick = Math.floor(Math.random() * 3);
+
+		const iconName = [
+			'far fa-compass',
+			'far fa-crosshairs',
+			'far fa-life-ring'
+		][randomPick];
+
+		const loadMessage = [
+			'Locating all the right places ...',
+			'Finding you what you want ...',
+			'Navigating to safe waters ...'
+		][randomPick];
+
+		return (
+			<div class="load-indicator has-text-red">
+				<SvgIsland className="load-indicator__island" />
+				<i class={`${iconName} fa-spin`} />
+				<div class="load-indicator__text">{loadMessage}</div>
+			</div>
+		);
+	};
 
 	componentDidMount() {
 		if (this.configIsComplete(this.state)) {
 			this.loadNewResults();
-		}
-	}
-
-	componentWillReceiveProps(nextProps, nextState) {
-		if (this.configIsComplete(nextState)) {
-			console.log('Component updated and search config is complete');
-		}
-
-		const changed = [
-			this.state.placeType == nextProps.placeType,
-			this.state.location.lat == nextProps.location.lat,
-			this.state.location.lng == nextProps.location.lng,
-			Object.keys(this.state.filters).every(
-				filterName =>
-					this.state.filters[filterName] == nextProps.filters[filterName],
-			)
-		].some(el => el == false);
-
-		if (changed) {
-			console.log('It appears user prefs have changed');
 		}
 	}
 
@@ -123,9 +136,7 @@ export default class Results extends Component {
 			<div id="landing" class="hero is-medium is-marginless">
 				<div class="hero-body">
 					{loading ? (
-						<div class="load-container has-text-purple">
-							<i class="fas fa-spinner fa-pulse" />
-						</div>
+						this.loadingIndicator()
 					) : (
 						<div class="results">
 							{currentResults && currentResults.length
