@@ -2,6 +2,7 @@
 import { Component } from 'preact';
 import { geocode } from '../apis/geocode';
 import classnames from 'classnames';
+import SvgIsland from '../components/svg/island';
 
 export default class Location extends Component {
 	state = {
@@ -70,7 +71,10 @@ export default class Location extends Component {
 			});
 	};
 
-	render = ({ location }, { enteredZip, zipIsValid, settingZip, isLoading }) => {
+	render = (
+		{ location },
+		{ enteredZip, zipIsValid, settingZip, isLoading },
+	) => {
 		const findMeClass = classnames(
 			'button has-text-weight-bold is-size-4 is-danger',
 			{
@@ -93,8 +97,18 @@ export default class Location extends Component {
 							<h1 class="title has-text-brown">Location</h1>
 							<h2 class="subtitle has-text-brown">Where ya at, sailor?</h2>
 						</div>
-						<div class="location">
-							<span>Filler here!</span>
+						<div class="location-hero">
+							<img class="location-hero__logo" src="./assets/logo-red.svg" />
+							{/* <SvgIsland className="location-hero__island" /> */}
+							<SvgIsland className="location-hero__water" fill="#d5f2ff" />
+							{location.data.lat ? (
+								<div class="location-hero__text">
+									<div>Last known position:</div>
+									<div>Lat: {location.data.lat.toFixed(1)}</div>
+									<div>Long: {location.data.lng.toFixed(1)}</div>
+									<div>City: {location.data.city}</div>
+								</div>
+							) : null}
 						</div>
 					</div>
 					{settingZip ? (

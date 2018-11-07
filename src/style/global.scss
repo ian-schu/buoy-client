@@ -82,6 +82,10 @@ $section-padding: 1rem 0.5rem;
 	}
 }
 
+.section {
+	padding-top: 0;
+}
+
 .background-layer {
 	position: absolute;
 	overflow: hidden;
@@ -89,7 +93,7 @@ $section-padding: 1rem 0.5rem;
 	height: 100%;
 	width: 100vw;
 	top: 0px;
-	z-index: -1;
+	z-index: -3;
 	&.home {
 		background: linear-gradient(
 			to bottom,
@@ -106,8 +110,10 @@ $section-padding: 1rem 0.5rem;
 			#4093ff 100%
 		);
 	}
-	&.values,&.places,&.location {
-		background: linear-gradient(to bottom, #ffffff 59%,#f5e7db 90%);
+	&.values,
+	&.places,
+	&.location {
+		background: linear-gradient(to bottom, #ffffff 59%, #f5e7db 90%);
 	}
 }
 
@@ -143,13 +149,61 @@ $section-padding: 1rem 0.5rem;
 	}
 
 	.filters,
-	.places,
-	.location {
-		min-height: 50vh;
+	.places {
+		min-height: 45vh;
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
 		align-items: flex-start;
+	}
+}
+
+.location-hero {
+	min-height: 55vh;
+
+	&__island {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		transform: scale(1.6, 1.8) rotate(1deg);
+		top: 13vh;
+		left: 15vw;
+		z-index: -1;
+	}
+
+	&__water {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		transform: scale(2, 2.6) rotate(4deg);
+		top: 19vh;
+		left: 19vw;
+		z-index: -2;
+	}
+
+	&__icon {
+		color: $red;
+		font-size: 2.5rem;
+		position: absolute;
+		top: 44%;
+		left: 18%;
+	}
+
+	&__logo {
+		height: 5rem;
+		transform: rotate(15deg);
+		position: absolute;
+		top: 37vh;
+		left: 59vw;
+	}
+
+	&__text {
+		@extend .has-text-brown ;
+		position: absolute;
+		top: 44vh;
+		left: 17vw;
+		transform: rotate(-14deg);
+		display: inline-block;
 	}
 }
 
@@ -233,15 +287,17 @@ $section-padding: 1rem 0.5rem;
 
 .filters__button,
 .places__button {
-	display: block;
-	margin: 0.5rem 0;
-	height: 3.5rem;
-	border: none;
-	background: transparent;
 	@extend .button;
 	@extend .has-text-weight-bold;
 	@extend .is-size-5;
 	@extend .is-rounded;
+
+	display: block;
+	margin: 0.25rem 0;
+	padding: 0.25rem 1rem;
+	height: 3rem;
+	border: none;
+	background: transparent;
 
 	i {
 		pointer-events: none;
@@ -381,9 +437,9 @@ $color-map: (
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		transform: scale(1.8,1.9) rotate(-2deg);
-		top: 6vh;
-		left: 16vw;
+		transform: scale(2.1, 2.5) rotate(-2deg);
+		top: 8vh;
+		left: 21vw;
 		z-index: -1;
 	}
 }

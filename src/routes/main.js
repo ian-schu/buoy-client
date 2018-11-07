@@ -9,7 +9,7 @@ const welcomeTitle = configComplete =>
 
 const welcomeSubTitle = configComplete =>
 	({
-		true: 'Find &amp; support businesses that share your values.',
+		true: 'Find & support businesses that share your values.',
 		false: 'Wanna just jump into your most recent search results?'
 	}[!configComplete]);
 
