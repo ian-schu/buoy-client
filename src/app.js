@@ -92,6 +92,32 @@ export default class App extends Component {
 		}
 	};
 
+	resetPrefs() {
+		this.setState(prevState => ({
+			location: {
+				data: {
+					lat: null,
+					lng: null,
+					county: null,
+					city: null,
+					state: null,
+					country: null
+				},
+				loading: false
+			},
+			filters: {
+				'locally-owned': false,
+				'living-wage': false,
+				'recruits-veterans': false,
+				sustainable: false,
+				'women-owned': false
+			},
+			placeType: 'food',
+			searchPrefsChanged: false,
+			configComplete: false
+		}));
+	}
+
 	setFilter = (filterName, value) => {
 		this.setState(prevState => ({
 			filters: {
@@ -176,7 +202,7 @@ export default class App extends Component {
 		});
 	}
 
-	render({}, { location, filters, placeType, results }) {
+	render({}, { location, filters, placeType, results, configComplete }) {
 		return (
 			<div id="app">
 				<Header />
@@ -185,7 +211,8 @@ export default class App extends Component {
 					<Main
 						path="/"
 						location={location}
-						locationHandlers={this.locationHandlers}
+						configComplete={configComplete}
+						resetPrefs={this.resetPrefs.bind(this)}
 					/>
 					<ValueFilters
 						path="/values"

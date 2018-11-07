@@ -74,6 +74,14 @@ $section-padding: 1rem 0.5rem;
 	}
 }
 
+.cta--vertical {
+	display: flex;
+	flex-flow: column nowrap !important;
+	.button {
+		margin: 0.4rem 0 !important;
+	}
+}
+
 .background-layer {
 	position: absolute;
 	overflow: hidden;
@@ -155,13 +163,21 @@ $section-padding: 1rem 0.5rem;
 	}
 }
 
+.logo {
+	display: block;
+	width: 32%;
+	margin: 1rem auto;
+	max-width: 250px;
+	transform: rotate(15deg);
+}
+
 .about {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
 	justify-content: flex-start;
 
-	&__logo {
+	.logo {
 		width: 23%;
 		margin-top: 2.5rem;
 		max-width: 200px;
