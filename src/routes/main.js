@@ -14,7 +14,7 @@ const welcomeSubTitle = configComplete =>
 	}[!configComplete]);
 
 const buoyLogo = (
-	<img src="../../assets/artwork/logo-red.svg" alt="Buoy logo" class="logo" />
+	<img src="./assets/logo-red.svg" alt="Buoy logo" class="logo" />
 );
 
 const valueCluster = (
