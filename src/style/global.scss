@@ -135,9 +135,19 @@ $section-padding: 1rem 0.5rem;
 
 #landing {
 	padding: 0;
+	min-height: 83vh;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: center;
 
 	.hero-body {
 		padding: 0.5rem 1rem;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 100%
 	}
 
 	.title {
@@ -150,7 +160,6 @@ $section-padding: 1rem 0.5rem;
 
 	.filters,
 	.places {
-		min-height: 45vh;
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
@@ -161,7 +170,7 @@ $section-padding: 1rem 0.5rem;
 .location-hero {
 	min-height: 55vh;
 	display: block;
-	width: 100%;
+  width: 80vw;
 	position: relative;
 
 	&__island {
@@ -197,8 +206,8 @@ $section-padding: 1rem 0.5rem;
 		height: 14vw;
 		transform: rotate(15deg);
 		position: absolute;
-		top: 53vw;
-		left: 62vw;
+		top: 44vw;
+		left: 52vw;
 	}
 
 	&__text {
@@ -424,12 +433,14 @@ $color-map: (
 }
 
 .load-indicator {
+	width: 100%;
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-around;
 	align-items: center;
 	font-size: 5rem;
 	min-height: 18vh;
+	margin-bottom: auto;
 
 	&__text {
 		font-style: italic;
