@@ -108,6 +108,16 @@ export default class Results extends Component {
 		);
 	};
 
+	noResults = (
+		<div class="search-result box load-indicator">
+			<div class="load-indicator__text">
+				Ah, this doesn't work if you don't select any{' '}
+				<a href="/values">values</a>.
+			</div>
+			<i class="fal fa-laugh-beam" />
+		</div>
+	);
+
 	componentDidMount() {
 		if (this.configIsComplete(this.state)) {
 			this.loadNewResults();
@@ -134,11 +144,13 @@ export default class Results extends Component {
 				<div class="hero-body">
 					{loading ? (
 						this.loadingIndicator()
+					) : !Object.values(filters).includes(true) ? (
+						this.noResults
 					) : (
 						<div class="results">
-							{currentResults && currentResults.length
-								? currentResults.map(record => <SearchResult data={record} />)
-								: 'No results here.'}
+							{currentResults.map(record => (
+								<SearchResult data={record} />
+							))}
 						</div>
 					)}
 				</div>
