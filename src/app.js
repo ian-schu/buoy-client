@@ -9,6 +9,7 @@ import './style/global';
 import Header from './components/header';
 import BackgroundLayer from './components/backgroundLayer';
 import Main from './routes/main';
+import About from './routes/about';
 import ValueFilters from './routes/filters';
 import Places from './routes/places';
 import Location from './routes/location';
@@ -144,12 +145,14 @@ export default class App extends Component {
 	};
 
 	handleRoute = e => {
-		if (e.router.base === undefined) {
-			route('/', true);
-		}
-		else {
-			this.currentUrl = e.url;
-		}
+		// if (e.router.base === undefined) {
+		// 	route('/', true);
+		// }
+		// else {
+		// 	this.currentUrl = e.url;
+		// }
+		this.currentUrl = e.url;
+
 	};
 
 	constructor() {
@@ -241,6 +244,7 @@ export default class App extends Component {
 						placeType={placeType}
 						searchPrefsChanged={this.state.searchPrefsChanged}
 					/>
+					<About path="/about" />
 					<Error type="404" default />
 				</Router>
 				<div class="footer">

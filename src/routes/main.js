@@ -97,40 +97,9 @@ export default class Main extends Component {
 					</p>
 				</div>
 				<div class="about__group">
-					<h1 class="about__group__title">How did we choose our criteria?</h1>
+					<h1 class="about__group__title">Want to know more?</h1>
 					<p class="about__group__p">
-						We can imagine all kinds of values being championed in Buoy. For our
-						launch, we looked at the top five that were easily verifiable and
-						would be valuable to all types of people— not just those like us.
-					</p>
-					<p class="about__group__p">
-						The businesses were added by us from a collection of sites that list
-						organizations with these values, like chambers of commerce, veterans
-						organizations, or environmentally minded sites.
-					</p>
-				</div>
-				<div class="about__group">
-					<h1 class="about__group__title">Can I add places?</h1>
-					<p class="about__group__p">
-						Sure! We’re only live in Austin right now and it’ll take some time
-						to add a submission. Suggest a business addition here.
-					</p>
-				</div>
-				<div class="about__group">
-					<h1 class="about__group__title">How can I support Buoy?</h1>
-					<p class="about__group__p">
-						If you’re a business, you can become a sponsor here! If you’re
-						anyone at all, you can share us with your friends and suggest places
-						to be added to Buoy.
-					</p>
-				</div>
-				<div class="about__group">
-					<h1 class="about__group__title">Why does Buoy exist?</h1>
-					<p class="about__group__p">
-						A buoy is a nautical beacon that communicates lots of different
-						things to boats nearby, like “safe water”. After watching numerous
-						local gems sink, we built Buoy to help people navigate to businesses
-						they believe in and want to support.
+						We'd love to <a href="/about">tell you more.</a>
 					</p>
 				</div>
 			</div>

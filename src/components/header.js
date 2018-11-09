@@ -38,17 +38,14 @@ export default class Header extends Component {
 						<a onClick={this.toggle} href="/" class="navbar-item">
 							Home
 						</a>
-						<a onClick={this.toggle} href="/values" class="navbar-item">
-							Choose Values
-						</a>
-						<a onClick={this.toggle} href="/places" class="navbar-item">
-							Set Place Type
+						<a onClick={this.toggle} href="/about" class="navbar-item">
+							About
 						</a>
 						<a onClick={this.toggle} href="/location" class="navbar-item">
 							Change Location
 						</a>
 						<a onClick={this.toggle} href="/results" class="navbar-item">
-							Results
+							Places
 						</a>
 					</div>
 				</div>

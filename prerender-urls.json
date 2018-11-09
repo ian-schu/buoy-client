@@ -3,5 +3,6 @@
   { "url": "/values", "title": "Buoy - Choose your values" },
   { "url": "/places", "title": "Buoy - Set place type" },
   { "url": "/location", "title": "Buoy - Set Location" },
+  { "url": "/about", "title": "Buoy - About" },
   { "url": "/results", "title": "Buoy - See your results" }
 ]
