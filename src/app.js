@@ -246,8 +246,24 @@ export default class App extends Component {
 				<div class="footer">
 					<div class="footer__text">
 						&copy; Buoy Navigation 2018.
-						<br />
-						Built by Ian and Robert in Austin, Texas.
+						<img src="./assets/logo-red.svg" alt="Buoy logo" class="logo" />
+						Built by{' '}
+						<a
+							href="http://www.ianschu.com/"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							Ian
+						</a>{' '}
+						and{' '}
+						<a
+							href="https://boler.work/"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							Robert
+						</a>{' '}
+						in Austin, Texas.
 					</div>
 				</div>
 			</div>
