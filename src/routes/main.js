@@ -89,9 +89,11 @@ export default class Main extends Component {
 				<div class="about__group">
 					<h1 class="about__group__title">What is Buoy?</h1>
 					<p class="about__group__p">
-						It’s a collection of organizations that stand for something more
-						than just profits, and walk the talk. An “easy” button for conscious
-						consumerism. A literal moral compass.
+						It's an easy button for conscious consumerism. A literal moral
+						compass, if you will. A directory of local businesses that are doing
+						things you care about. Next time you want to go eat, drink, or shop,
+						try Buoy instead of Yelp or Google Maps. We&apos;re adding more
+						establishments all the time.
 					</p>
 				</div>
 				<div class="about__group">
