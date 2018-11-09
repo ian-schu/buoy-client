@@ -98,9 +98,6 @@ export default class Location extends Component {
 							<h2 class="subtitle has-text-brown">Where ya at, sailor?</h2>
 						</div>
 						<div class="location-hero">
-							<img class="location-hero__logo" src="./assets/logo-red.svg" />
-							{/* <SvgIsland className="location-hero__island" /> */}
-							<SvgIsland className="location-hero__water" fill="#d5f2ff" />
 							{location.data.lat ? (
 								<div class="location-hero__text">
 									<div>Last known position:</div>
@@ -109,6 +106,9 @@ export default class Location extends Component {
 									<div>City: {location.data.city}</div>
 								</div>
 							) : null}
+							<img class="location-hero__logo" src="./assets/logo-red.svg" />
+							{/* <SvgIsland className="location-hero__island" /> */}
+							<SvgIsland svgClass="location-hero__water" pathClass="location-hero__water__path" fill="#d5f2ff" />
 						</div>
 					</div>
 					{settingZip ? (

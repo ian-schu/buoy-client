@@ -1,7 +1,6 @@
 import { Component } from 'preact';
 import SearchResult from '../components/searchResult';
 import ValueIcon from '../components/valueIcon';
-import SvgIsland from '../components/svg/island';
 
 import { Haversine } from 'haversine-position';
 import convert from 'convert-units';
@@ -34,7 +33,6 @@ export default class Results extends Component {
 
 	simulatedLoadingMs() {
 		let value = (400 + Math.random() * 2000).toFixed(0);
-		console.log(`Loading for ${value / 1000} seconds`);
 		return value;
 	}
 
@@ -97,15 +95,14 @@ export default class Results extends Component {
 		][randomPick];
 
 		const loadMessage = [
-			'Locating all the right places ...',
-			'Finding you what you want ...',
-			'Navigating to safe waters ...'
+			'Zeroing in ...',
+			'Setting sail ...',
+			'Navigating ...'
 		][randomPick];
 
 		return (
-			<div class="load-indicator has-text-red">
-				<SvgIsland className="load-indicator__island" />
-				<i class={`${iconName} fa-spin`} />
+			<div class="search-result box load-indicator">
+				<i class={`${iconName} fa-spin spinner`} />
 				<div class="load-indicator__text">{loadMessage}</div>
 			</div>
 		);
