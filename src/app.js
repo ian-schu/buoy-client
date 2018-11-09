@@ -145,14 +145,12 @@ export default class App extends Component {
 	};
 
 	handleRoute = e => {
-		// if (e.router.base === undefined) {
-		// 	route('/', true);
-		// }
-		// else {
-		// 	this.currentUrl = e.url;
-		// }
-		this.currentUrl = e.url;
-
+		if (e.router.base === undefined) {
+			route('/', true);
+		}
+		else {
+			this.currentUrl = e.url;
+		}
 	};
 
 	constructor() {
