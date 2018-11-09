@@ -182,7 +182,7 @@ $section-padding: 1rem 0.5rem;
 	}
 
 	&__water__path {
-		transform: scale(2, 2.6) rotate(4deg) translate(-63px,-70px);
+		transform: scale(2, 2.6) rotate(4deg) translate(-64px, -89px);
 	}
 
 	&__icon {
@@ -197,14 +197,14 @@ $section-padding: 1rem 0.5rem;
 		height: 14vw;
 		transform: rotate(15deg);
 		position: absolute;
-		top: 60vw;
+		top: 53vw;
 		left: 62vw;
 	}
 
 	&__text {
-		@extend .has-text-brown ;
+		@extend .has-text-brown;
 		position: absolute;
-		top: 42vw;
+		top: 35vw;
 		left: 17vw;
 		transform: rotate(-14deg);
 		display: inline-block;
