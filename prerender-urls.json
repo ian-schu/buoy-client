@@ -1,0 +1,7 @@
+[
+  { "url": "/", "title": "Buoy" },
+  { "url": "/values", "title": "Buoy - Choose your values" },
+  { "url": "/places", "title": "Buoy - Set place type" },
+  { "url": "/location", "title": "Buoy - Set Location" },
+  { "url": "/results", "title": "Buoy - See your results" }
+]
