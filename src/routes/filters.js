@@ -22,25 +22,25 @@ export default class ValueFilters extends Component {
 					</div>
 					<div class="filters">
 						<button
-							data-name="locally-owned"
+							data-name="local_owned"
 							onClick={this.setFilter}
-							class={`filters__button ${filters['locally-owned'] &&
+							class={`filters__button ${filters['local_owned'] &&
 								'is-selected'} has-text-teal has-background-teal`}
 						>
 							<i class="fas fa-store" /> locally owned
 						</button>
 						<button
-							data-name="living-wage"
+							data-name="living_wage"
 							onClick={this.setFilter}
-							class={`filters__button ${filters['living-wage'] &&
+							class={`filters__button ${filters['living_wage'] &&
 								'is-selected'} has-text-gold has-background-gold`}
 						>
 							<i class="fas fa-coins" /> living wage
 						</button>
 						<button
-							data-name="recruits-veterans"
+							data-name="recruit_veterans"
 							onClick={this.setFilter}
-							class={`filters__button ${filters['recruits-veterans'] &&
+							class={`filters__button ${filters['recruit_veterans'] &&
 								'is-selected'} has-text-red has-background-red`}
 						>
 							<i class="fas fa-medal" /> recruits veterans
@@ -54,12 +54,12 @@ export default class ValueFilters extends Component {
 							<i class="fas fa-globe-americas" /> sustainable
 						</button>
 						<button
-							data-name="women-owned"
+							data-name="women_owned"
 							onClick={this.setFilter}
-							class={`filters__button ${filters['women-owned'] &&
+							class={`filters__button ${filters['women_owned'] &&
 								'is-selected'} has-text-purple has-background-purple`}
 						>
-							<i class="fas fa-venus" /> women-owned
+							<i class="fas fa-venus" /> women_owned
 						</button>
 					</div>
 				</div>

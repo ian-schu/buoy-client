@@ -33,11 +33,11 @@ export default class App extends Component {
 			loading: false
 		},
 		filters: {
-			'locally-owned': false,
-			'living-wage': false,
-			'recruits-veterans': false,
+			local_owned: false,
+			living_wage: false,
+			recruit_veterans: false,
 			sustainable: false,
-			'women-owned': false
+			women_owned: false
 		},
 		placeType: 'food',
 		searchPrefsChanged: false,
@@ -107,11 +107,11 @@ export default class App extends Component {
 				loading: false
 			},
 			filters: {
-				'locally-owned': false,
-				'living-wage': false,
-				'recruits-veterans': false,
+				local_owned: false,
+				living_wage: false,
+				recruit_veterans: false,
 				sustainable: false,
-				'women-owned': false
+				women_owned: false
 			},
 			placeType: 'food',
 			searchPrefsChanged: false,

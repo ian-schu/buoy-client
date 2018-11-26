@@ -3,18 +3,18 @@ import classnames from 'classnames';
 
 export default class ValueIcon extends Component {
 	dictionary = {
-		'locally-owned': {
-			propName: 'locally-owned',
+		local_owned: {
+			propName: 'local_owned',
 			color: 'teal',
 			iconClass: 'fas fa-store'
 		},
-		'living-wage': {
-			propName: 'livingWage',
+		living_wage: {
+			propName: 'living_wage',
 			color: 'gold',
 			iconClass: 'fas fa-coins'
 		},
-		'recruits-veterans': {
-			propName: 'recruits-veterans',
+		recruit_veterans: {
+			propName: 'recruit_veterans',
 			color: 'red',
 			iconClass: 'fas fa-medal'
 		},
@@ -23,8 +23,8 @@ export default class ValueIcon extends Component {
 			color: 'green',
 			iconClass: 'fas fa-globe-americas'
 		},
-		'women-owned': {
-			propName: 'women-owned',
+		women_owned: {
+			propName: 'women_owned',
 			color: 'purple',
 			iconClass: 'fas fa-venus'
 		},
@@ -45,7 +45,7 @@ export default class ValueIcon extends Component {
 		}
 	};
 
-	render = ({ name, className, inactive }, {}) => {
+	render = ({ name, className, inactive }, { }) => {
 		const iconClassName = classnames(className, `has-text-${this.dictionary[name].color}`, {
 			inactive
 		});
