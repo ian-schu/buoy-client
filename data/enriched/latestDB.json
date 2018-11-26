@@ -33,7 +33,7 @@
     "name": "The Loop Running Supply",
     "type": "retail",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.26796199999999,
@@ -60,7 +60,7 @@
     "name": "24 Hour Fitness",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.39735459999999,
@@ -90,7 +90,7 @@
     "name": "Taco Mex",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2846468,
@@ -121,8 +121,8 @@
     "name": "Tiff's Treats",
     "type": "food",
     "values": [
-      "locally-owned",
-      "recruits-veterans"
+      "local_owned",
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.273326,
@@ -154,7 +154,7 @@
     "name": "The Butterfly Bar @ The VORTEX",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.28370839999999,
@@ -214,7 +214,7 @@
     "name": "Alamo Drafthouse Cinema South Lamar",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2560786,
@@ -246,7 +246,7 @@
     "name": "Alamo Drafthouse Cinema Mueller",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.29845359999999,
@@ -309,7 +309,7 @@
     "name": "Soco Select Farmers & Makers Market",
     "type": "retail",
     "values": [
-      "locally-owned",
+      "local_owned",
       "sustainable"
     ],
     "location": {
@@ -368,7 +368,7 @@
     "name": "Patrizi's",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2838808,
@@ -399,7 +399,7 @@
     "name": "Service King Collision Repair South 1st - Austin",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.237492,
@@ -428,7 +428,7 @@
     "name": "AT&T Store",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.2704988,
@@ -457,7 +457,7 @@
     "name": "Accenture",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.2609153,
@@ -486,7 +486,7 @@
     "name": "Mother's Cafe",
     "type": "food",
     "values": [
-      "locally-owned",
+      "local_owned",
       "sustainable"
     ],
     "location": {
@@ -517,7 +517,7 @@
     "name": "Bank of America Financial Center",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.267628,
@@ -548,8 +548,8 @@
     "type": "food",
     "values": [
       "sustainable",
-      "locally-owned",
-      "living-wage"
+      "local_owned",
+      "living_wage"
     ],
     "location": {
       "lat": 30.2496468,
@@ -611,7 +611,7 @@
     "name": "Costco Wholesale",
     "type": "retail",
     "values": [
-      "living-wage"
+      "living_wage"
     ],
     "location": {
       "lat": 30.5276712,
@@ -640,7 +640,7 @@
     "name": "Sweet Ritual",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.306135,
@@ -672,7 +672,7 @@
     "name": "24 Hour Fitness",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.30135210000001,
@@ -735,8 +735,8 @@
     "name": "SKG",
     "type": "retail",
     "values": [
-      "locally-owned",
-      "women-owned"
+      "local_owned",
+      "women_owned"
     ],
     "location": {
       "lat": 30.2013522,
@@ -766,8 +766,8 @@
     "name": "Mopac Media",
     "type": "services",
     "values": [
-      "locally-owned",
-      "women-owned"
+      "local_owned",
+      "women_owned"
     ],
     "location": {
       "lat": 30.310003,
@@ -795,7 +795,7 @@
     "name": "Torchy's Tacos",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.29370999999999,
@@ -855,7 +855,7 @@
     "name": "Amazon@UTexas",
     "type": "retail",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.283991,
@@ -884,7 +884,7 @@
     "type": "retail",
     "values": [
       "sustainable",
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.309002,
@@ -917,8 +917,8 @@
     "name": "Tiff's Treats",
     "type": "food",
     "values": [
-      "locally-owned",
-      "recruits-veterans"
+      "local_owned",
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.2819052,
@@ -949,7 +949,7 @@
     "name": "Allstate Insurance: Roger Morse",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.207646,
@@ -980,7 +980,7 @@
     "name": "24 Hour Fitness",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.22239899999999,
@@ -1069,7 +1069,7 @@
     "name": "J.T. Youngblood's",
     "type": "food",
     "values": [
-      "locally-owned",
+      "local_owned",
       "sustainable"
     ],
     "location": {
@@ -1102,7 +1102,7 @@
     "type": "retail",
     "values": [
       "sustainable",
-      "living-wage"
+      "living_wage"
     ],
     "location": {
       "lat": 30.265961,
@@ -1164,7 +1164,7 @@
     "name": "The Beer Plant",
     "type": "food",
     "values": [
-      "locally-owned",
+      "local_owned",
       "sustainable"
     ],
     "location": {
@@ -1196,8 +1196,8 @@
     "name": "Black Star Co-op",
     "type": "food",
     "values": [
-      "locally-owned",
-      "living-wage"
+      "local_owned",
+      "living_wage"
     ],
     "location": {
       "lat": 30.3382593,
@@ -1228,7 +1228,7 @@
     "name": "woom bikes USA",
     "type": "retail",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.37817059999999,
@@ -1289,7 +1289,7 @@
     "name": "Torchy's Tacos",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.303292,
@@ -1321,8 +1321,8 @@
     "type": "food",
     "values": [
       "sustainable",
-      "locally-owned",
-      "living-wage"
+      "local_owned",
+      "living_wage"
     ],
     "location": {
       "lat": 30.3150704,
@@ -1385,7 +1385,7 @@
     "name": "Austin Carson: Allstate Insurance",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.2432286,
@@ -1415,7 +1415,7 @@
     "name": "Toy Joy",
     "type": "retail",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.3061588,
@@ -1444,8 +1444,8 @@
     "name": "Amy's Ice Creams",
     "type": "food",
     "values": [
-      "locally-owned",
-      "women-owned"
+      "local_owned",
+      "women_owned"
     ],
     "location": {
       "lat": 30.25094990000001,
@@ -1475,7 +1475,7 @@
     "name": "Costco Wholesale",
     "type": "retail",
     "values": [
-      "living-wage"
+      "living_wage"
     ],
     "location": {
       "lat": 30.3971631,
@@ -1506,8 +1506,8 @@
     "name": "Tiff's Treats",
     "type": "food",
     "values": [
-      "locally-owned",
-      "recruits-veterans"
+      "local_owned",
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.3073355,
@@ -1538,7 +1538,7 @@
     "name": "Paco's Tacos",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.3074261,
@@ -1568,8 +1568,8 @@
     "name": "Kendra Scott",
     "type": "retail",
     "values": [
-      "locally-owned",
-      "women-owned"
+      "local_owned",
+      "women_owned"
     ],
     "location": {
       "lat": 30.3060028,
@@ -1632,8 +1632,8 @@
     "name": "Workplace Resource",
     "type": "services",
     "values": [
-      "locally-owned",
-      "women-owned"
+      "local_owned",
+      "women_owned"
     ],
     "location": {
       "lat": 30.2758029,
@@ -1665,7 +1665,7 @@
     "name": "HOPE Farmers Market",
     "type": "retail",
     "values": [
-      "locally-owned",
+      "local_owned",
       "sustainable"
     ],
     "location": {
@@ -1694,7 +1694,7 @@
     "name": "Texas Farmers' Market at Mueller",
     "type": "retail",
     "values": [
-      "locally-owned",
+      "local_owned",
       "sustainable"
     ],
     "location": {
@@ -1723,7 +1723,7 @@
     "name": "Arlo's",
     "type": "food",
     "values": [
-      "locally-owned",
+      "local_owned",
       "sustainable"
     ],
     "location": {
@@ -1755,7 +1755,7 @@
     "name": "Casa de Luz",
     "type": "food",
     "values": [
-      "locally-owned",
+      "local_owned",
       "sustainable"
     ],
     "location": {
@@ -1789,7 +1789,7 @@
     "name": "Service King Collision Repair of Austin",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.2284888,
@@ -1818,7 +1818,7 @@
     "name": "Tyson's Tacos",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.30964,
@@ -1881,7 +1881,7 @@
     "name": "Service King Collision Repair North Lamar",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.333616,
@@ -1910,7 +1910,7 @@
     "name": "Alamo Drafthouse Cinema Ritz",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2674467,
@@ -1973,7 +1973,7 @@
     "name": "Alamo Drafthouse Cinema Slaughter Lane",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.1988112,
@@ -2004,7 +2004,7 @@
     "name": "Service King Collision Repair of South Austin",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.1804582,
@@ -2033,7 +2033,7 @@
     "name": "Thai Fresh",
     "type": "food",
     "values": [
-      "living-wage",
+      "living_wage",
       "sustainable"
     ],
     "location": {
@@ -2069,7 +2069,7 @@
     "name": "Accenture Interactive",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.26570709999999,
@@ -2097,9 +2097,9 @@
     "name": "Austin City Hall",
     "type": "services",
     "values": [
-      "locally-owned",
-      "recruits-veterans",
-      "living-wage"
+      "local_owned",
+      "recruit_veterans",
+      "living_wage"
     ],
     "location": {
       "lat": 30.264792,
@@ -2129,8 +2129,8 @@
     "name": "Baer Engineering & Environmental Consulting, Inc.",
     "type": "services",
     "values": [
-      "women-owned",
-      "locally-owned"
+      "women_owned",
+      "local_owned"
     ],
     "location": {
       "lat": 30.356728,
@@ -2160,8 +2160,8 @@
     "name": "Kidd Roofing",
     "type": "services",
     "values": [
-      "locally-owned",
-      "women-owned"
+      "local_owned",
+      "women_owned"
     ],
     "location": {
       "lat": 30.335071,
@@ -2227,7 +2227,7 @@
     "name": "Torchy's Tacos",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.24547750000001,
@@ -2257,8 +2257,8 @@
     "name": "Sherry Matthews Inc",
     "type": "services",
     "values": [
-      "locally-owned",
-      "women-owned"
+      "local_owned",
+      "women_owned"
     ],
     "location": {
       "lat": 30.2597436,
@@ -2287,9 +2287,9 @@
     "name": "Bananarchy",
     "type": "food",
     "values": [
-      "women-owned",
+      "women_owned",
       "sustainable",
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.28834500000001,
@@ -2349,7 +2349,7 @@
     "name": "Michael Walker: Allstate Insurance",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.3064245,
@@ -2409,7 +2409,7 @@
     "name": "Terry Black's Barbecue",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2596563,
@@ -2439,9 +2439,9 @@
     "name": "Bananarchy",
     "type": "food",
     "values": [
-      "women-owned",
+      "women_owned",
       "sustainable",
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2444054,
@@ -2472,7 +2472,7 @@
     "name": "Costco Wholesale",
     "type": "retail",
     "values": [
-      "living-wage"
+      "living_wage"
     ],
     "location": {
       "lat": 30.2188933,
@@ -2504,7 +2504,7 @@
     "name": "Bistro Vonish",
     "type": "food",
     "values": [
-      "locally-owned",
+      "local_owned",
       "sustainable"
     ],
     "location": {
@@ -2535,7 +2535,7 @@
     "name": "Counter Culture",
     "type": "food",
     "values": [
-      "locally-owned",
+      "local_owned",
       "sustainable"
     ],
     "location": {
@@ -2566,7 +2566,7 @@
     "name": "Sam's BBQ",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2740619,
@@ -2597,7 +2597,7 @@
     "name": "Franklin Barbecue",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.270142,
@@ -2627,7 +2627,7 @@
     "name": "Ride Austin",
     "type": "services",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2714956,
@@ -2652,9 +2652,9 @@
     "name": "Austin Central Library, Austin Public Library",
     "type": "services",
     "values": [
-      "recruits-veterans",
+      "recruit_veterans",
       "sustainable",
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2660439,
@@ -2683,7 +2683,7 @@
     "name": "Toy Joy",
     "type": "retail",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.265214,
@@ -2712,7 +2712,7 @@
     "name": "Homero Escobar: Allstate Insurance",
     "type": "services",
     "values": [
-      "recruits-veterans"
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.209944,
@@ -2742,7 +2742,7 @@
     "name": "SFC Farmers' Market Downtown",
     "type": "retail",
     "values": [
-      "locally-owned",
+      "local_owned",
       "sustainable"
     ],
     "location": {
@@ -2771,8 +2771,8 @@
     "name": "T3",
     "type": "services",
     "values": [
-      "locally-owned",
-      "women-owned"
+      "local_owned",
+      "women_owned"
     ],
     "location": {
       "lat": 30.28334409999999,
@@ -2801,7 +2801,7 @@
     "name": "VMC Pharmacy Health & Wellness Products",
     "type": "retail",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2322543,
@@ -2831,7 +2831,7 @@
     "name": "Sandy's Hamburgers",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2584181,
@@ -2862,7 +2862,7 @@
     "name": "BookPeople",
     "type": "retail",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2718488,
@@ -2892,8 +2892,8 @@
     "name": "Amy's Ice Creams",
     "type": "food",
     "values": [
-      "locally-owned",
-      "women-owned"
+      "local_owned",
+      "women_owned"
     ],
     "location": {
       "lat": 30.3013244,
@@ -2924,8 +2924,8 @@
     "type": "food",
     "values": [
       "sustainable",
-      "locally-owned",
-      "living-wage"
+      "local_owned",
+      "living_wage"
     ],
     "location": {
       "lat": 30.35766449999999,
@@ -2956,8 +2956,8 @@
     "name": "Tiff's Treats",
     "type": "food",
     "values": [
-      "locally-owned",
-      "recruits-veterans"
+      "local_owned",
+      "recruit_veterans"
     ],
     "location": {
       "lat": 30.403678,
@@ -2990,7 +2990,7 @@
     "name": "Torchy's Tacos",
     "type": "food",
     "values": [
-      "locally-owned"
+      "local_owned"
     ],
     "location": {
       "lat": 30.2367541,

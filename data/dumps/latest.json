@@ -16,7 +16,7 @@
     "fields": {
       "Location-name": "The Loop Running Supply",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJk4iZvRG1RIYR4tjFDkN5lj0"
@@ -28,7 +28,7 @@
     "fields": {
       "Location-name": "24 Hour Fitness - Research Blvd",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJR-xAPITMRIYRm2M3q5FUlwI"
@@ -40,7 +40,7 @@
     "fields": {
       "Location-name": "Taco Mex",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJZ4kuIuy1RIYRS0KldSxpuPQ"
@@ -52,8 +52,8 @@
     "fields": {
       "Location-name": "Tiff's Treats - Bee Cave",
       "Values": [
-        "locally-owned",
-        "recruits-veterans"
+        "local_owned",
+        "recruit_veterans"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJn5y8vLhKW4YRpoTmK6GQxbI"
@@ -65,7 +65,7 @@
     "fields": {
       "Location-name": "Butterfly Bar",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJ_SqzjOy1RIYR09ZBlUuVbyc"
@@ -89,7 +89,7 @@
     "fields": {
       "Location-name": "Alamo - S Lamar",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJ0-fbEx-1RIYRDC-yUevuPhs"
@@ -101,7 +101,7 @@
     "fields": {
       "Location-name": "Alamo - Mueller",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJ595f4vi1RIYRiOMsgjtJDlk"
@@ -125,7 +125,7 @@
     "fields": {
       "Location-name": "Soco Select Farmers & Makers Market",
       "Values": [
-        "locally-owned",
+        "local_owned",
         "sustainable"
       ],
       "Location-type": "retail",
@@ -150,7 +150,7 @@
     "fields": {
       "Location-name": "Patrizi's",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJ_SqzjOy1RIYR0-au-H5SDZE"
@@ -162,7 +162,7 @@
     "fields": {
       "Location-name": "Service King - S 1st",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJr9BVNOi0RIYR-tZ39UpdbDY"
@@ -174,7 +174,7 @@
     "fields": {
       "Location-name": "AT&T",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJXZ7nMhK1RIYRg_z9xgBSpx4"
@@ -186,7 +186,7 @@
     "fields": {
       "Location-name": "Accenture",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJW19zBdJKW4YRyhN-_CWdNXA"
@@ -203,7 +203,7 @@
     "fields": {
       "Location-name": "Mother's Cafe",
       "Values": [
-        "locally-owned",
+        "local_owned",
         "sustainable"
       ],
       "Location-type": "food",
@@ -216,7 +216,7 @@
     "fields": {
       "Location-name": "Bank of America",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJbf0vzAm1RIYR0tdhjO8llJM"
@@ -229,8 +229,8 @@
       "Location-name": "Hopdoddy Burger Bar - SoCo",
       "Values": [
         "sustainable",
-        "locally-owned",
-        "living-wage"
+        "local_owned",
+        "living_wage"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJK7_q__y0RIYRA9j-Q5KFOP0"
@@ -254,7 +254,7 @@
     "fields": {
       "Location-name": "Costco - Cedar Park",
       "Values": [
-        "living-wage"
+        "living_wage"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJF6oc7PwsW4YRqDNCFttjGfc"
@@ -266,7 +266,7 @@
     "fields": {
       "Location-name": "Sweet Ritual",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJZYMc3XPKRIYRVwLke3pBj7U"
@@ -278,7 +278,7 @@
     "fields": {
       "Location-name": "24 Hour Fitness - 41st St",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJw1zenIq1RIYRLJTo_ZFw4-I"
@@ -302,8 +302,8 @@
     "fields": {
       "Location-name": "SKG",
       "Values": [
-        "locally-owned",
-        "women-owned"
+        "local_owned",
+        "women_owned"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJK7HPz_OzRIYRKJoRMDOHxRw"
@@ -315,8 +315,8 @@
     "fields": {
       "Location-name": "Mopac Media",
       "Values": [
-        "locally-owned",
-        "women-owned"
+        "local_owned",
+        "women_owned"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJU9_s6fnJRIYRC3HhcjbMD5Y",
@@ -329,7 +329,7 @@
     "fields": {
       "Location-name": "Torchy's Central",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJtXihV3-1RIYRlOwoggkOrTU"
@@ -353,8 +353,8 @@
     "fields": {
       "Location-name": "Vintage IT Services ",
       "Values": [
-        "locally-owned",
-        "women-owned"
+        "local_owned",
+        "women_owned"
       ],
       "Location-type": "services",
       "Google-ID": " ChIJwffThxS1RIYRqQYIeAeM6-o"
@@ -366,7 +366,7 @@
     "fields": {
       "Location-name": "Amazon",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJZ__Nd5y1RIYRNaCBHVf8AXY"
@@ -379,7 +379,7 @@
       "Location-name": "Hope Thrift",
       "Values": [
         "sustainable",
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJA6knhQXKRIYRP5CZf7C5Zc8"
@@ -391,8 +391,8 @@
     "fields": {
       "Location-name": "Tiff's Treats - Nueces",
       "Values": [
-        "locally-owned",
-        "recruits-veterans"
+        "local_owned",
+        "recruit_veterans"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJBcCyfna1RIYRWq1qgur8n1A"
@@ -404,7 +404,7 @@
     "fields": {
       "Location-name": "Allstate Insurance",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJN7rzyKe0RIYRGNTss88H544"
@@ -416,7 +416,7 @@
     "fields": {
       "Location-name": "24 Hour Fitness - William Cannon",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJZ1O7Q5ZLW4YR7I9vD_QwZIU"
@@ -452,7 +452,7 @@
     "fields": {
       "Location-name": "J T Youngblood's Chicken",
       "Values": [
-        "locally-owned",
+        "local_owned",
         "sustainable"
       ],
       "Location-type": "food",
@@ -467,11 +467,11 @@
       "Location-name": "Patagonia",
       "Values": [
         "sustainable",
-        "living-wage"
+        "living_wage"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJAWPLQgi1RIYRZUsZxtASSpE",
-      "Notes": "https://www.patagonia.com/living-wage-vs-minimum-wage.html"
+      "Notes": "https://www.patagonia.com/living_wage-vs-minimum-wage.html"
     },
     "createdTime": "2018-11-05T05:34:04.000Z"
   },
@@ -492,7 +492,7 @@
     "fields": {
       "Location-name": "The Beer Plant",
       "Values": [
-        "locally-owned",
+        "local_owned",
         "sustainable"
       ],
       "Location-type": "food",
@@ -505,8 +505,8 @@
     "fields": {
       "Location-name": "Black Star Coop",
       "Values": [
-        "locally-owned",
-        "living-wage"
+        "local_owned",
+        "living_wage"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJw6LxOTbKRIYR6tMZVkiyTGI"
@@ -518,7 +518,7 @@
     "fields": {
       "Location-name": "Woom Bikes USA",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJuYaR843LRIYRxL9VD2j4TV4"
@@ -543,7 +543,7 @@
     "fields": {
       "Location-name": "Torchy's 51st",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJz4sPdQDKRIYRnfLvHUhLOgg"
@@ -556,8 +556,8 @@
       "Location-name": "Hopdoddy Burger Bar - Triangle",
       "Values": [
         "sustainable",
-        "locally-owned",
-        "living-wage"
+        "local_owned",
+        "living_wage"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJYe-rPmTKRIYRjZh87ISdczY"
@@ -581,7 +581,7 @@
     "fields": {
       "Location-name": "Allstate 3",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJpcUHSVe0RIYRzbRA0sem-V4"
@@ -593,7 +593,7 @@
     "fields": {
       "Location-name": "Toy Joy - Airport Blvd",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJQSNP-AvKRIYRQmSA09tSo_s"
@@ -605,8 +605,8 @@
     "fields": {
       "Location-name": "Amy's Ice Cream - SoCo",
       "Values": [
-        "locally-owned",
-        "women-owned"
+        "local_owned",
+        "women_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJ7XN8ov20RIYRLmnVuy3Y2B4"
@@ -618,7 +618,7 @@
     "fields": {
       "Location-name": "Costco - Research Blvd",
       "Values": [
-        "living-wage"
+        "living_wage"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJtwapOofMRIYRjgmSrwiZGGk"
@@ -630,8 +630,8 @@
     "fields": {
       "Location-name": "Tiff's Treats - 51st",
       "Values": [
-        "locally-owned",
-        "recruits-veterans"
+        "local_owned",
+        "recruit_veterans"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJ38An3gG2RIYR1zn5lqMlkVw"
@@ -643,7 +643,7 @@
     "fields": {
       "Location-name": "Paco's Tacos",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJBd-COgTKRIYRalF7kGnZfNo"
@@ -655,8 +655,8 @@
     "fields": {
       "Location-name": "Kendra Scott",
       "Values": [
-        "locally-owned",
-        "women-owned"
+        "local_owned",
+        "women_owned"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJM_9YFYfKRIYRXIiwEbNqVbo"
@@ -680,8 +680,8 @@
     "fields": {
       "Location-name": "Workplace Resource",
       "Values": [
-        "locally-owned",
-        "women-owned"
+        "local_owned",
+        "women_owned"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJPUFJWUC1RIYRhWepdxwW-80"
@@ -693,7 +693,7 @@
     "fields": {
       "Location-name": "HOPE Farmers Market",
       "Values": [
-        "locally-owned",
+        "local_owned",
         "sustainable"
       ],
       "Location-type": "retail",
@@ -706,7 +706,7 @@
     "fields": {
       "Location-name": "Texas Farmers’ Market at Mueller",
       "Values": [
-        "locally-owned",
+        "local_owned",
         "sustainable"
       ],
       "Location-type": "retail",
@@ -719,7 +719,7 @@
     "fields": {
       "Location-name": "Arlo's",
       "Values": [
-        "locally-owned",
+        "local_owned",
         "sustainable"
       ],
       "Location-type": "food",
@@ -732,7 +732,7 @@
     "fields": {
       "Location-name": "Casa de Luz",
       "Values": [
-        "locally-owned",
+        "local_owned",
         "sustainable"
       ],
       "Location-type": "food",
@@ -745,7 +745,7 @@
     "fields": {
       "Location-name": "Service King",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJm7_O5sm0RIYRAlgg23ipkC8"
@@ -757,7 +757,7 @@
     "fields": {
       "Location-name": "Tyson's Tacos",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJj9DEzw3KRIYRZHwTEZL58eg"
@@ -781,7 +781,7 @@
     "fields": {
       "Location-name": "Service King - N Lamar",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJC4gPxEfKRIYRuL8lcCWfDaw"
@@ -793,7 +793,7 @@
     "fields": {
       "Location-name": "Alamo - Ritz",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJWZvTOpDeQIYReqbSr6_OAN8"
@@ -818,7 +818,7 @@
     "fields": {
       "Location-name": "Alamo - Slaughter",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJ5dOVjwBMW4YRuD5lYP0-_cY"
@@ -830,7 +830,7 @@
     "fields": {
       "Location-name": "Service King - S Austin",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJNWoNtzezRIYRO4TrmTUPDrw"
@@ -842,7 +842,7 @@
     "fields": {
       "Location-name": "Thai Fresh",
       "Values": [
-        "living-wage",
+        "living_wage",
         "sustainable"
       ],
       "Location-type": "food",
@@ -855,7 +855,7 @@
     "fields": {
       "Location-name": "Accenture Interactive",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJVVU5agi1RIYRw0U86t6w4YI"
@@ -867,13 +867,13 @@
     "fields": {
       "Location-name": "City of Austin",
       "Values": [
-        "locally-owned",
-        "recruits-veterans",
-        "living-wage"
+        "local_owned",
+        "recruit_veterans",
+        "living_wage"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJ-ZzJsgi1RIYR5BCTgDqni4M",
-      "Notes": "https://www.austintexas.gov/faq/what-citys-living-wage"
+      "Notes": "https://www.austintexas.gov/faq/what-citys-living_wage"
     },
     "createdTime": "2018-11-05T04:41:26.000Z"
   },
@@ -882,8 +882,8 @@
     "fields": {
       "Location-name": "Baer Engineering",
       "Values": [
-        "women-owned",
-        "locally-owned"
+        "women_owned",
+        "local_owned"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJQWE_HabLRIYRM2ozugdmjBI"
@@ -895,8 +895,8 @@
     "fields": {
       "Location-name": "Kidd Roofing ",
       "Values": [
-        "locally-owned",
-        "women-owned"
+        "local_owned",
+        "women_owned"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJEVx0oY_JRIYR9zIdxwE5TsQ"
@@ -920,7 +920,7 @@
     "fields": {
       "Location-name": "Torchy's SoCo",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJh_3dRvu0RIYRLBSOysYanEY"
@@ -932,8 +932,8 @@
     "fields": {
       "Location-name": "Sherry Matthews Advocacy Marketing",
       "Values": [
-        "locally-owned",
-        "women-owned"
+        "local_owned",
+        "women_owned"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJGaJo6Qa1RIYRIXFCcCINSIg"
@@ -945,9 +945,9 @@
     "fields": {
       "Location-name": "Bananarchy - North",
       "Values": [
-        "women-owned",
+        "women_owned",
         "sustainable",
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJ8ae4rxPKRIYRaJbQlx0XzMM"
@@ -971,7 +971,7 @@
     "fields": {
       "Location-name": "Allstate 4",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJ4--YHIfKRIYRZiS20WU_3GE"
@@ -995,7 +995,7 @@
     "fields": {
       "Location-name": "Terry Black's",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJZSqCDhu1RIYRx1iRoCvCOsA"
@@ -1008,9 +1008,9 @@
       "Location-name": "Bananarchy",
       "Verification": "See attached photo of tax records",
       "Values": [
-        "women-owned",
+        "women_owned",
         "sustainable",
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJS8vlbRm1RIYRzipYa4SJ7ko",
@@ -1023,7 +1023,7 @@
     "fields": {
       "Location-name": "Costco - William Cannon",
       "Values": [
-        "living-wage"
+        "living_wage"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJDR3ux4bMRIYRiN5Q1F1_po0"
@@ -1035,7 +1035,7 @@
     "fields": {
       "Location-name": "Bistro Vonish",
       "Values": [
-        "locally-owned",
+        "local_owned",
         "sustainable"
       ],
       "Location-type": "food",
@@ -1048,7 +1048,7 @@
     "fields": {
       "Location-name": "Counter Culture",
       "Values": [
-        "locally-owned",
+        "local_owned",
         "sustainable"
       ],
       "Location-type": "food",
@@ -1061,7 +1061,7 @@
     "fields": {
       "Location-name": "Sam’s BBQ",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJNTIKjMC1RIYRdsqaaM_8M0c"
@@ -1073,7 +1073,7 @@
     "fields": {
       "Location-name": "Franklin's",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJM8w7rqS1RIYRhEz2-KuoqzE"
@@ -1085,7 +1085,7 @@
     "fields": {
       "Location-name": "Ride Austin",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJK5pZehS1RIYRkndhF0ausOI"
@@ -1097,9 +1097,9 @@
     "fields": {
       "Location-name": "Austin Public Library",
       "Values": [
-        "recruits-veterans",
+        "recruit_veterans",
         "sustainable",
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJvWCx3A-1RIYRHFJwgQAZH2o"
@@ -1111,7 +1111,7 @@
     "fields": {
       "Location-name": "Toy Joy - Downtown",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJnaV5c3-1RIYRg5SvFfQ9YSw"
@@ -1123,7 +1123,7 @@
     "fields": {
       "Location-name": "Allstate 2",
       "Values": [
-        "recruits-veterans"
+        "recruit_veterans"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJZ0Znd6u0RIYR302FkueYKaU"
@@ -1135,7 +1135,7 @@
     "fields": {
       "Location-name": "SFC Farmers' Market Downtown",
       "Values": [
-        "locally-owned",
+        "local_owned",
         "sustainable"
       ],
       "Location-type": "retail",
@@ -1148,8 +1148,8 @@
     "fields": {
       "Location-name": "T3",
       "Values": [
-        "locally-owned",
-        "women-owned"
+        "local_owned",
+        "women_owned"
       ],
       "Location-type": "services",
       "Google-ID": "ChIJwaTlxXG1RIYR7x0T43ED_KI"
@@ -1161,7 +1161,7 @@
     "fields": {
       "Location-name": "VMC Pharmacy",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJ44y9rzZLW4YRdovMBe-_a3M"
@@ -1173,7 +1173,7 @@
     "fields": {
       "Location-name": "Sandy's",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJk2URmQS1RIYROQEEINlNh1c"
@@ -1185,7 +1185,7 @@
     "fields": {
       "Location-name": "BookPeople",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "retail",
       "Google-ID": "ChIJb4u6ehK1RIYRxYGE7rdra90"
@@ -1197,8 +1197,8 @@
     "fields": {
       "Location-name": "Amy's Ice Cream - Guad",
       "Values": [
-        "locally-owned",
-        "women-owned"
+        "local_owned",
+        "women_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJ74v8qH_KRIYRYXbiu76VCUU",
@@ -1212,8 +1212,8 @@
       "Location-name": "Hopdoddy Burger Bar - Anderson",
       "Values": [
         "sustainable",
-        "locally-owned",
-        "living-wage"
+        "local_owned",
+        "living_wage"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJH60lcaXLRIYR0Y6AVUyTjoU"
@@ -1225,8 +1225,8 @@
     "fields": {
       "Location-name": "Tiff's Treats - Research Blvd",
       "Values": [
-        "locally-owned",
-        "recruits-veterans"
+        "local_owned",
+        "recruit_veterans"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJkfkS9IjMRIYRTFYNxmFbOuA"
@@ -1238,7 +1238,7 @@
     "fields": {
       "Location-name": "Torchy's S 1st",
       "Values": [
-        "locally-owned"
+        "local_owned"
       ],
       "Location-type": "food",
       "Google-ID": "ChIJg239z-m0RIYRp2mpN1qppiU"
