@@ -1,9 +1,7 @@
 import { Component } from 'preact';
 import SearchResult from '../components/searchResult';
 import ValueIcon from '../components/valueIcon';
-
-import { Haversine } from 'haversine-position';
-import convert from 'convert-units';
+import { getPlaces } from '../apis/getPlaces';
 
 export default class Results extends Component {
 	state = {
@@ -39,8 +37,12 @@ export default class Results extends Component {
 	loadNewResults() {
 		this.setLoading();
 		this.setState(prevState => ({ filters: this.props.filters }));
-		this.setState(prevState => ({ currentResults: this.calculateResults() }));
-		setTimeout(this.clearLoading.bind(this), this.simulatedLoadingMs());
+		this.calculateResults()
+			.then(results => {
+				this.setState(prevState => ({ currentResults: results }));
+				this.clearLoading();
+			});
+		// setTimeout(this.clearLoading.bind(this), this.simulatedLoadingMs());
 	}
 
 	configIsComplete(searchPrefsObject) {
@@ -55,34 +57,15 @@ export default class Results extends Component {
 	calculateResults() {
 		const filtersArray = this.reduceFilters(this.state.filters);
 		const placeType = this.state.placeType;
-		const typeFiltered = this.props.allRecords.filter(
-			record => record.type == placeType,
-		);
 
-		const valueFiltered = typeFiltered.filter(record =>
-			record.values.some(val => filtersArray.includes(val)),
-		);
-
-		let coords = {
-			lat: this.state.location.lat,
-			lng: this.state.location.lng
-		};
-		const origin = new Haversine(coords);
-
-		const distanceAdded = valueFiltered.map(record => {
-			let distanceTo = origin.getDistance(record.location);
-			record.distanceTo = convert(distanceTo)
-				.from('m')
-				.to('mi')
-				.toFixed(1);
-			return record;
+		return getPlaces({
+			values: filtersArray,
+			type: placeType,
+			origin: {
+				lat: this.state.location.lat,
+				lng: this.state.location.lng
+			}
 		});
-
-		const orderedByDistance = distanceAdded.sort(
-			(a, b) => a.distanceTo - b.distanceTo,
-		);
-
-		return orderedByDistance;
 	}
 
 	loadingIndicator = () => {
@@ -124,7 +107,7 @@ export default class Results extends Component {
 		}
 	}
 
-	render = ({}, { loading, currentResults, filters, placeType, location }) => (
+	render = ({ }, { loading, currentResults, filters, placeType, location }) => (
 		<section class="section">
 			<div class="filters-bar">
 				<a href="/places" class="placeType-pill box">

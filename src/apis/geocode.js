@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const geocode = (type, inputString) => {
-	console.log(`Requesting payload for '${inputString}'`);
 	const promise = axios.get(
 		'https://maps.googleapis.com/maps/api/geocode/json',
 		{
@@ -51,6 +50,6 @@ export const geocode = (type, inputString) => {
 			};
 		})
 		.catch(err => {
-			console.log(err);
+			console.error(err);
 		});
 };

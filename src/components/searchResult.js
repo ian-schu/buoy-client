@@ -9,7 +9,7 @@ export default class SearchResult extends Component {
 	};
 
 	render = ({ data }, {}) => {
-		const fullAddress = [`${data.street.streetNumber} ${data.street.street}`, data.street.zip].join(
+		const fullAddress = [`${data.address.streetNumber} ${data.address.street}`, data.address.zip].join(
 			', ',
 		);
 
@@ -18,7 +18,7 @@ export default class SearchResult extends Component {
 				<div class="search-result__left">
 					<div class="search-result__title">{data.name}</div>
 					<div>{fullAddress}</div>
-					<div>{data.distanceTo} mi</div>
+					<div>{data.distance} mi</div>
 					<div>({data.type})</div>
 					<div class="search-result__values">
 						{data.values.map(valueName => (
@@ -26,7 +26,7 @@ export default class SearchResult extends Component {
 						))}
 					</div>
 				</div>
-				<a href={data.mapsUrl} class="search-result__right">
+				<a href={data.google_url} class="search-result__right">
 					<i class="search-result__arrow far fa-arrow-alt-circle-right" />
 				</a>
 			</div>
