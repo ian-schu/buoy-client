@@ -25,7 +25,7 @@ export default [
 	{
 		name: 'The Loop Running Supply',
 		type: 'retail',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.26796199999999,
 			lng: -97.754368
@@ -46,7 +46,7 @@ export default [
 	{
 		name: '24 Hour Fitness',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.39735459999999,
 			lng: -97.7478769
@@ -69,7 +69,7 @@ export default [
 	{
 		name: 'Taco Mex',
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.2846468,
 			lng: -97.71485799999999
@@ -93,7 +93,7 @@ export default [
 	{
 		name: "Tiff's Treats",
 		type: 'food',
-		values: ['locally-owned', 'recruits-veterans'],
+		values: ['local_owned', 'recruit_veterans'],
 		location: {
 			lat: 30.273326,
 			lng: -97.800662
@@ -123,7 +123,7 @@ export default [
 	{
 		name: 'The Butterfly Bar @ The VORTEX',
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.28370839999999,
 			lng: -97.71742669999999
@@ -170,7 +170,7 @@ export default [
 	{
 		name: 'Alamo Drafthouse Cinema South Lamar',
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.2560786,
 			lng: -97.7635091
@@ -200,7 +200,7 @@ export default [
 	{
 		name: 'Alamo Drafthouse Cinema Mueller',
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.29845359999999,
 			lng: -97.7045157
@@ -259,7 +259,7 @@ export default [
 	{
 		name: 'Soco Select Farmers & Makers Market',
 		type: 'retail',
-		values: ['locally-owned', 'sustainable'],
+		values: ['local_owned', 'sustainable'],
 		location: {
 			lat: 30.24828969999999,
 			lng: -97.7497606
@@ -305,7 +305,7 @@ export default [
 	{
 		name: "Patrizi's",
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.2838808,
 			lng: -97.71727489999999
@@ -329,7 +329,7 @@ export default [
 	{
 		name: 'Service King Collision Repair South 1st - Austin',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.237492,
 			lng: -97.762222
@@ -352,7 +352,7 @@ export default [
 	{
 		name: 'AT&T Store',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.2704988,
 			lng: -97.756023
@@ -379,7 +379,7 @@ export default [
 	{
 		name: 'Accenture',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.2609153,
 			lng: -97.790019
@@ -403,7 +403,7 @@ export default [
 	{
 		name: "Mother's Cafe",
 		type: 'food',
-		values: ['locally-owned', 'sustainable'],
+		values: ['local_owned', 'sustainable'],
 		location: {
 			lat: 30.30433,
 			lng: -97.725968
@@ -426,7 +426,7 @@ export default [
 	{
 		name: 'Bank of America Financial Center',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.267628,
 			lng: -97.742679
@@ -450,7 +450,7 @@ export default [
 	{
 		name: 'Hopdoddy Burger Bar',
 		type: 'food',
-		values: ['sustainable', 'locally-owned', 'living-wage'],
+		values: ['sustainable', 'local_owned', 'living_wage'],
 		location: {
 			lat: 30.2496468,
 			lng: -97.74990539999999
@@ -503,7 +503,7 @@ export default [
 	{
 		name: 'Costco Wholesale',
 		type: 'retail',
-		values: ['living-wage'],
+		values: ['living_wage'],
 		location: {
 			lat: 30.5276712,
 			lng: -97.81954739999999
@@ -531,7 +531,7 @@ export default [
 	{
 		name: 'Sweet Ritual',
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.306135,
 			lng: -97.71506699999999
@@ -561,7 +561,7 @@ export default [
 	{
 		name: '24 Hour Fitness',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.30135210000001,
 			lng: -97.72033909999999
@@ -615,7 +615,7 @@ export default [
 	{
 		name: 'SKG',
 		type: 'retail',
-		values: ['locally-owned', 'women-owned'],
+		values: ['local_owned', 'women_owned'],
 		location: {
 			lat: 30.2013522,
 			lng: -97.71471090000001
@@ -639,7 +639,7 @@ export default [
 	{
 		name: 'Mopac Media',
 		type: 'service',
-		values: ['locally-owned', 'women-owned'],
+		values: ['local_owned', 'women_owned'],
 		location: {
 			lat: 30.310003,
 			lng: -97.674078
@@ -662,7 +662,7 @@ export default [
 	{
 		name: "Torchy's Tacos",
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.29370999999999,
 			lng: -97.74172809999999
@@ -713,7 +713,7 @@ export default [
 	{
 		name: 'Amazon@UTexas',
 		type: 'retail',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.283991,
 			lng: -97.73628099999999
@@ -736,7 +736,7 @@ export default [
 	{
 		name: 'Hope Family Thrift Store',
 		type: 'retail',
-		values: ['sustainable', 'locally-owned'],
+		values: ['sustainable', 'local_owned'],
 		location: {
 			lat: 30.309002,
 			lng: -97.708604
@@ -767,7 +767,7 @@ export default [
 	{
 		name: "Tiff's Treats",
 		type: 'food',
-		values: ['locally-owned', 'recruits-veterans'],
+		values: ['local_owned', 'recruit_veterans'],
 		location: {
 			lat: 30.2819052,
 			lng: -97.744089
@@ -796,7 +796,7 @@ export default [
 	{
 		name: 'Allstate Insurance: Roger Morse',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.207646,
 			lng: -97.7732374
@@ -825,7 +825,7 @@ export default [
 	{
 		name: '24 Hour Fitness',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.22239899999999,
 			lng: -97.84359309999999
@@ -903,7 +903,7 @@ export default [
 	{
 		name: "J.T. Youngblood's",
 		type: 'food',
-		values: ['locally-owned', 'sustainable'],
+		values: ['local_owned', 'sustainable'],
 		location: {
 			lat: 30.29811069999999,
 			lng: -97.7055547
@@ -927,7 +927,7 @@ export default [
 	{
 		name: 'Patagonia Austin',
 		type: 'retail',
-		values: ['sustainable', 'living-wage'],
+		values: ['sustainable', 'living_wage'],
 		location: {
 			lat: 30.265961,
 			lng: -97.74378399999999
@@ -986,7 +986,7 @@ export default [
 	{
 		name: 'The Beer Plant',
 		type: 'food',
-		values: ['locally-owned', 'sustainable'],
+		values: ['local_owned', 'sustainable'],
 		location: {
 			lat: 30.2967355,
 			lng: -97.767646
@@ -1015,7 +1015,7 @@ export default [
 	{
 		name: 'Black Star Co-op',
 		type: 'food',
-		values: ['locally-owned', 'living-wage'],
+		values: ['local_owned', 'living_wage'],
 		location: {
 			lat: 30.3382593,
 			lng: -97.7188884
@@ -1044,7 +1044,7 @@ export default [
 	{
 		name: 'woom bikes USA',
 		type: 'retail',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.37817059999999,
 			lng: -97.72126039999999
@@ -1097,7 +1097,7 @@ export default [
 	{
 		name: "Torchy's Tacos",
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.303292,
 			lng: -97.6988397
@@ -1121,7 +1121,7 @@ export default [
 	{
 		name: 'Hopdoddy Burger Bar',
 		type: 'food',
-		values: ['sustainable', 'locally-owned', 'living-wage'],
+		values: ['sustainable', 'local_owned', 'living_wage'],
 		location: {
 			lat: 30.3150704,
 			lng: -97.7344067
@@ -1175,7 +1175,7 @@ export default [
 	{
 		name: 'Austin Carson: Allstate Insurance',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.2432286,
 			lng: -97.73683059999999
@@ -1199,7 +1199,7 @@ export default [
 	{
 		name: 'Toy Joy',
 		type: 'retail',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.3061588,
 			lng: -97.71512489999999
@@ -1222,7 +1222,7 @@ export default [
 	{
 		name: "Amy's Ice Creams",
 		type: 'food',
-		values: ['locally-owned', 'women-owned'],
+		values: ['local_owned', 'women_owned'],
 		location: {
 			lat: 30.25094990000001,
 			lng: -97.7489492
@@ -1245,7 +1245,7 @@ export default [
 	{
 		name: 'Costco Wholesale',
 		type: 'retail',
-		values: ['living-wage'],
+		values: ['living_wage'],
 		location: {
 			lat: 30.3971631,
 			lng: -97.7447382
@@ -1275,7 +1275,7 @@ export default [
 	{
 		name: "Tiff's Treats",
 		type: 'food',
-		values: ['locally-owned', 'recruits-veterans'],
+		values: ['local_owned', 'recruit_veterans'],
 		location: {
 			lat: 30.3073355,
 			lng: -97.7070093
@@ -1304,7 +1304,7 @@ export default [
 	{
 		name: "Paco's Tacos",
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.3074261,
 			lng: -97.705849
@@ -1327,7 +1327,7 @@ export default [
 	{
 		name: 'Kendra Scott',
 		type: 'retail',
-		values: ['locally-owned', 'women-owned'],
+		values: ['local_owned', 'women_owned'],
 		location: {
 			lat: 30.3060028,
 			lng: -97.743175
@@ -1387,7 +1387,7 @@ export default [
 	{
 		name: 'Workplace Resource',
 		type: 'service',
-		values: ['locally-owned', 'women-owned'],
+		values: ['local_owned', 'women_owned'],
 		location: {
 			lat: 30.2758029,
 			lng: -97.76526969999999
@@ -1417,7 +1417,7 @@ export default [
 	{
 		name: 'HOPE Farmers Market',
 		type: 'retail',
-		values: ['locally-owned', 'sustainable'],
+		values: ['local_owned', 'sustainable'],
 		location: {
 			lat: 30.2619637,
 			lng: -97.7272713
@@ -1440,7 +1440,7 @@ export default [
 	{
 		name: "Texas Farmers' Market at Mueller",
 		type: 'retail',
-		values: ['locally-owned', 'sustainable'],
+		values: ['local_owned', 'sustainable'],
 		location: {
 			lat: 30.296611,
 			lng: -97.7072821
@@ -1463,7 +1463,7 @@ export default [
 	{
 		name: "Arlo's",
 		type: 'food',
-		values: ['locally-owned', 'sustainable'],
+		values: ['local_owned', 'sustainable'],
 		location: {
 			lat: 30.2626612,
 			lng: -97.724149
@@ -1487,7 +1487,7 @@ export default [
 	{
 		name: 'Casa de Luz',
 		type: 'food',
-		values: ['locally-owned', 'sustainable'],
+		values: ['local_owned', 'sustainable'],
 		location: {
 			lat: 30.264275,
 			lng: -97.761675
@@ -1518,7 +1518,7 @@ export default [
 	{
 		name: 'Service King Collision Repair of Austin',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.2284888,
 			lng: -97.77985249999999
@@ -1541,7 +1541,7 @@ export default [
 	{
 		name: "Tyson's Tacos",
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.30964,
 			lng: -97.715239
@@ -1595,7 +1595,7 @@ export default [
 	{
 		name: 'Service King Collision Repair North Lamar',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.333616,
 			lng: -97.722174
@@ -1618,7 +1618,7 @@ export default [
 	{
 		name: 'Alamo Drafthouse Cinema Ritz',
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.2674467,
 			lng: -97.7395652
@@ -1672,7 +1672,7 @@ export default [
 	{
 		name: 'Alamo Drafthouse Cinema Slaughter Lane',
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.1988112,
 			lng: -97.86889149999999
@@ -1701,7 +1701,7 @@ export default [
 	{
 		name: 'Service King Collision Repair of South Austin',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.1804582,
 			lng: -97.7760534
@@ -1724,7 +1724,7 @@ export default [
 	{
 		name: 'Thai Fresh',
 		type: 'food',
-		values: ['living-wage', 'sustainable'],
+		values: ['living_wage', 'sustainable'],
 		location: {
 			lat: 30.247849,
 			lng: -97.761729
@@ -1757,7 +1757,7 @@ export default [
 	{
 		name: 'Accenture Interactive',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.26570709999999,
 			lng: -97.74330409999999
@@ -1780,7 +1780,7 @@ export default [
 	{
 		name: 'Austin City Hall',
 		type: 'service',
-		values: ['locally-owned', 'recruits-veterans', 'living-wage'],
+		values: ['local_owned', 'recruit_veterans', 'living_wage'],
 		location: {
 			lat: 30.264792,
 			lng: -97.7472145
@@ -1808,7 +1808,7 @@ export default [
 	{
 		name: 'Baer Engineering & Environmental Consulting, Inc.',
 		type: 'service',
-		values: ['women-owned', 'locally-owned'],
+		values: ['women_owned', 'local_owned'],
 		location: {
 			lat: 30.356728,
 			lng: -97.73735500000001
@@ -1833,7 +1833,7 @@ export default [
 	{
 		name: 'Kidd Roofing',
 		type: 'service',
-		values: ['locally-owned', 'women-owned'],
+		values: ['local_owned', 'women_owned'],
 		location: {
 			lat: 30.335071,
 			lng: -97.689075
@@ -1895,7 +1895,7 @@ export default [
 	{
 		name: "Torchy's Tacos",
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.24547750000001,
 			lng: -97.75160179999999
@@ -1918,7 +1918,7 @@ export default [
 	{
 		name: 'Sherry Matthews Inc',
 		type: 'service',
-		values: ['locally-owned', 'women-owned'],
+		values: ['local_owned', 'women_owned'],
 		location: {
 			lat: 30.2597436,
 			lng: -97.74617669999999
@@ -1942,7 +1942,7 @@ export default [
 	{
 		name: 'Bananarchy',
 		type: 'food',
-		values: ['women-owned', 'sustainable', 'locally-owned'],
+		values: ['women_owned', 'sustainable', 'local_owned'],
 		location: {
 			lat: 30.28834500000001,
 			lng: -97.74168300000001
@@ -1988,7 +1988,7 @@ export default [
 	{
 		name: 'Michael Walker: Allstate Insurance',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.3064245,
 			lng: -97.7439666
@@ -2040,7 +2040,7 @@ export default [
 	{
 		name: "Terry Black's Barbecue",
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.2596563,
 			lng: -97.7548214
@@ -2063,7 +2063,7 @@ export default [
 	{
 		name: 'Bananarchy',
 		type: 'food',
-		values: ['women-owned', 'sustainable', 'locally-owned'],
+		values: ['women_owned', 'sustainable', 'local_owned'],
 		location: {
 			lat: 30.2444054,
 			lng: -97.758124
@@ -2092,7 +2092,7 @@ export default [
 	{
 		name: 'Costco Wholesale',
 		type: 'retail',
-		values: ['living-wage'],
+		values: ['living_wage'],
 		location: {
 			lat: 30.2188933,
 			lng: -97.8429107
@@ -2123,7 +2123,7 @@ export default [
 	{
 		name: 'Bistro Vonish',
 		type: 'food',
-		values: ['locally-owned', 'sustainable'],
+		values: ['local_owned', 'sustainable'],
 		location: {
 			lat: 30.3152855,
 			lng: -97.7166364
@@ -2146,7 +2146,7 @@ export default [
 	{
 		name: 'Counter Culture',
 		type: 'food',
-		values: ['locally-owned', 'sustainable'],
+		values: ['local_owned', 'sustainable'],
 		location: {
 			lat: 30.25465400000001,
 			lng: -97.71784099999999
@@ -2169,7 +2169,7 @@ export default [
 	{
 		name: "Sam's BBQ",
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.2740619,
 			lng: -97.71885619999999
@@ -2193,7 +2193,7 @@ export default [
 	{
 		name: 'Franklin Barbecue',
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.270142,
 			lng: -97.7312712
@@ -2216,7 +2216,7 @@ export default [
 	{
 		name: 'Ride Austin',
 		type: 'service',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.2714956,
 			lng: -97.75846039999999
@@ -2236,7 +2236,7 @@ export default [
 	{
 		name: 'Austin Central Library, Austin Public Library',
 		type: 'service',
-		values: ['recruits-veterans', 'sustainable', 'locally-owned'],
+		values: ['recruit_veterans', 'sustainable', 'local_owned'],
 		location: {
 			lat: 30.2660439,
 			lng: -97.752101
@@ -2259,7 +2259,7 @@ export default [
 	{
 		name: 'Toy Joy',
 		type: 'retail',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.265214,
 			lng: -97.74806099999999
@@ -2282,7 +2282,7 @@ export default [
 	{
 		name: 'Homero Escobar: Allstate Insurance',
 		type: 'service',
-		values: ['recruits-veterans'],
+		values: ['recruit_veterans'],
 		location: {
 			lat: 30.209944,
 			lng: -97.7823188
@@ -2306,7 +2306,7 @@ export default [
 	{
 		name: "SFC Farmers' Market Downtown",
 		type: 'retail',
-		values: ['locally-owned', 'sustainable'],
+		values: ['local_owned', 'sustainable'],
 		location: {
 			lat: 30.2679131,
 			lng: -97.7472722
@@ -2330,7 +2330,7 @@ export default [
 	{
 		name: 'T3',
 		type: 'service',
-		values: ['locally-owned', 'women-owned'],
+		values: ['local_owned', 'women_owned'],
 		location: {
 			lat: 30.28334409999999,
 			lng: -97.75139519999999
@@ -2354,7 +2354,7 @@ export default [
 	{
 		name: 'VMC Pharmacy Health & Wellness Products',
 		type: 'retail',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.2322543,
 			lng: -97.7911433
@@ -2382,7 +2382,7 @@ export default [
 	{
 		name: "Sandy's Hamburgers",
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.2584181,
 			lng: -97.75098919999999
@@ -2406,7 +2406,7 @@ export default [
 	{
 		name: 'BookPeople',
 		type: 'retail',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.2718488,
 			lng: -97.7529009
@@ -2429,7 +2429,7 @@ export default [
 	{
 		name: "Amy's Ice Creams",
 		type: 'food',
-		values: ['locally-owned', 'women-owned'],
+		values: ['local_owned', 'women_owned'],
 		location: {
 			lat: 30.3013244,
 			lng: -97.73931309999999
@@ -2452,7 +2452,7 @@ export default [
 	{
 		name: 'Hopdoddy Burger Bar',
 		type: 'food',
-		values: ['sustainable', 'locally-owned', 'living-wage'],
+		values: ['sustainable', 'local_owned', 'living_wage'],
 		location: {
 			lat: 30.35766449999999,
 			lng: -97.73315000000001
@@ -2481,7 +2481,7 @@ export default [
 	{
 		name: "Tiff's Treats",
 		type: 'food',
-		values: ['locally-owned', 'recruits-veterans'],
+		values: ['local_owned', 'recruit_veterans'],
 		location: {
 			lat: 30.403678,
 			lng: -97.744794
@@ -2512,7 +2512,7 @@ export default [
 	{
 		name: "Torchy's Tacos",
 		type: 'food',
-		values: ['locally-owned'],
+		values: ['local_owned'],
 		location: {
 			lat: 30.2367541,
 			lng: -97.76280109999999
