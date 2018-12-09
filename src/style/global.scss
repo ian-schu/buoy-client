@@ -54,7 +54,7 @@ $section-padding: 1rem 0.5rem;
 	min-height: 100vh;
 	position: absolute;
 	padding-bottom: 7rem;
-	width: 100vw;
+	width: 100%;
 }
 
 #cta {
@@ -434,7 +434,7 @@ $color-map: (
 }
 
 .inactive {
-	opacity: 0.3;
+	opacity: 0.12;
 }
 
 .load-indicator {
@@ -483,6 +483,44 @@ $color-map: (
 
 // Begin Desktop styles
 @media (min-width: 650px) {
+	.section {
+		width: 70%;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+
+	#landing {
+		.title, #landing .about__group__title {
+			font-size: 3.2rem;
+		}
+		.subtitle {
+			font-size: 2.5rem;
+		}
+	}
+
+	#landing {
+		min-height: 45vh;
+		.hero-body {
+			min-height: 45vh;
+		}
+	}
+
+	.hero-values {
+		width: 100%;
+		font-size: 2rem;
+		&__value i {
+			font-size: 4rem;
+		}
+	}
+
+	.about {
+		width: 80%;
+		margin: 0 auto;
+		&__group {
+			min-width: 100%;
+		}
+	}
+
 	@each $colorName, $color in $color-map {
 		.has-background-#{$colorName} {
 			&:hover {
@@ -495,12 +533,23 @@ $color-map: (
 		}
 	}
 
+	#cta .button, .filters__button, .places__button {
+		font-size: 2.5rem !important;
+	}
+
+	.filters__button {
+		height: 4.5rem;
+		i {
+			font-size: 2.6rem;
+		}
+	}
+
 	.background-svg {
 		position: absolute;
 		&.beach {
 			z-index: -1;
 			transform: scale(6.9, 3.3) rotate(-18deg);
-			top: -4%;
+			top: -14%;
 			left: 52%;
 		}
 		&.ocean {
@@ -508,6 +557,55 @@ $color-map: (
 			transform: scale(18, 15.4) rotate(1deg);
 			top: 9%;
 			left: 50%;
+		}
+	}
+
+	.location-hero {
+		min-height: 0;
+		width: 80vh;
+		max-height: 750px;
+
+		&__logo {
+			top: 24vh;
+			left: 50vh;
+			height: 17vh;
+		}
+		&__water__path {
+			transform: scale(1.85, 2.4) rotate(4deg) translate(-64px, -119px);
+		}
+	}
+
+	.filters-bar {
+		.placeType-pill {
+			width: 5rem;
+		}
+		.placeType-pill, .filters-pill {
+			height: 4.5rem;
+			&__icon {
+				font-size: 2.6rem;
+			}
+		}
+	}
+
+	.hero-body .results {
+			width: 90%;
+	}
+
+	.search-result {
+		&__left {
+			width: 90%;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+		}
+		&__title {
+			width: 100%;
+		}
+		&__address {
+			width: 75%
+		}
+		&__values {
+			width: 100%;
 		}
 	}
 }
