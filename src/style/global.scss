@@ -482,8 +482,143 @@ $color-map: (
 	}
 }
 
-// Begin Desktop styles
+// Shared desktop styles
+
 @media (min-width: 650px) {
+	@each $colorName, $color in $color-map {
+		.has-background-#{$colorName} {
+			&:hover {
+				background-color: rgba($color, 0.25);
+			}
+
+			&.is-selected:hover {
+				background-color: darken($color, 15);
+			}
+		}
+	}
+}
+
+// Desktop styles - tablet and laptop scale
+@media (min-width: 650px) and (max-width: 1679px) {
+	.section {
+		width: 60%;
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+
+	#landing {
+		.title, #landing .about__group__title {
+			font-size: 2.6rem;
+		}
+		.subtitle {
+			font-size: 1.9rem;
+		}
+	}
+
+	#landing {
+		min-height: 60vh;
+		.hero-body {
+			min-height: 60vh;
+		}
+	}
+
+	.hero-values {
+		width: 100%;
+		font-size: 1.5rem;
+		&__value i {
+			font-size: 3rem;
+		}
+	}
+
+	.about {
+		width: 80%;
+		margin: 0 auto;
+		&__group {
+			min-width: 100%;
+		}
+		.logo {
+			width: 14%;
+		}
+	}
+
+	#cta .button, .filters__button, .places__button {
+		font-size: 1.5rem !important;
+	}
+
+	.filters__button {
+		height: 3.5rem;
+		i {
+			font-size: 2.1rem;
+		}
+	}
+
+	.background-svg {
+		position: absolute;
+		&.beach {
+			z-index: -1;
+			transform: scale(6.9, 3.3) rotate(-18deg);
+			top: -20%;
+			left: 52%;
+		}
+		&.ocean {
+			z-index: -5;
+			transform: scale(18, 15.4) rotate(1deg);
+			top: 9%;
+			left: 50%;
+		}
+	}
+
+	.location-hero {
+		width: 80vh;
+		height:50vh;
+
+		&__logo {
+			top: 24vh;
+			left: 50vh;
+			height: 17vh;
+		}
+		&__water__path {
+			transform: scale(1.85, 2.4) rotate(4deg) translate(-64px, -119px);
+		}
+	}
+
+	.filters-bar {
+		.placeType-pill {
+			width: 5rem;
+		}
+		.placeType-pill, .filters-pill {
+			height: 4.5rem;
+			&__icon {
+				font-size: 2.6rem;
+			}
+		}
+	}
+
+	.hero-body .results {
+			width: 90%;
+	}
+
+	.search-result {
+		&__left {
+			width: 90%;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+		}
+		&__title {
+			width: 100%;
+		}
+		&__address {
+			width: 75%
+		}
+		&__values {
+			width: 100%;
+		}
+	}
+}
+
+// Desktop styles - large displays 
+@media (min-width: 1680px) {
 	.section {
 		width: 70%;
 		max-width: 1300px;
@@ -519,18 +654,6 @@ $color-map: (
 		margin: 0 auto;
 		&__group {
 			min-width: 100%;
-		}
-	}
-
-	@each $colorName, $color in $color-map {
-		.has-background-#{$colorName} {
-			&:hover {
-				background-color: rgba($color, 0.25);
-			}
-
-			&.is-selected:hover {
-				background-color: darken($color, 15);
-			}
 		}
 	}
 
