@@ -59,7 +59,7 @@ export default class ValueFilters extends Component {
 							class={`filters__button ${filters['women_owned'] &&
 								'is-selected'} has-text-purple has-background-purple`}
 						>
-							<i class="fas fa-venus" /> women_owned
+							<i class="fas fa-venus" /> women-owned
 						</button>
 					</div>
 				</div>

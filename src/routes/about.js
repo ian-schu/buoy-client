@@ -10,7 +10,7 @@ export default class Main extends Component {
 		<section class="section">
 			<div class="about">
 				{buoyLogo}
-				<h1 class="title has-text-brown">About Buoy</h1>
+				<h1 class="title has-text-brown">Buoy</h1>
 				<h2 class="subtitle has-text-brown">
 					A little, literal, digital moral compass
 				</h2>

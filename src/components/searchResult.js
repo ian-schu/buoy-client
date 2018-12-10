@@ -17,9 +17,9 @@ export default class SearchResult extends Component {
 			<div class="search-result box">
 				<div class="search-result__left">
 					<div class="search-result__title">{data.name}</div>
-					<div>{fullAddress}</div>
-					<div>{data.distance} mi</div>
-					<div>({data.type})</div>
+					<div class="search-result__address">{fullAddress}</div>
+					<div class="search-result__type">({data.type})</div>
+					<div class="search-result__distance">{data.distance} mi</div>
 					<div class="search-result__values">
 						{data.values.map(valueName => (
 							<ValueIcon className="search-result__value" name={valueName} />

@@ -47,7 +47,7 @@ export default class Main extends Component {
 		<section class="section">
 			<div id="landing" class="hero is-medium is-marginless">
 				<div class="hero-body">
-					<div class="container">
+					<div>
 						<h1 class="title has-text-brown">{welcomeTitle(configComplete)}</h1>
 						<h2 class="subtitle has-text-brown">
 							{welcomeSubTitle(configComplete)}

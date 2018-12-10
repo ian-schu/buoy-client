@@ -112,7 +112,7 @@ export default class Location extends Component {
 						</div>
 					</div>
 					{settingZip ? (
-						<div id="cta" class="container">
+						<div id="cta">
 							<button
 								onClick={this.cancelChooseZip}
 								class="button has-text-weight-bold is-size-4 is-danger is-outlined"
